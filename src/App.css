@@ -2,6 +2,9 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+.text-mono {
     font-family: 'Chivo Mono', monospace;
 }
 
@@ -14,6 +17,12 @@
     min-width: 200px;   
     width: 30%;
     fill: #000000;
+}
+.nico {
+    fill: #FFD400;
+}
+.ncofoot {
+    height: 300px;
 }
 
 .linea1 {
@@ -28,7 +37,7 @@
 
 .nicoBarrera {
     font-weight: 500;
-    letter-spacing: -8px
+    letter-spacing: -14px
 }
 
 .asterixco {
@@ -39,7 +48,6 @@
 .cuerpo {
     padding-right: 50px;
     padding-left: 50px;
-    padding-top: 40px;
 }
 
 .paraf-ini {
@@ -48,6 +56,9 @@
 .haches {
     font-weight: bold;
     margin-top: 1rem;
+}
+.texto2{
+    font-family: 'Inter', sans-serif;
 }
 
 .fontt {
@@ -67,4 +78,20 @@
 footer {
     background-color: #b700ff;
     margin-top: auto;
+}
+
+.degrade1 {
+    background-color: #FF0080;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    right: 19%;
+}
+.degrade2 {
+    background-color: #0600ff;
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    right: 10%;
+    top: 30%;
 }
