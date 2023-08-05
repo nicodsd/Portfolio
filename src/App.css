@@ -19,10 +19,10 @@
     fill: #000000;
 }
 .nico {
-    fill: #FFD400;
+    fill: #ffffff;
 }
 .ncofoot {
-    height: 300px;
+    height: 30px;
 }
 
 .linea1 {
@@ -37,17 +37,17 @@
 
 .nicoBarrera {
     font-weight: 500;
-    letter-spacing: -14px
 }
 
 .asterixco {
     color: #FFD400;
-    font-size: 500px;
+    font-size: 30vw;
+    position: absolute;
 }
 
 .cuerpo {
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 25px;
+    padding-left: 25px;
 }
 
 .paraf-ini {
@@ -78,20 +78,4 @@
 footer {
     background-color: #b700ff;
     margin-top: auto;
-}
-
-.degrade1 {
-    background-color: #FF0080;
-    width: 180px;
-    height: 180px;
-    position: absolute;
-    right: 19%;
-}
-.degrade2 {
-    background-color: #0600ff;
-    width: 190px;
-    height: 190px;
-    position: absolute;
-    right: 10%;
-    top: 30%;
 }
