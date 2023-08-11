@@ -50,6 +50,10 @@
     padding-left: 25px;
 }
 
+.cap {
+    border-radius: 15px;
+}
+
 .paraf-ini {
     font-size: small;
 }
