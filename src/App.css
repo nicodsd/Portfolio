@@ -8,6 +8,11 @@
     font-family: 'Chivo Mono', monospace;
 }
 
+.nicoBarrera {
+    letter-spacing: -1px;
+    text-indent: -10px;
+}
+
 .cls-1 {
     min-width: 200px;   
     width: 30%;
@@ -33,10 +38,6 @@
 }
 .linea3 {
     background-color: #0600ff;
-}
-
-.nicoBarrera {
-    font-weight: 500;
 }
 
 .asterixco {
