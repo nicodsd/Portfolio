@@ -27,7 +27,7 @@
     fill: #ffffff;
 }
 .ncofoot {
-    height: 30px;
+    height: 40px;
 }
 
 .linea1 {
@@ -55,6 +55,9 @@
     border-radius: 15px;
 }
 
+.texto2{
+    font-family: 'Inter', sans-serif;
+}
 .paraf-ini {
     font-size: small;
 }
@@ -62,9 +65,7 @@
     font-weight: bold;
     margin-top: 1rem;
 }
-.texto2{
-    font-family: 'Inter', sans-serif;
-}
+
 
 .fontt {
     font-style: italic;
