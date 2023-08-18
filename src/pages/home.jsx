@@ -21,7 +21,7 @@ function Index() {
     <>
       <div className='w-full h-[8rem] blur-[35px] bg-[#ffffff] absolute'></div>
       <Navbar />
-      <div className='flex flex-col justify-between min-h-screen h-fit bg-[#d8e3f0]'>
+      <div className='flex flex-col justify-between min-h-screen h-fit bg-[#e2e8ee]'>
         <ATopce />
         <div className='h-fit cuerpo text-mono mt-24'>
           <p className='absolute text-[18rem] text-[#FFD400] text-mono font-semibold top-20 right-[50%] '>*</p>
@@ -82,7 +82,8 @@ function Index() {
             <h2 className='text-2xl font-bold text-mono w-full'>Sobre mi<span className=' animate-pulse-slow'>_</span></h2>
             <h2 className='text-7xl text-mono font-semibold text-[#FFD400] w-24 h-16 mt-6'>Primero,</h2>
             <h2 className='text-7xl text-mono font-semibold text-[#FFD400] w-24'> hola</h2>
-            <p className='paraf-ini mt-4'>Me llamo Nicolas Barrera, soy una persona multifacética e inquieta.
+            <h3 className='haches text-mono mt-4'>Introducción</h3>
+            <p className='paraf-ini'>Me llamo Nicolas Barrera, soy una persona multifacética e inquieta.
               De pequeño me llamaba la atención las computadoras y las artes plásticas, tomando un gusto por los graffitis
               y el arte callejero, viendo eso hacia mis propios dibujos y replicaba aquello que me atraía.
               Durante mi vida experimenté con muchas cosas, probándome en la música, conociendo
