@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Carrousel from '../components/Carrousel'
 import ATopce from '../components/ATop'
+import Contact from '../components/Contact'
 
 import pls from '../../public/Images/diseño-grafico/300ppi/Recurso63.svg'
 import flecha from '../../public/Images/diseño-grafico/300ppi/arrow2.svg'
@@ -20,11 +21,12 @@ function Index() {
   return (
     <>
       <div className='w-full h-[8rem] blur-[35px] bg-[#ffffff] absolute'></div>
+      <div className='w-full h-[8rem] blur-[35px] bg-[#ffffff] absolute'></div>
       <Navbar />
       <div className='flex flex-col justify-between min-h-screen h-fit bg-[#e2e8ee]'>
         <ATopce />
         <div className='h-fit cuerpo text-mono mt-24'>
-          <p className='absolute text-[18rem] text-[#FFD400] text-mono font-semibold top-20 right-[50%] '>*</p>
+          <p className='absolute text-[20rem] text-[#FFD400] text-mono font-semibold top-14 right-[50%] '>*</p>
           <div className='flex relative items-end my-10 justify-between'>
             <div className='flex flex-col font-semibold'>
               <p className='nicoBarrera nico text-[11vw] h-[8.5vw]'> Nico </p>
@@ -74,15 +76,16 @@ function Index() {
 
           <div className='absolute right-24'>
             <div className='cap w-[37vh] relative -right-10 h-[24vh] hover:scale-110 hover:ease-in-out hover:duration-150 rotate-3 bg-[#a1a1a1]'></div>
-            <img className='absolute z-10' src={flechaMid} alt="flecha" />
+            <img className='absolute z-10 rotate-12' src={flechaMid} alt="flecha" />
             <div className='cap w-[30vh] relative right-10 h-[21vh] hover:scale-110 hover:ease-in-out hover:duration-150 z-20 -rotate-3 bg-[#cecece]'></div>
             <div className='cap w-[30vh] relative -right-2 hover:z-30 h-[21vh] hover:scale-110 hover:ease-in-out hover:duration-150 rotate-[10deg] bg-[#cecece]'></div>
           </div>
-          <div className='w-[60%] h-fit texto2 flex flex-col justify-center px-8 z-10'>
+          
+          <div className='w-[55%] h-fit texto2 flex flex-col justify-center px-14 z-10'>
             <h2 className='text-2xl font-bold text-mono w-full'>Sobre mi<span className=' animate-pulse-slow'>_</span></h2>
-            <h2 className='text-7xl text-mono font-semibold text-[#FFD400] w-24 h-16 mt-6'>Primero,</h2>
+            <h2 className='text-7xl text-mono font-semibold text-[#FFD400] w-24 h-[65px] mt-6'>Primero,</h2>
             <h2 className='text-7xl text-mono font-semibold text-[#FFD400] w-24'> hola</h2>
-            <h3 className='haches text-mono mt-4'>Introducción</h3>
+            <h3 className='haches text-mono mt-8'>Introducción</h3>
             <p className='paraf-ini'>Me llamo Nicolas Barrera, soy una persona multifacética e inquieta.
               De pequeño me llamaba la atención las computadoras y las artes plásticas, tomando un gusto por los graffitis
               y el arte callejero, viendo eso hacia mis propios dibujos y replicaba aquello que me atraía.
@@ -99,10 +102,11 @@ function Index() {
               Es así como fui ganando experiencia y marcando un trayecto en lo que hoy en dia me gusta que es el área
               del diseño.
               De esta manera fui aprendiendo y conociendo de las herramientas de diseño de manera autodidacta.</p>
-            <p className='paraf-ini'>Teniendo en cuenta esto como referencia para crear mi marca y generar una imagen de dinamismo, en
+            <p className='paraf-ini '>Teniendo en cuenta esto como referencia para crear mi marca y generar una imagen de dinamismo, en
               las formas por los cambios y lo multifacético de mi personalidad.</p>
           </div>
         </div>
+        <Contact />
       </div>
       <Footer />
     </>
