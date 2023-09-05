@@ -4,7 +4,8 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Carrousel from '../components/Carrousel'
 import ATopce from '../components/ATop'
-import Contact from '../components/Contact'
+import Contact from '../components/Home-Cont'
+import ContactHom from '../components/Contact'
 
 import pls from '../../public/Images/diseño-grafico/300ppi/Recurso63.svg'
 import flecha from '../../public/Images/diseño-grafico/300ppi/arrow2.svg'
@@ -72,8 +73,7 @@ function Index() {
           </section>
         </div>
 
-        <div className='relative mb-20 h-screen my-28 bg-white flex justify-start items-center'>
-
+        <div className='relative min-h-screen h-fit mt-28 bg-black flex justify-start items-center'>
           <div className='absolute right-24'>
             <div className='cap w-[37vh] relative -right-10 h-[24vh] hover:scale-110 hover:ease-in-out hover:duration-150 rotate-3 bg-[#a1a1a1]'></div>
             <img className='absolute z-10 rotate-12' src={flechaMid} alt="flecha" />
@@ -81,11 +81,10 @@ function Index() {
             <div className='cap w-[30vh] relative -right-2 hover:z-30 h-[21vh] hover:scale-110 hover:ease-in-out hover:duration-150 rotate-[10deg] bg-[#cecece]'></div>
           </div>
           
-          <div className='w-[55%] h-fit texto2 flex flex-col justify-center px-14 z-10'>
+          <div className='w-[60%] py-16 h-fit text-white texto2 flex flex-col justify-center px-14 z-10'>
             <h2 className='text-2xl font-bold text-mono w-full'>Sobre mi<span className=' animate-pulse-slow'>_</span></h2>
-            <h2 className='text-8xl text-mono font-semibold text-[#FFD400] w-24 h-[85px] mt-6'>Primero,</h2>
-            <h2 className='text-8xl text-mono font-semibold text-[#FFD400] w-24'> hola</h2>
-            <h3 className='haches text-mono mt-8'>Introducción</h3>
+            <h2 className='text-7xl text-mono font-semibold text-[#FFD400] h-[85px]'>Primero, hola</h2>
+            <h3 className='haches text-mono mt-6'>Introducción</h3>
             <p className='paraf-ini'>Me llamo Nicolas Barrera, soy una persona multifacética e inquieta.
               De pequeño me llamaba la atención las computadoras y las artes plásticas, tomando un gusto por los graffitis
               y el arte callejero, viendo eso hacia mis propios dibujos y replicaba aquello que me atraía.
@@ -106,6 +105,7 @@ function Index() {
               las formas por los cambios y lo multifacético de mi personalidad.</p>
           </div>
         </div>
+        <ContactHom />
         <Contact />
       </div>
       <Footer />

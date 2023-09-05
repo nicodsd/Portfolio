@@ -64,6 +64,8 @@
 .haches {
     font-weight: bold;
     margin-top: 1rem;
+    margin-bottom: .2rem;
+    color: #FFD400;
 }
 
 
@@ -79,6 +81,10 @@
 .imge {
     width: 100px;
     object-fit: contain;
+}
+
+.contact-com {
+    font-size: 3rem;
 }
 
 footer {

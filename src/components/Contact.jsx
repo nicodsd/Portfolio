@@ -1,29 +1,30 @@
 import React from 'react'
-import { Link as Anchor } from 'react-router-dom'
-import {HiArrowLongRight} from 'react-icons/hi2'
-
-import flecha5 from '../../public/Images/diseño-grafico/300ppi/flecha-5.svg'
+import avion from '../../public/Images/diseño-grafico/300ppi/avioncito.svg'
 
 function Contact() {
-
-  const contactoDiseño = () => {
-
-  }
-
   return (
-    <>
-      <div className='h-screen relative w-full flex justify-center items-center'>
-          <p className='absolute text-mono font-semibold text-[200px] text-[#ffffff] left-1'>"</p>
-          <p className='absolute text-mono font-semibold text-[200px] text-[#ffffff] right-1'>"</p>
-        <div className='text-mono text-xl flex items-center font-semibold text-[#0600ff] z-10'>
-          <p>Contame un poco de lo tienes en mente</p>
-          <div className='flex items-center ml-6'>
-            <div className='h-[3px] w-24 bg-[#0600ff]'></div>
-            <Anchor onClick={()=>contactoDiseño} className='border-[3px] border-[#0600ff] hover:bg-[#ffffff] duration-100 rounded-full px-7 text-[60px]'><HiArrowLongRight className='h-10'/></Anchor>
+    <div className='relative h-screen w-full flex items-center justify-center bg-[#FFD400]'>
+      <div className='w-[60%] h-[70vh] flex flex-col justify-evenly'>
+        <div className='text-mono w-full font-[900] flex'>
+          <div>
+            <p className='contact-com h-11'>Contacta</p>
+            <p className='contact-com'>conmigo</p>
           </div>
+          <img className='h-24' src={avion} alt="" />
+        </div>
+        <div className='flex justify-center w-full'>
+          <form className='flex flex-col w-full gap-1 row shadow-[0_4px_0px_rgba(0,0,0,1)] ' action="/post">
+            <div className='w-full flex gap-x-4'>
+              <input className='w-[49%] placeholder:pl-2 p-1' type="text" placeholder='Nombre' />
+              <input className='w-[49%] placeholder:pl-2 p-1' type="text" placeholder='Barrera' />
+            </div>
+            <input className='h-44 placeholder:pl-2 p-1' type="text" placeholder='Comentarios' />
+            <input className='bg-[#0600ff] text-white text-mono' type="submit" value="Submit" />
+          </form>
         </div>
       </div>
-    </>
+
+    </div>
   )
 }
 
