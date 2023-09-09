@@ -47,8 +47,8 @@
 }
 
 .cuerpo {
-    padding-right: 25px;
-    padding-left: 25px;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .cap {
@@ -65,7 +65,7 @@
     font-weight: bold;
     margin-top: 1rem;
     margin-bottom: .2rem;
-    color: #ffffff;
+    color: #000000;
 }
 
 

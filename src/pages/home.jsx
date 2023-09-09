@@ -24,12 +24,12 @@ function Index() {
       <div className='w-full h-[8rem] blur-[35px] bg-[#ffffff] absolute'></div>
       <div className='w-full h-[8rem] blur-[35px] bg-[#ffffff] absolute'></div>
       <Navbar />
-      <div className='flex flex-col justify-between min-h-screen h-fit bg-[#e2e8ee]'>
+      <div className='flex flex-col justify-between h-fit bg-[#e2e8ee]'>
         <ATopce />
-        <div className='h-fit cuerpo text-mono mt-24'>
-          <p className='absolute text-[20rem] text-[#FFD400] text-mono font-semibold top-14 right-[50%] selection:bg-transparent'>*</p>
+        <div className='h-fit cuerpo text-mono mt-24 min-h-screen'>
+          <p className='absolute text-[20rem] font-bold text-[#FFD400] text-mono top-14 right-[50%] selection:bg-transparent'>*</p>
           <div className='flex relative items-end my-10 justify-between'>
-            <div className='flex flex-col font-semibold'>
+            <div className='flex flex-col font-[600]'>
               <p className='nicoBarrera nico text-[11vw] h-[8.5vw] selection:bg-transparent'> Nico </p>
               <p className='nicoBarrera text-[11vw] h-[14vw] selection:bg-transparent'> Barrera </p>
             </div>
@@ -38,14 +38,13 @@ function Index() {
           <div className='flex w-[60%] items-center justify-between'>
           </div>
 
-          <div className='flex items-start mt-4 justify-between w-full text-mono font-bold '>
+          <div className='flex items-start justify-between w-full text-mono'>
             <div className='flex mt-4 w-[50%]'>
               <div className='linea1 h-1 w-[20%]'></div>
               <div className='linea2 h-1 w-[20%]'></div>
               <div className='linea3 h-1 w-[20%]'></div>
               <div className='linea bg-black h-1 w-[100%]'></div>
             </div>
-            <p className='text-lg'>Desarrollo Full Stack & Diseño Grāfico</p>
           </div>
 
           <section className='flex relative mt-10 justify-between text-mono'>
@@ -63,7 +62,7 @@ function Index() {
               <div className='flex'>
                 <img className='h-[110px]' src={flecha} alt="flecha" />
               </div>
-              <div className='text-end text-sm text-mono w-32 '>
+              <div className='text-end text-sm text-mono w-32'>
                 <p>UX & UI</p>
                 <p>Apps móviles</p>
                 <p>Páginas webs</p>
@@ -73,17 +72,66 @@ function Index() {
           </section>
         </div>
 
-        <div className='relative min-h-screen h-fit mt-28 bg-white flex justify-start items-center'>
+        <div className='h-[25vw] w-full flex justify-center items-center '>
+          <h2 className='text-mono text-[#0600ff] text-[2rem] font-[600]'><span className='text-[#FFD400]'>S</span><span className='text-[#FF0080]'>o</span><span className='text-[#0600ff]'>y</span> <span className='text-[#0600ff]'>Desarrollador</span> & Diseñador Grāfico</h2>
+        </div>
+
+        <div className='h-screen w-full flex flex-col py-16 px-14 items-center justify-evenly'>
+          <div className='w-full'>
+            <h2 className='text-2xl font-bold text-mono'>Tecnologias<span className=' animate-pulse-slow'>_</span></h2>
+          </div>
+
+          <div className='flex text-mono z-10'>
+            <div className='flex'>
+              <div className=''>
+                <div className=' bg-black  p-1 text-white'>
+                  <p>Frontend</p>
+                  <p className='text-xs'>& librerias</p>
+                </div>
+                <div className='bg-[#FF0080] p-1 text-white'>
+                  <p>Html</p>
+                  <p>Javascript</p>
+                  <p>Css</p>
+                  <p>React</p>
+                  <p>React Native</p>
+                  <p>Boostrap</p>
+                  <p>Tailwind</p>
+                  <p>WordPress</p>
+                </div>
+              </div>
+
+              <div className=' text-white flex flex-col pt-4'>
+                <div className='bg-black p-1'>Backend</div>
+                <div className='bg-[#FF0080] p-1'>
+                  <p>NodeJs</p>
+                  <p>ExpressJs</p>
+                  <p>php</p>
+                </div>
+              </div>
+
+              <div className='flex flex-col justify-center'>
+                <div className='bg-[#0600ff] p-1 text-white'>Base de Datos</div>
+                <div className='bg-[#FF0080] p-1 text-white'>
+                  <p>Firebase</p>
+                  <p>MongoDB</p>
+                  <p>MySQL</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div className='min-h-screen flex justify-start items-center'>
           <div className='absolute right-24'>
             <div className='cap w-[37vh] relative -right-10 h-[24vh] hover:scale-110 hover:ease-in-out hover:duration-150 rotate-3 bg-[#a1a1a1]'></div>
             <img className='absolute z-10 rotate-12' src={flechaMid} alt="flecha" />
             <div className='cap w-[30vh] relative right-10 h-[21vh] hover:scale-110 hover:ease-in-out hover:duration-150 z-20 -rotate-3 bg-[#cecece]'></div>
             <div className='cap w-[30vh] relative -right-2 hover:z-30 h-[21vh] hover:scale-110 hover:ease-in-out hover:duration-150 rotate-[10deg] bg-[#cecece]'></div>
           </div>
-          
-          <div className='w-[60%] py-16 h-fit text-white texto2 flex flex-col justify-center px-14 z-10'>
+
+          <div className='w-[60%] py-16 h-fit text-black texto2 flex flex-col justify-center px-14 z-10'>
             <h2 className='text-2xl font-bold text-mono w-full'>Sobre mi<span className=' animate-pulse-slow'>_</span></h2>
-            <h2 className='text-7xl text-mono font-semibold text-[#FFD400] h-[85px]'>Primero, <b className='text-[#FF0080]'>hola</b></h2>
+            <h2 className='text-7xl text-mono font-normal text-[#FFD400] h-[85px]'>Primero, <b className='text-[#FF0080] font-black'>hola</b></h2>
             <h3 className='haches text-mono mt-6'>Introducción</h3>
             <p className='paraf-ini'>Soy Nicolas Barrera, me identifico como una persona multifacética e inquieta.
               De pequeño me llamaba la atención las computadoras y las artes plásticas, tomando un gusto por los graffitis
