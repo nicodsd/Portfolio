@@ -14,18 +14,21 @@
 }
 
 .cls-1 {
-    min-width: 200px;   
+    min-width: 200px;
     width: 30%;
     fill: #0600ff;
 }
+
 .cls-1:hover {
-    min-width: 200px;   
+    min-width: 200px;
     width: 30%;
     fill: #000000;
 }
+
 .nico {
     fill: #ffffff;
 }
+
 .ncofoot {
     height: 40px;
 }
@@ -33,17 +36,25 @@
 .linea1 {
     background-color: #FFD400;
 }
+
 .linea2 {
     background-color: #FF0080;
 }
+
 .linea3 {
     background-color: #0600ff;
 }
 
+
 .asterixco {
-    color: #FFD400;
-    font-size: 30vw;
     position: absolute;
+    transition: transform .7s;
+    height: 17rem;
+}
+.asterixco:hover {
+
+    transform: scale(1.1) rotate(-360deg);
+    cursor: default;
 }
 
 .cuerpo {
@@ -55,19 +66,20 @@
     border-radius: 15px;
 }
 
-.texto2{
+.texto2 {
     font-family: 'Inter', sans-serif;
 }
+
 .paraf-ini {
     font-size: small;
 }
+
 .haches {
     font-weight: bold;
     margin-top: 1rem;
     margin-bottom: .2rem;
-    color: #000000;
+    color: #0600ff;
 }
-
 
 .fontt {
     font-style: italic;
@@ -78,10 +90,6 @@
 
 }
 
-.imge {
-    width: 100px;
-    object-fit: contain;
-}
 
 .contact-com {
     font-size: 6rem;
