@@ -27,7 +27,7 @@ function ATop() {
                 <div onClick={() => {
                     parriba()
                 }}>
-                    <div className='bg-[#ffd500] cursor-pointer absolute rounded-[1rem] w-[7vh] h-[5.5vh] flex items-center justify-center'>
+                    <div className='bg-[#ffd500] drop-shadow-lg selection:bg-transparent cursor-pointer absolute rounded-[1rem] w-[7vh] h-[5.5vh] flex items-center justify-center'>
                         <img className='z-10 w-5 absolute' src={arr} alt='' />
                     </div>
                 </div>
