@@ -8,7 +8,7 @@ function Ojos() {
           <p className='absolute z-10 text-white text-lg w-[50%] p-10 text-mono'>¿Quieres una cotización para tu sitio web?</p>
             <img className='h-[18vh] w-fit drop-shadow-lg' src={ojo} alt="ojos" />
             <div className='w-full flex justify-end pr-10'>
-                <p className=' bg-black px-2 text-mono rounded-xl text-white'>Mas info</p>
+                <p className=' bg-black px-2 text-mono rounded-xl text-white cursor-pointer'>Mas info</p>
             </div>
         </div>
     </div>
