@@ -50,10 +50,10 @@
     position: absolute;
     transition: transform .7s;
     height: 17rem;
+    transform: scale(1) rotate(-10deg);
 }
 .asterixco:hover {
-
-    transform: scale(1.1) rotate(-360deg);
+    transform: scale(1.2) rotate(-360deg);
     cursor: default;
 }
 
@@ -64,10 +64,6 @@
 
 .cap {
     border-radius: 15px;
-}
-
-.texto2 {
-    font-family: 'Inter', sans-serif;
 }
 
 .paraf-ini {

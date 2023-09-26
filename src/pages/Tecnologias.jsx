@@ -53,12 +53,11 @@ function Tecnologias() {
                                 <div className='bg-[#FF0080] p-2 rounded-ss-[15px] rounded-se-[15px] text-white'>
                                     <p>Firebase</p>
                                     <p>MongoDB</p>
-                                    <p>MySQL</p>
                                 </div>
                             </div>
                             <div className='flex flex-col mt-4'>
                                 <div className='bg-[#000000] p-2 rounded-es-[15px] text-white'>Herramientas</div>
-                                <div className='bg-[#FFD400] p-2 rounded-ss-[15px] text-white'>
+                                <div className='bg-[#FFD400] p-2 rounded-ss-[15px]'>
                                     <p>Postman</p>
                                     <p>Figma</p>
                                 </div>

@@ -3,12 +3,13 @@ import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ATopce from '../components/ATop'
-import Contact from '../components/Home-Cont'
-import ContactHom from '../components/Contact'
+import Contact from './Home-Cont'
+import ContactHom from './Contact'
 import Carrousel from '../components/Carrousel'
-import Tecnologias from '../components/Tecnologias'
-import Presentacion from '../components/Presentacion'
-import Presentacion_2 from '../components/Presentacion_2'
+import Tecnologias from './Tecnologias'
+import Presentacion from './Presentacion'
+import Presentacion_2 from './Presentacion_2'
+import Proyectos from './Proyectos'
 
 import pls from '../../public/Images/diseño-grafico/300ppi/Recurso63.svg'
 import flecha from '../../public/Images/diseño-grafico/300ppi/arrow2.svg'
@@ -19,7 +20,7 @@ import nicos from '../../public/Images/Primer-plano/300ppi/menjunge.png'
 import ene from '../../public/Images/logos/logo-negro.png'
 import ojos from '../../public/Images/Primer-plano/300ppi/300ppi/ojos.png'
 import asterixco from '../../public/Images/diseño-grafico/300ppi/asterixco.svg'
-import Ojos from '../components/Ojos'
+import Ojos from './Ojos'
 
 function Index() {
 
@@ -82,6 +83,7 @@ function Index() {
 
         <Presentacion />
         <Presentacion_2 />
+        <Proyectos />
         <Ojos />
         <Tecnologias />
         <ContactHom />
