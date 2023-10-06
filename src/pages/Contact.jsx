@@ -8,7 +8,7 @@ function Contact() {
       <div className='w-[60%] h-[90vh] flex flex-col justify-evenly'>
         <div className='text-mono w-full flex flex-col items-center'>
           <p className='contact-com text-[#0600ff] font-[900] h-28'>Contáctame</p>
-          <p>Serás atendido en menos de <b className='text-[#0600ff]'>48hs</b></p>
+          <p>Serás atendido dentro de las <b className='text-[#0600ff]'>24hs</b></p>
         </div>
         <div className='flex justify-center w-full'>
           <form className='flex flex-col w-full text-sm gap-y-10' action="/post">

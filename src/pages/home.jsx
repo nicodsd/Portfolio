@@ -30,7 +30,7 @@ function Index() {
       <div className='w-full h-[8rem] blur-[35px] bg-[#ffffff]  absolute'></div>
       <Navbar />
 
-      <div className='flex flex-col h-fit bg-[#e2e8ee]'>
+      <div className='flex flex-col h-fit '>
         <ATopce />
         <div className='h-fit cuerpo text-mono mt-10 z-20'>
           <img className='absolute h-[11rem] text-[#FFD400] top-36 right-[47%] drop-shadow-lg z-20 asterixco selection:bg-transparent' src={asterixco} alt="asterixco" />
@@ -84,8 +84,8 @@ function Index() {
         <Presentacion />
         <Presentacion_2 />
         <Proyectos />
-        <Ojos />
         <Tecnologias />
+        <Ojos />
         <ContactHom />
       </div>
       <Footer />
