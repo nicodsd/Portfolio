@@ -1,16 +1,23 @@
 import React from 'react'
-import Imag from '../../public/Images/fondos-web-proy/image.png'
+import arrow from '../../public/Images/diseño-grafico/300ppi/flecha-sitio.svg'
 
-function Cards() {
+function Cards(props) {
+
+    let { imag, titulo, descripcion } = props
+
     return (
-        <div className='hover:opacity-80 h-[23.5rem] w-[26rem] flex flex-col justify-between'>
-            <img className='w-full h-[15rem] object-cover' src={Imag} alt="" />
-            <div className='text-mono flex flex-col gap-y-1'>
-                <h3 className='font-bold text-xl'>Titulo descriptivo</h3>
-                <p className='font-light'>dasdsad asdas as a dsadasds s ddsada dd a sda sadasd asdassa sdsd as</p>
-                <div className='mt-2 font-medium'>
-                    <p>Ir al sitio</p>
-                    <img src="" alt="" />
+        <div className='flex flex-col max-w-[23rem] duration-100 hover:shadow-[-10px_10px_0_rgba(0,0,0,1)] hover:translate-x-[10px] hover:-translate-y-[10px]'>
+            <div className='h-fit relative cursor-pointer'>
+                <img className='object-contain w-fit' src={imag} alt={titulo} />
+            </div>
+            <div className='font-mono flex flex-col p-2 justify-between text-white h-[8rem] bg-[#0600ff]'>
+                <div>
+                    <h2 className='font-[600] text-xl'>{titulo}</h2>
+                    <p className='w-[95%] text-xs text-[#E2E8EE]'>{descripcion}<span className='font-[900] ml-1 cursor-pointer'>Ver más</span></p>
+                </div>
+                <div className='w-full flex justify-end items-center cursor-pointer'>
+                    <p className='text-[14px] mr-3 font-bold'>Ir al sitio</p>
+                    <img className='h-3' src={arrow} alt="Ir al sitio" />
                 </div>
             </div>
         </div>

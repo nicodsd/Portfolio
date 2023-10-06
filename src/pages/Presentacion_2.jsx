@@ -1,14 +1,17 @@
 import React from 'react'
 import flechaMid from '../../public/Images/diseño-grafico/300ppi/flecha-dis.svg'
+import img1 from '../../public/Images/contenido/calaka.webp'
+import img2 from '../../public/Images/contenido/nico.webp'
+import img3 from '../../public/Images/contenido/nico2.jpg'
 
 function Presentacion_2() {
     return (
-        <div className='min-h-screen flex justify-start items-center'>
+        <div className='min-h-screen bg-black flex justify-start items-center'>
             <div className='absolute right-24'>
-                <div className='cap w-[37vh] relative -right-10 h-[24vh] hover:scale-110 hover:ease-in-out hover:duration-150 rotate-3 bg-[#a1a1a1]'></div>
+                <img src={img3} alt="imagen" className='cap w-[32vh] object-cover relative -right-14 h-[25vh] rotate-3 bg-[#a1a1a1]'/>
                 <img className='absolute z-10 rotate-12' src={flechaMid} alt="flecha" />
-                <div className='cap w-[30vh] relative right-10 h-[21vh] hover:scale-110 hover:ease-in-out hover:duration-150 z-20 -rotate-3 bg-[#cecece]'></div>
-                <div className='cap w-[30vh] relative -right-2 hover:z-30 h-[21vh] hover:scale-110 hover:ease-in-out hover:duration-150 rotate-[10deg] bg-[#cecece]'></div>
+                <img src={img2} alt="imagen" className='cap w-[30vh] object-cover relative right-16 h-[30vh] z-20 -rotate-3 bg-[#cecece]'/>
+                <img src={img1} alt="imagen" className='cap w-[30vh] object-cover relative -right-2 h-[21vh] rotate-[6deg] bg-[#cecece]'/>
             </div>
 
             <div className='w-[60%] py-16 h-fit text-black texto2 flex flex-col justify-center px-14 z-10'>

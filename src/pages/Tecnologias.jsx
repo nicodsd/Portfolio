@@ -11,12 +11,12 @@ function Tecnologias() {
             <h2 className='w-full text-2xl font-bold text-mono'>Tecnologias<span className=' animate-pulse-slow'>_</span></h2>
             <img className='absolute h-[7rem] opacity-80 bottom-1/2 right-44 drop-shadow-lg animate-spin-slow z-0' src={rueda} alt="rueda" />
 
-            <div className='w-full min-h-screen'>
+            <div className='w-full'>
                 <div className='flex w-full flex-col items-center gap-4 text-mono z-10'>
 
-                    <div className='tecnologias h-[40vw] gap-x-10 flex w-full justify-center items-center'>
+                    <div className='tecnologias h-[30vw] gap-x-10 flex w-full justify-center items-center'>
 
-                        <div className=' w-[40%] border-e-4 border-[#0600ff]'>
+                        <div className='w-[40%] border-e-4 border-[#0600ff]'>
                             <p className='w-[80%]'>Mi trabajo comienza desde un maquetado en Figma buscando dar sentido a las ideas creativas, luego voy desarrollando las funcionalidades de las aplicaciones.</p>
                         </div>
 
