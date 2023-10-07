@@ -4,7 +4,7 @@ import lineas from '../../public/Images/diseño-grafico/300ppi/Lineas.svg'
 
 function Contact() {
   return (
-    <div className='relative h-screen mt-32 w-full flex items-center justify-center '>
+    <div className='relative h-screen w-full flex items-center justify-center'>
       <div className='w-[60%] h-[90vh] flex flex-col justify-evenly'>
         <div className='text-mono w-full flex flex-col items-center'>
           <p className='contact-com text-[#0600ff] font-[900] h-28'>Contáctame</p>
@@ -26,7 +26,7 @@ function Contact() {
             <div className='flex w-full justify-center pt-12'>
               <div className='flex cursor-pointer'>
                 <input className='bg-[#0600ff] w-24 cursor-pointer text-sm p-3 text-white text-mono' type="submit" value="Enviar" />
-                <div className='w-[2.7rem] flex items-center justify-center'>
+                <div className='w-[2.7rem] flex items-center border-2 border-[#0600ff] rounded-ee-lg justify-center'>
                   <img className='h-7' src={avion} alt="avion-enviar" />
                 </div>
               </div>
@@ -34,7 +34,6 @@ function Contact() {
           </form>
         </div>
       </div>
-    <img className='absolute left-0 bottom-0 z-50 h-[30vh]' src={lineas} alt="" />
     </div>
   )
 }
