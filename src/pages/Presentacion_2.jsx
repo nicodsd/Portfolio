@@ -6,16 +6,17 @@ import img3 from '../../public/Images/contenido/nico2.jpg'
 
 function Presentacion_2() {
     return (
-        <div className='min-h-screen bg-black flex justify-start items-center'>
+        <div className='min-h-screen h-[65vw] flex justify-start items-center'>
             <div className='absolute right-24'>
-                <img src={img3} alt="imagen" className='cap w-[32vh] object-cover relative -right-14 h-[25vh] rotate-3 bg-[#a1a1a1]'/>
-                <img className='absolute z-10 rotate-12' src={flechaMid} alt="flecha" />
-                <img src={img2} alt="imagen" className='cap w-[30vh] object-cover relative right-16 h-[30vh] z-20 -rotate-3 bg-[#cecece]'/>
-                <img src={img1} alt="imagen" className='cap w-[30vh] object-cover relative -right-2 h-[21vh] rotate-[6deg] bg-[#cecece]'/>
+                <p className='absolute text-[15rem] font-bold text-[#ffffff] right-[170px] -top-20'>@</p>
+                <img src={img3} alt="imagen" className='cap drop-shadow-[0px_5px_7px_rgba(0,0,0,0.4)] w-[32vh] object-cover relative -right-14 h-[25vh] rotate-3 bg-[#a1a1a1]'/>
+                <img className='absolute h-[35vh] z-10 rotate-12' src={flechaMid} alt="flecha" />
+                <img src={img2} alt="imagen" className='cap drop-shadow-[0px_5px_7px_rgba(0,0,0,0.4)] w-[30vh] object-cover relative right-16 h-[30vh] z-20 -rotate-3 bg-[#cecece]'/>
+                <img src={img1} alt="imagen" className='cap drop-shadow-[0px_5px_7px_rgba(0,0,0,0.4)] w-[30vh] object-cover relative -right-2 h-[21vh] rotate-[6deg] bg-[#cecece]'/>
             </div>
 
             <div className='w-[60%] py-16 h-fit text-black texto2 flex flex-col justify-center px-14 z-10'>
-                <h2 className='text-2xl font-bold text-mono w-full'>Sobre mi<span className=' animate-pulse-slow'>_</span></h2>
+                <h2 className='text-3xl font-bold text-mono w-full'>Sobre mi<span className=' animate-pulse-slow'>_</span></h2>
                 <h2 className='text-7xl text-mono font-normal text-[#0600ff] h-[85px]'>Primero, <b className='text-[#FF0080] font-black'>hola</b></h2>
                 <h3 className='haches text-mono mt-6'>Introducción</h3>
                 <p className='paraf-ini'>Soy Nicolas Barrera, me identifico como una persona multifacética e inquieta.

@@ -21,10 +21,10 @@ function WordCarousel() {
     const palabras = ["Diseño Gráfico", "Desarrollo de Web & Apps", "Nico Barrera", "UX/UI", "Full Stack"];
 
     return (
-        <div className="palabra-carousel w-full drop-shadow-md">
+        <div className="palabra-carousel w-full ">
             <Slider {...settings}>
                 {palabras.map((palabra, index) => (
-                    <div key={index} className="palabra-item border-[1px] p-1 border-[#000000] text-[#000000] bg-[#FFD400] text-center">
+                    <div key={index} className="palabra-item border-[1px] p-2 border-[#000000] text-[#000000] bg-[#FFD400] text-center">
                         <p className='palabras_slide text-mono'>{palabra}</p>
                     </div>
                 ))}

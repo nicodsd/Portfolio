@@ -20,12 +20,12 @@ function Proyectos() {
     const homeDes = "E-commerce de productos para el hogar con un diseño vanguardista y moderno, con un largo catalogo de productos en varias categorias, con carrito y creación de usarios."
 
     return (
-        <div className='min-h-screen text-mono h-[62vw] flex w-full px-14'>
-            <div className='w-[30%]'>
-                <h2 className='text-2xl font-bold w-full mb-6'>Proyectos<span className='animate-pulse-slow'>_</span></h2>
-                <p className='text-sm pt-2 w-[90%] font-[300]'>Proyectos donde se aplicaron las principales tecnologias del desarrollo web complementando conocimientos con diseño y las ultimas tecnologias</p>
+        <div className='min-h-screen h-[68vw] text-mono flex items-center w-full px-14'>
+            <div className='w-[35%] py-32 h-full'>
+                <h2 className='text-3xl font-bold w-full mb-2'>Proyectos<span className='animate-pulse-slow'>_</span></h2>
+                <p className='text-sm pt-2 w-[96%] font-[300]'>Proyectos donde se aplicaron las principales tecnologias del desarrollo web complementando conocimientos con diseño y las ultimas tecnologias</p>
             </div>
-            <div className='flex w-full h-full items-start '>
+            <div className='flex w-full items-start'>
                 <div className='flex h-fit justify-center flex-wrap gap-6'>
                     <Card imag={imag1} descripcion={amazingDes} titulo={amazingEvents} />
                     <Card imag={imag2} descripcion={huellaDes} titulo={petshop} />
