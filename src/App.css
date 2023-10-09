@@ -49,7 +49,6 @@
 .asterixco {
     position: absolute;
     transition: transform .7s;
-    height: 17rem;
     transform: scale(1) rotate(-10deg);
 }
 .asterixco:hover {

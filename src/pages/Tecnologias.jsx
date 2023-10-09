@@ -9,7 +9,7 @@ function Tecnologias() {
     return (
         <div className='h-fit relative w-full flex flex-col px-14 items-center justify-evenly'>
             <h2 className='w-full text-3xl font-bold text-mono'>Tecnologias<span className=' animate-pulse-slow'>_</span></h2>
-            <img className='absolute h-[7rem] bottom-1/2 right-44 drop-shadow-lg animate-spin-slow z-0' src={rueda} alt="rueda" />
+            <img className='absolute h-[7rem] bottom-1/2 right-44 animate-spin-slow z-0 drop-shadow-lg' src={rueda} alt="rueda" />
 
             <div className='w-full'>
                 <div className='flex w-full flex-col items-center gap-4 text-mono z-10'>
@@ -65,10 +65,10 @@ function Tecnologias() {
                         </div>
 
                     </div>
-                    <div className='relative w-full h-[28vw] flex items-center drop-shadow-lg selection:bg-transparent'>
-                        <img className='absolute h-fit w-[44vw] rounded right-1/4 z-10' src={img} alt="imagen" />
-                        <img className='absolute h-fit w-[30vw] rounded right-0 z-0' src={img2} alt="imagen_2" />
-                        <img className='absolute h-fit w-[30vw] rounded left-0 z-0' src={img3} alt="imagen_3" />
+                    <div className='relative w-full h-[28vw] flex items-center selection:bg-transparent'>
+                        <img className='absolute h-fit w-[44vw] rounded right-1/4 z-10 drop-shadow-lg' src={img} alt="imagen" />
+                        <img className='absolute h-fit w-[30vw] rounded right-0 z-0 drop-shadow-lg' src={img2} alt="imagen_2" />
+                        <img className='absolute h-fit w-[30vw] rounded left-0 z-0 drop-shadow-lg' src={img3} alt="imagen_3" />
                         <img className='z-20 absolute bottom-0' src={devsa} alt="devsarrollo" />
                     </div>
                 </div>

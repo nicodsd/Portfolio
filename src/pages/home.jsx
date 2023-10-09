@@ -11,7 +11,7 @@ import Presentacion from './Presentacion'
 import Presentacion_2 from './Presentacion_2'
 import Proyectos from './Proyectos'
 import Mobile from './Mobile'
-import Bajo from './Bajo'
+import Detalles from './Detalles'
 
 import pls from '../../public/Images/diseño-grafico/300ppi/Recurso63.svg'
 import flecha from '../../public/Images/diseño-grafico/300ppi/arrow2.svg'
@@ -89,7 +89,6 @@ function Index() {
         <Tecnologias />
         <Ojos />
         <ContactHom />
-        <Bajo />
       </div>
       <Footer />
     </>

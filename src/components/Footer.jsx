@@ -9,15 +9,15 @@ function Footer() {
       <div className='h-full w-[10%] flex flex-col justify-between'>
         <p className='text-[2.8vh] font-[700]'>redes<span className='animate-pulse-slow'>_</span></p>
         <div>
-          <Anchor>
+          <a href='https://www.behance.net/nicobaj' >
             <p className='h-5'>Github</p>
-          </Anchor>
-          <Anchor>
+          </a>
+          <a href=''>
             <p className='h-5'>Bēhance</p>
-          </Anchor>
-          <Anchor>
+          </a>
+          <a href='https://www.linkedin.com/in/nicobarrerarg/'>
             <p>Linkedin</p>
-          </Anchor>
+          </a>
         </div>
       </div>
 
