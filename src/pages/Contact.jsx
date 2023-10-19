@@ -1,14 +1,13 @@
 import React from 'react'
 import avion from '../../public/Images/diseño-grafico/300ppi/avioncito.svg'
-import lineas from '../../public/Images/diseño-grafico/300ppi/Lineas.svg'
 
 function Contact() {
   return (
     <div className='relative h-screen w-full flex items-center justify-center'>
-      <div className='w-[60%] h-[90vh] flex flex-col justify-evenly'>
+      <div className='px-6 py-14 md:p-0 lg:w-[60%] h-[90vh] flex flex-col justify-evenly'>
         <div className='text-mono w-full flex flex-col items-center'>
-          <p className='contact-com text-[#0600ff] font-[900] h-28'>Contáctame</p>
-          <p>Serás atendido dentro de las <b className='text-[#0600ff]'>24hs</b></p>
+          <p className='text-4xl md:text-[6rem] text-[#0600ff] font-[900] md:h-16'>Contáctame</p>
+          <p className='text-sm text-center lg:text-start lg:text-lg'>Serás atendido dentro de las <b className='text-[#0600ff]'>24hs</b></p>
         </div>
         <div className='flex justify-center w-full'>
           <form className='flex flex-col w-full text-sm gap-y-10' action="/post">
@@ -27,7 +26,7 @@ function Contact() {
               <div className='flex cursor-pointer'>
                 <input className='bg-[#0600ff] w-24 cursor-pointer text-sm p-3 text-white text-mono' type="submit" value="Enviar" />
                 <div className='w-[2.7rem] flex items-center border-2 border-[#0600ff] rounded-ee-lg justify-center'>
-                  <img className='h-7' src={avion} alt="avion-enviar" />
+                  <img className='h-6' src={avion} alt="avion-enviar" />
                 </div>
               </div>
             </div>
