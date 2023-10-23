@@ -3,7 +3,7 @@ import avion from '../../public/Images/diseño-grafico/300ppi/avioncito.svg'
 
 function Contact() {
   return (
-    <div className='relative h-screen w-full flex items-center justify-center'>
+    <div id='contacto' className='relative h-screen w-full flex items-center justify-center'>
       <div className='px-6 py-14 md:p-0 lg:w-[60%] h-[90vh] flex flex-col justify-evenly'>
         <div className='text-mono w-full flex flex-col items-center'>
           <p className='text-4xl md:text-[6rem] text-[#0600ff] font-[900] md:h-16'>Contáctame</p>

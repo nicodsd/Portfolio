@@ -12,33 +12,27 @@ function Navbar() {
     setOpen(false)
   }
 
+  function scrollToSection(id) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   function irSobreMi() {
-    window.scroll({
-      top: 1560,
-      left: 100,
-      behavior: "smooth",
-    })
+    scrollToSection("sobreMi");
   }
+
   function irProyectos() {
-    window.scroll({
-      top: 2530,
-      left: 100,
-      behavior: "smooth",
-    })
+    scrollToSection("proyectos");
   }
+
   function irTecnologias() {
-    window.scroll({
-      top: 4350,
-      left: 100,
-      behavior: "smooth",
-    })
+    scrollToSection("tecnologias");
   }
+
   function irContacto() {
-    window.scroll({
-      top: 5600,
-      left: 100,
-      behavior: "smooth",
-    })
+    scrollToSection("contacto");
   }
 
   return (
@@ -50,27 +44,17 @@ function Navbar() {
       <nav className="relative w-full text-mono z-10 p-2 md:p-0">
         <div className="w-full text-[#000000] flex justify-between lg:px-6 lg:py-[20px] items-center">
           <div onClick={() => sideBar()} className="w-8 visible drop-shadow-lg md:invisible h-8 left-2 absolute lg:w-8 lg:h-8 bg-[#000000] rounded-full"></div>
-          <div className='flex lg:gap-x-7 text-[0px] md:text-base invisible md:visible font-[400] items-center'>
-            <div className="w-4 h-4 lg:w-8 lg:h-8 bg-[#000000] rounded-full drop-shadow-xl"></div>
-            <Anchor to={"/"}>
-              <p className=''>Inicio</p>
-            </Anchor>
-            <Anchor to={"/"}>
-              <p onClick={irSobreMi} className=''>Sobre mí</p>
-            </Anchor>
-            <Anchor >
-              <p onClick={irProyectos} className=''>Proyectos</p>
-            </Anchor>
-            <Anchor >
-              <p onClick={irTecnologias} className=''>Tecnologias</p>
-            </Anchor>
-            <Anchor >
-              <p onClick={irContacto} className=''>Contacto</p>
-            </Anchor>
-            <Anchor to={""} className='border-l-2 border-black lg:px-6'>
-              <p className=''>Diseño Grāfico</p>
-            </Anchor>
-          </div>
+          <div className="w-4 h-4 lg:w-8 lg:h-8 bg-[#000000] rounded-full drop-shadow-xl"></div>
+
+          <ul className='flex lg:gap-x-7 text-[0px] md:text-base invisible md:visible font-[400] items-center'>
+            <li className='cursor-pointer'><Anchor to={'/'} >Inicio</Anchor></li>
+            <li className='cursor-pointer'><Anchor onClick={irSobreMi}>Sobre mí</Anchor></li>
+            <li className='cursor-pointer'><Anchor onClick={irProyectos}>Proyectos</Anchor></li>
+            <li className='cursor-pointer'><Anchor onClick={irTecnologias}>Tecnologias</Anchor></li>
+            <li className='cursor-pointer'><Anchor onClick={irContacto}>Contacto</Anchor></li>
+            <li className='cursor-pointer'><Anchor className='border-l-2 border-black lg:px-6'>Diseño Grāfico</Anchor></li>
+          </ul>
+
           <p className="text-xl font-semibold cursor-default">`portafolio`</p>
         </div>
       </nav>
