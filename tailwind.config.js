@@ -7,7 +7,9 @@ module.exports = {
   theme: {
       extend: {
         animation: {
+          'pulse-quick': 'pulse 1s linear infinite',
           'pulse-slow': 'pulse 2s linear infinite',
+          'spin-slow': 'spin 15s linear infinite',
         }
       }
   },
