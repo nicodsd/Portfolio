@@ -9,13 +9,13 @@ import flecha from '../../public/Images/contenido/SVG/flecha.svg'
 function Tecnologias() {
     return (
         <div className='h-fit relative w-full text-mono flex flex-col px-5 lg:px-14 items-center justify-evenly'>
-            <h2 className='w-full text-2xl lg:text-3xl font-bold'>Tecnologias<span className=' animate-pulse-slow'>_</span></h2>
+            <h2 id='tecnologias' className='w-full pt-20 text-2xl lg:text-3xl font-bold'>Tecnologias<span className=' animate-pulse-slow'>_</span></h2>
             <img className='absolute h-20 z-30 lg:h-[7rem] bottom-24 lg:bottom-1/2 right-10 lg:right-44 animate-spin-slow' src={rueda} alt="rueda" />
 
             <div className='w-full'>
                 <div className='flex w-full flex-col items-center gap-y-10 md:gap-4 z-10'>
 
-                    <div className='lg:h-[30vw]  gap-y-10 md:gap-y-0 flex flex-col md:flex-row w-full md:justify-between items-center'>
+                    <div className='lg:h-[30vw] gap-y-10 md:gap-y-0 flex flex-col md:flex-row w-full md:justify-between items-center'>
 
                         <div className='md:w-[50%] pb-6 border-b-2 md:border-b-0 border-[#0600ff] lg:border-e-4 lg:border-[#0600ff]'>
                             <p className='text-xs md:text-base font-[300] md:w-[80%] pt-2'>Mi trabajo comienza desde un maquetado en Figma buscando dar sentido a las ideas creativas, luego voy desarrollando las funcionalidades de las aplicaciones.</p>
@@ -63,7 +63,7 @@ function Tecnologias() {
                                     <p>Figma</p>
                                 </div>
                             </div>
-                            <img className='absolute h-[25vh] md:h-[20vw] z-10 top-64 md:top-52 md:rotate-12' src={flecha} alt="flecha" />
+                            <img className='absolute h-[25vh] md:h-[20vw] z-10 top-64 md:rotate-12' src={flecha} alt="flecha" />
                         </div>
 
                     </div>
