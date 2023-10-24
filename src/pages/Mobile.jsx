@@ -1,5 +1,5 @@
 import React from 'react'
-import mobile from '../../public/Images/fondos-web-proy/mobile-hom.png'
+import mobile from '../../public/Images/contenido/mobile-hom.webp'
 import apple from '../../public/Images/contenido/SVG/logo-apple.svg'
 import android from '../../public/Images/contenido/SVG/logo-android.svg'
 
