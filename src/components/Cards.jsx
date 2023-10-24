@@ -37,7 +37,7 @@ function Cards(props) {
                         </Anchor>
                     </div>
                 </div>
-            )) : null}
+            )) : <p>asdasdsa</p> }
         </>
 
     )
