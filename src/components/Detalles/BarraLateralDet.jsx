@@ -1,5 +1,4 @@
 import React, { useRef } from 'react'
-import img from '../../../public/Images/fondos-web-proy/amazing-events.png'
 import { Link as Anchor } from 'react-router-dom'
 import arrow from '../../../public/Images/diseño-grafico/300ppi/flecha-sitio2.svg'
 

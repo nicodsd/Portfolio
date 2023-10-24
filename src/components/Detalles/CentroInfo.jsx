@@ -1,8 +1,3 @@
-import img1 from '../../../public/Images/fondos-web-proy/AmazingEventsScreens/1.webp'
-import img2 from '../../../public/Images/fondos-web-proy/AmazingEventsScreens/2.webp'
-import img3 from '../../../public/Images/fondos-web-proy/AmazingEventsScreens/3.webp'
-import img4 from '../../../public/Images/fondos-web-proy/AmazingEventsScreens/4.webp'
-import img5 from '../../../public/Images/fondos-web-proy/AmazingEventsScreens/5.webp'
 
 function CentroInfo() {
 

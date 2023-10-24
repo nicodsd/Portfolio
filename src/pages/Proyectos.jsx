@@ -1,12 +1,34 @@
 import React from 'react'
-import Card from '../components/Cards'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+import apiUrl from '../../api'
+import Cards from '../components/Cards'
 
 function Proyectos() {
 
-   /*  <Card imag={imag1} descripcion={amazingDes} titulo={amazingEvents} enlace={enlAmazingDes} />
-    <Card imag={imag2} descripcion={huellaDes} titulo={petshop} enlace={enlHuellaDes} />
-    <Card imag={imag3} descripcion={mingaDes} titulo={minga} enlace={enlMingaDes} />
-    <Card imag={imag4} descripcion={homeDes} titulo={home} enlace={enlHomeDes} /> */
+    let [data, setData] = useState(null)
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await axios.get(apiUrl + "pages");
+                setData(res)
+            } catch (error) {
+                console.log(error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    const datos = data
+
+    console.log(datos)
+
+    /*  <Card imag={imag1} descripcion={amazingDes} titulo={amazingEvents} enlace={enlAmazingDes} />
+     <Card imag={imag2} descripcion={huellaDes} titulo={petshop} enlace={enlHuellaDes} />
+     <Card imag={imag3} descripcion={mingaDes} titulo={minga} enlace={enlMingaDes} />
+     <Card imag={imag4} descripcion={homeDes} titulo={home} enlace={enlHomeDes} /> */
 
     return (
         <div className='lg:min-h-screen pt-20 pb-5 lg:h-[68vw] text-mono flex flex-col lg:flex-row lg:items-center w-full px-5 lg:px-14'>
@@ -16,8 +38,7 @@ function Proyectos() {
             </div>
             <div className='flex w-full items-start mt-6'>
                 <div className='flex h-fit justify-start flex-wrap gap-y-4 md:gap-6'>
-                    {/*dasdasdasdas*/} 
-                    <Card />
+                    <Cards datos={datos?.data} />
                 </div>
             </div>
         </div>
