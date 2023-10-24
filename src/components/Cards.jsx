@@ -8,15 +8,6 @@ function Cards(props) {
     const pages = datos?.pages || []
     console.log(pages)
 
-    /* let amazingEvents = datos.pages[0]
-    console.log(amazingEvents)
-    let homeEssentials = datos?.pages[1]
-    console.log(homeEssentials)
-    let huellaSana = datos?.pages[2]
-    console.log(huellaSana)
-    let minga = datos?.pages[3]
-    console.log(minga)  */
-
     function parriba() {
         window.scroll({
             top: 0,
