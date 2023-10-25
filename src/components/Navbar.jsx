@@ -44,7 +44,7 @@ function Navbar() {
       <nav className="relative w-full text-mono z-10 p-2 md:p-0">
         <div className="w-full text-[#000000] flex justify-between lg:px-6 lg:py-[20px] items-center">
           <div onClick={() => sideBar()} className="w-8 visible drop-shadow-lg md:invisible h-8 left-2 absolute lg:w-8 lg:h-8 bg-[#000000] rounded-full"></div>
-          <div className="w-4 h-4 lg:w-8 lg:h-8 bg-[#000000] rounded-full drop-shadow-xl"></div>
+          <div className="w-4 h-4 lg:w-8 lg:h-8 bg-[#000000] rounded-full drop-shadow-xl animate__flash animate__animated animate__delay-1s animate__faster"></div>
 
           <ul className='flex lg:gap-x-7 text-[0px] md:text-base invisible md:visible font-[400] items-center'>
             <li className='cursor-pointer'><Anchor to={'/'} >Inicio</Anchor></li>
