@@ -6,7 +6,6 @@ function Cards(props) {
 
     let { datos } = props
     const pages = datos?.pages || []
-    console.log(pages)
 
     function parriba() {
         window.scroll({

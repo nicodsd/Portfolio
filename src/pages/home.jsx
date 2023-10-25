@@ -8,6 +8,7 @@ import Proyectos from './Proyectos'
 import Mobile from './Mobile'
 import Principio from './Principio'
 import '../App.css'
+import 'animate.css';
 import Ojos from './Ojos'
 
 function Index() {
