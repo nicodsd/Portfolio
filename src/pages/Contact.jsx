@@ -9,9 +9,6 @@ function Contact() {
   const [res, setRes] = useState(null)
   const [pending, setPending] = useState(null)
 
-  console.log(pending)
-  console.log(res?.data)
-
   const nombre = useRef("")
   const apellido = useRef("")
   const correo = useRef("")
