@@ -23,13 +23,6 @@ function Proyectos() {
 
     const datos = data
 
-    console.log(datos)
-
-    /*  <Card imag={imag1} descripcion={amazingDes} titulo={amazingEvents} enlace={enlAmazingDes} />
-     <Card imag={imag2} descripcion={huellaDes} titulo={petshop} enlace={enlHuellaDes} />
-     <Card imag={imag3} descripcion={mingaDes} titulo={minga} enlace={enlMingaDes} />
-     <Card imag={imag4} descripcion={homeDes} titulo={home} enlace={enlHomeDes} /> */
-
     return (
         <div className='lg:min-h-screen pt-20 pb-5 lg:h-[68vw] text-mono flex flex-col lg:flex-row lg:items-center w-full px-5 lg:px-14'>
             <div id='proyectos' className='lg:w-[35%] mb-10 lg:py-32 h-full'>
