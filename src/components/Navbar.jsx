@@ -43,7 +43,7 @@ function Navbar() {
       {open ? <div className='w-full fixed h-full bg-black z-40'></div> : null}
       <nav className="relative w-full text-mono z-10 p-2 md:p-0">
         <div className="w-full text-[#000000] flex justify-between lg:px-6 lg:py-[20px] items-center">
-          <div onClick={() => sideBar()} className="w-8 visible drop-shadow-lg md:invisible h-8 left-2 absolute lg:w-8 lg:h-8 bg-[#000000] rounded-full"></div>
+          <div onClick={() => sideBar()} className="w-8 visible drop-shadow-lg md:invisible h-8 left-2 absolute lg:w-8 lg:h-8 bg-[#000000] rounded-full animate__flash animate__animated animate__delay-1s animate__faster"></div>
 
           <div className='flex gap-x-8'>
             <div className="w-4 h-4 lg:w-8 lg:h-8 bg-[#000000] rounded-full drop-shadow-xl animate__flash animate__animated animate__delay-1s animate__faster"></div>

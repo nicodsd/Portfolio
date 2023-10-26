@@ -3,16 +3,14 @@
 function CentroInfo(props) {
 
     const { info } = props
-    console.log(info?.infoSecundaria.fotos)
 
     const titulo = info?.infoPrincipal.titulo
     const descripcion = info?.infoPrincipal.descripcion
     const fotos = info?.infoSecundaria.fotos
-    console.log(fotos)
 
     return (
         <>
-            <div className='relative md:w-fit min-h-screen gap-y-10 flex flex-col pl-10 py-10 lg:py-16'>
+            <div className='relative md:w-fit min-h-screen gap-y-10 flex flex-col pl-10'>
                 <div>
                     <h1 className="text-4xl font-[600] mb-7">{titulo} -</h1>
                     <p className="text-sm w-[85%]">{descripcion} </p>
