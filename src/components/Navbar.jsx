@@ -37,8 +37,8 @@ function Navbar() {
 
   return (
     <>
-      <div className='w-full h-[9rem] blur-[35px] bg-[#ffffff] absolute'></div>
-      <div className='w-full h-[12rem] blur-[35px] bg-[#ffffff] absolute'></div>
+      <div className='w-full h-[9rem] blur-[35px] bg-[#ffffff] absolute z-10'></div>
+      <div className='w-full h-[12rem] blur-[35px] bg-[#ffffff] absolute z-10'></div>
       {open == true ? <div onClick={() => close()} className="px-4 py-2 bg-[#ffffff] fixed flex justify-center items-center z-50 rounded-full right-3 top-2">X</div> : null}
       {open ? <div className='w-full fixed h-full bg-black z-40'></div> : null}
       <nav className="relative w-full text-mono z-10 p-2 md:p-0">
