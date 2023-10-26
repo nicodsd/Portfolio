@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './index.css';
 import Layout from './layouts/Layout';
 import Index from './pages/home.jsx'; 
-import Detalles from './pages/Detalles/DetallesAmazing'; 
+import Detalles from './pages/Detalles/Detalles'; 
 import ErrorPage from './pages/ErrorPage'; 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Index />} />
-          <Route path="/detalles" element={<Detalles />} />
+          <Route path="/detalles/:id" element={<Detalles />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
