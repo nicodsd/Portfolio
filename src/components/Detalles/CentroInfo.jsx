@@ -10,7 +10,7 @@ function CentroInfo(props) {
 
     return (
         <>
-            <div className='relative md:w-fit min-h-screen gap-y-10 flex flex-col pl-10'>
+            <div className='relative md:w-fit min-h-screen gap-y-10 flex flex-col pl-10 z-20'>
                 <div>
                     <h1 className="text-4xl font-[600] mb-7">{titulo} -</h1>
                     <p className="text-sm w-[85%]">{descripcion} </p>

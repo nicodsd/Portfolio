@@ -8,7 +8,7 @@ function BarraLateralDet(props) {
 
     return (
         <>
-            <div className='w-[30vw] '>
+            <div className='w-[30vw] z-20'>
                 <div className='p-3 md:px-10 justify-end items-end'>
                     <img className='h-fit w-72 object-contain' src={info?.infoPrincipal?.miniatura} alt={info?.infoPrincipal?.titulo} />
                     <a href={"https://" + info?.infoPrincipal?.enlace} target="_blank" rel="noopener noreferrer" className='mt-4 flex cursor-pointer'>
