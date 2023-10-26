@@ -29,7 +29,7 @@ function Detalles() {
 
   return (
     <>
-      <div className='min-h-screen h-fit w-full flex text-mono bg-[#E2E8EE] lg:py-[4vw] z-20'>
+      <div className='min-h-screen h-fit w-full flex text-mono bg-[#E2E8EE] lg:py-[4vw] relative '>
         <BarraLateralDet info={info} />
         <CentroInfo info={info} />
       </div>
