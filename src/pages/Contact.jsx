@@ -27,17 +27,25 @@ function Contact() {
       comentarios: comentarios?.current?.value
     }
 
-    axios.post(apiUrl + "enviar-correo", data)
-      .then(res => {
-        setRes(res)
-        if(res?.data == "Correo enviado con éxito"){
-          setPending(true)
-        } else {
-          setPending(false)
-        }
-      }).catch(err=>{
-        console.log(err)
-      })
+    if (
+      nombre?.current?.value.length > 0
+      &&
+      nombre?.current?.value.length > 0
+      &&
+      nombre?.current?.value.length > 0
+    ) {
+      axios.post(apiUrl + "enviar-correo", data)
+        .then(res => {
+          setRes(res)
+          if (res?.data == "Correo enviado con éxito") {
+            setPending(true)
+          } else {
+            setPending(false)
+          }
+        }).catch(err => {
+          console.log(err)
+        })
+    }
 
   }
 
