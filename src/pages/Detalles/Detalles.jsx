@@ -11,8 +11,6 @@ function Detalles() {
 
   const [info, setInfo] = useState(null)
 
-  console.log(info)
-
   useEffect(
     () => {
       axios.get(apiUrl + `detalles?id=${id}`)
@@ -31,7 +29,7 @@ function Detalles() {
 
   return (
     <>
-      <div className='min-h-screen h-fit w-full flex text-mono bg-[#E2E8EE]'>
+      <div className='min-h-screen h-fit w-full flex text-mono bg-[#E2E8EE] lg:py-[4vw] z-10'>
         <BarraLateralDet info={info} />
         <CentroInfo info={info} />
       </div>
