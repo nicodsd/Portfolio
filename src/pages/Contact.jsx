@@ -117,7 +117,7 @@ function Contact() {
               <input ref={comentarios} onKeyDown={() => { console.log(comentarios?.current.value) }} className='w-full border-b-[1px] bg-transparent focus:outline-none focu h-fit text-mono border-[#000000] placeholder:text-[#0600ff]' type="text" placeholder='Comentarios *' />
             </div>
             <div className='flex w-full justify-center pt-12'>
-              <div onClick={sendMail} className='flex cursor-pointer'>
+              <div onClick={sendMail} className='flex cursor-pointer z-50'>
                 <input className='bg-[#0600ff] w-24 cursor-pointer text-sm p-3 text-white text-mono' type="submit" value="Enviar" />
 
                 {enviar == true ? (
