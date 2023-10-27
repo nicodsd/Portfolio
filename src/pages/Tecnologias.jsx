@@ -66,7 +66,7 @@ function Tecnologias() {
                                     <p>GitHub</p>
                                 </div>
                             </div>
-                            <img className='absolute h-[60vw] sm:h-[30vw] z-10 bottom-[24vw] md:rotate-12' src={flecha} alt="flecha" />
+                            <img className='absolute h-[60vw] sm:h-[25vw] z-10 bottom-[24vw] md:rotate-12' src={flecha} alt="flecha" />
                         </div>
 
                     </div>
