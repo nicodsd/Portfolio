@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import arrow from '../../public/Images/diseño-grafico/300ppi/flecha-sitio.svg'
 import { Link as Anchor } from 'react-router-dom'
 import MyLoader from './LoaderSkeletonCard';
 
 function Cards(props) {
 
-    const navigate = useNavigate()
     let { datos } = props
     const pages = datos?.pages || []
-    console.log(pages)
 
     function parriba() {
         window.scroll({
