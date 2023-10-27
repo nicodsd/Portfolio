@@ -30,9 +30,9 @@ function Contact() {
     if (
       nombre?.current?.value.length > 0
       &&
-      nombre?.current?.value.length > 0
+      correo?.current?.value.length > 0
       &&
-      nombre?.current?.value.length > 0
+      comentarios?.current?.value.length > 0
     ) {
       axios.post(apiUrl + "enviar-correo", data)
         .then(res => {
