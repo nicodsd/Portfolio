@@ -80,11 +80,11 @@ function Contact() {
     <div id='contacto' className='relative h-screen w-full flex items-center justify-center'>
       {
         error && (
-          <div className='animate__slideInRight animate__animated bg-white max-w-[35vh] lg:max-w-[29vw] flex lg:min-h-[8vw] fixed top-20 right-0 z-50'>
+          <div className='animate__slideInRight animate__animated  max-w-[35vh] drop-shadow-md lg:max-w-[29vw] flex lg:min-h-[8vw] fixed top-20 right-0 z-50'>
             <div className='text-white'>
               <p onClick={quitarAlerta} className='h-full w-9 md:w-7 bg-[#0600ff] flex justify-center items-center rounded-l-md md:rounded-l-lg text-xl'>X</p>
             </div>
-            <div className='h-full flex flex-col md:py-3 py-2 pl-2 md:pl-4'>
+            <div className='h-full flex flex-col md:py-3 py-2 pl-2 md:pl-4 bg-white'>
               <h2 className='font-semibold flex flex-wrap mb-2 md:mb-3'>Por favor rellena los campos obligatorios</h2>
               {
                 campos?.length > 0 ? campos?.map((eachCampo, index) => (
