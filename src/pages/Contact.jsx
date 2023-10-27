@@ -12,8 +12,6 @@ function Contact() {
   const [campos, setCampo] = useState([])
   const [enviar, setEnviar] = useState(false)
 
-  console.log(campos)
-
   const nombre = useRef("")
   const apellido = useRef("")
   const correo = useRef("")
@@ -52,8 +50,7 @@ function Contact() {
             setEnviar(true)
             setPending(true)
             setError(false)
-          } else {
-            setPending(false)
+            window.location.reload()
           }
         }).catch(err => {
           console.log(err)
@@ -74,19 +71,29 @@ function Contact() {
 
   }
 
+  const quitarAlerta = () => {
+    setError(false)
+    setCampo([])
+  }
+
   return (
     <div id='contacto' className='relative h-screen w-full flex items-center justify-center'>
       {
         error && (
-          <div className='animate__slideInRight animate__animated bg-white max-w-[29vw] min-h-[8vw] py-5 px-5 rounded-s-xl fixed top-20 right-0 z-50'>
-            <h2 className=' font-semibold flex flex-wrap mb-3'>Por favor rellena los campos obligatorios</h2>
-            {
-              campos?.length > 0 ? campos?.map((eachCampo, index) => (
-                <p key={index} className='text-sm h-4'>{eachCampo}</p>
-              ))
-                :
-                null
-            }
+          <div className='animate__slideInRight animate__animated bg-white max-w-[35vh] lg:max-w-[29vw] flex lg:min-h-[8vw] fixed top-20 right-0 z-50'>
+            <div className='text-white'>
+              <p onClick={quitarAlerta} className='h-full w-9 md:w-7 bg-[#0600ff] flex justify-center items-center rounded-l-md md:rounded-l-lg text-xl'>X</p>
+            </div>
+            <div className='h-full flex flex-col md:py-3 py-2 pl-2 md:pl-4'>
+              <h2 className='font-semibold flex flex-wrap mb-2 md:mb-3'>Por favor rellena los campos obligatorios</h2>
+              {
+                campos?.length > 0 ? campos?.map((eachCampo, index) => (
+                  <p key={index} className='text-xs md:text-sm font-light h-4 text-[#0600ff]'>{eachCampo}</p>
+                ))
+                  :
+                  null
+              }
+            </div>
           </div>
         )
       }
@@ -114,8 +121,8 @@ function Contact() {
                 <input className='bg-[#0600ff] w-24 cursor-pointer text-sm p-3 text-white text-mono' type="submit" value="Enviar" />
 
                 {enviar == true ? (
-                  <div className='animate__animated animate__zoomOutRight w-[2.7rem] flex items-center border-2 border-[#0600ff] rounded-ee-lg justify-center'>
-                    <img className='h-6 ' src={avion} alt="avion-enviar" />
+                  <div className='w-[2.7rem] flex items-center border-2 border-[#0600ff] rounded-ee-lg justify-center'>
+                    <img className='h-6 animate__animated animate__zoomOut' src={avion} alt="avion-enviar" />
                   </div>
                 ) : (
                   <div className='w-[2.7rem] flex items-center border-2 border-[#0600ff] rounded-ee-lg justify-center'>
