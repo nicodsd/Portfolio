@@ -18,7 +18,7 @@ function Tecnologias() {
                     <div className='md:h-[45vw] lg:h-[30vw] gap-y-10 md:gap-y-0 flex flex-col md:flex-row w-full md:justify-between items-center'>
 
                         <div className='md:w-[50%] pb-6 border-b-2 md:border-b-0 border-[#0600ff] lg:border-e-4 lg:border-[#0600ff]'>
-                            <p className='text-xs md:text-base font-[300] md:w-[80%] pt-2'>Mi trabajo comienza desde un maquetado en Figma buscando dar sentido a las ideas creativas, luego voy desarrollando las funcionalidades de las aplicaciones.</p>
+                            <p className='text-xs md:text-base font-[300] md:w-[80%] pt-2'>Mi trabajo comienza desde un maquetado en Figma, buscando dar sentido a las ideas creativas, luego voy desarrollando las funcionalidades de las aplicaciones.</p>
                         </div>
 
                         <div className='flex z-10 md:w-[48%] justify-center'>

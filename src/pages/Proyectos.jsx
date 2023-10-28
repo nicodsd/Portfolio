@@ -24,13 +24,13 @@ function Proyectos() {
     const datos = data
 
     return (
-        <div className='lg:min-h-screen pt-24 md:pt-0 pb-5 lg:h-[60vw] selection:bg-transparent text-mono flex flex-col lg:flex-row lg:items-center w-full px-5 lg:px-14'>
-            <div id='proyectos' className='lg:w-[35%] mb-10 lg:py-32 h-full'>
+        <div className='lg:min-h-screen pt-24 md:pt-0 pb-5 lg:h-[60vw] selection:bg-transparent text-mono flex flex-col md:flex-row md:items-start  w-full px-5 lg:px-14'>
+            <div id='proyectos' className='md:w-[40%] lg:w-[35%] mb-10 lg:py-32 h-full'>
                 <h2 className='w-full text-2xl lg:text-3xl font-bold mb-2'>Proyectos<span className='animate-pulse-slow'>_</span></h2>
-                <p className='text-xs md:text-sm lg:text-sm pt-2 lg:w-[96%] font-[400]'>Proyectos donde se aplicaron las principales tecnologias del desarrollo web complementando conocimientos con diseño y las ultimas tecnologias</p>
+                <p className='text-xs md:text-sm lg:text-sm pt-2 w-full lg:w-[96%] font-[400]'>Proyectos donde se aplicaron las principales tecnologías del desarrollo web complementando conocimientos con diseño y las últimas tecnologías.</p>
             </div>
             <div className='flex w-full h-full items-start mt-6'>
-                <div className='flex h-fit justify-start items-start flex-wrap gap-y-4 md:gap-6 md:mt-20'>
+                <div className='flex h-fit justify-start items-start flex-wrap lg:gap-y-4 gap-y-[3vw] md:gap-y-[2vw] gap-[1vw] lg:mt-20'>
                     <Cards datos={datos?.data} />
                 </div>
             </div>
