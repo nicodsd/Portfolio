@@ -12,17 +12,17 @@ function Presentacion_2() {
                 <h2 className='w-full text-2xl lg:text-3xl font-bold'>Sobre mi<span className=' animate-pulse-slow'>_</span></h2>
                 <h2 className='text-3xl md:text-5xl lg:text-7xl border-black font-normal text-[#0600ff] md:h-[85px]'>Primero, <b className='text-[#FF0080] font-black'>hola</b></h2>
                 <h3 className='haches'>Introducción</h3>
-                <p className='text-[11px] md:text-sm text-black font-[400]'>Soy Nicolas Barrera, me identifico como una persona multifacética e inquieta.
+                <p className='text-[12px] md:text-sm text-black font-[400]'>Soy Nicolas Barrera, me identifico como una persona multifacética e inquieta.
                     De pequeño me llamaba la atención las computadoras y las artes plásticas, tomando un gusto por los graffitis
                     y el arte callejero, subversivo y emergente, reflejándolo en mis dibujos y replicando aquello que me atraía.
                     Durante mi vida experimenté con muchas cosas, entre ellas con la música, conociendo
                     nuevos horizontes y encontrándome en el camino.</p>
                 <h3 className='haches'>Sobre estudios</h3>
-                <p className='text-[11px] md:text-sm text-black font-[400]'>Estudié dos carreras las cuales estaban fuera del rango del arte, hoy por hoy
+                <p className='text-[12px] md:text-sm text-black font-[400]'>Estudié dos carreras las cuales estaban fuera del rango del arte, hoy por hoy
                     descontinuadas, a pesar de eso pude tener un buen desempeño y siempre focalizándome de tomar de otras
                     disciplinas para expandir mi mirada en la vida en general.</p>
                 <h3 className='haches'>Virando al diseño...</h3>
-                <p className='text-[11px] md:text-sm text-black font-[400]'>Al inicio solo deseaba expresar mis emociones por medio de ilustraciones
+                <p className='text-[12px] md:text-sm text-black font-[400]'>Al inicio solo deseaba expresar mis emociones por medio de ilustraciones
                     visuales, dejándome fluir y queriendo transmitir un mensaje de lo que transitaba en esos momentos,
                     a su vez me deje influir por la moda, pendiente a los detalles visuales que para mí eran fascinantes.
                     Es así como fui ganando experiencia y marcando un trayecto en lo que hoy en dia me apasiona como es el área

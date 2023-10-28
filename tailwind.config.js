@@ -10,6 +10,7 @@ module.exports = {
           'pulse-quick': 'pulse 1s linear infinite',
           'pulse-slow': 'pulse 2s linear infinite',
           'spin-slow': 'spin 15s linear infinite',
+          'spin-speed': 'spin 0.6s linear infinite',
         }
       }
   },
