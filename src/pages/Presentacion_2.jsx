@@ -6,7 +6,7 @@ import img3 from '../../public/Images/contenido/nico2.jpg'
 
 function Presentacion_2() {
     return (
-        <div id='sobreMi' className='min-h-screen lg:h-[60vw] flex flex-col md:flex-row justify-between items-center'>
+        <div id='sobreMi' className='min-h-screen selection:bg-transparent lg:h-[60vw] flex flex-col md:flex-row justify-between items-center'>
 
             <div className='md:w-[60%] lg:w-[60%] py-16 h-fit text-mono text-black texto2 flex flex-col justify-center px-5 lg:px-14 z-10'>
                 <h2 className='w-full text-2xl lg:text-3xl font-bold'>Sobre mi<span className=' animate-pulse-slow'>_</span></h2>
