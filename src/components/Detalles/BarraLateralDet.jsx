@@ -6,18 +6,20 @@ function BarraLateralDet(props) {
 
     const { info } = props
 
+    const color = info?.infoSecundaria.color
+
     return (
         <>
-            <div className='w-[30vw] z-20'>
-                <div className='p-3 md:px-10 justify-end items-end'>
-                    <img className='h-fit w-72 object-contain' src={info?.infoPrincipal?.miniatura} alt={info?.infoPrincipal?.titulo} />
-                    <a href={"https://" + info?.infoPrincipal?.enlace} target="_blank" rel="noopener noreferrer" className='mt-4 flex cursor-pointer'>
+            <div className='max-w-[26vw] z-20'>
+                <div className='py-10 md:px-10 justify-end items-end bg-white rounded-ee-[5rem]'>
+                    <img className='h-fit max-w-72 object-contain' src={info?.infoPrincipal?.miniatura} alt={info?.infoPrincipal?.titulo} />
+                    <a href={"https://" + info?.infoPrincipal?.enlace} target="_blank" rel="noopener noreferrer" className='mt-6 flex cursor-pointer'>
                         <p className='text-xs md:text-[14px] mr-3 font-bold'>Ir al sitio</p>
-                        <img className='h-3' src={arrow} alt="Ir al sitio" />
+                        <img className='h-4' src={arrow} alt="Ir al sitio" />
                     </a>
                 </div>
 
-                <div className=' h-fit md:py-8 md:px-10 text-xs md:text-sm gap-3 md:gap-2  p-3 flex flex-col'>
+                <div style={{ backgroundColor: color }} className='h-fit rounded-e-[5rem] text-white md:px-10 md:py-28 text-xs md:text-sm gap-3 md:gap-2 flex flex-col'>
                     <div className='flex flex-col'>
                         <p className=' font-[600] '>Duración de proyecto:</p><p className=' font-[300]'>{info?.infoSecundaria?.duraciónDeProyecto}</p>
                     </div>
