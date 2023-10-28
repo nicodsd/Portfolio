@@ -80,15 +80,15 @@ function Contact() {
     <div id='contacto' className='relative h-screen w-full flex items-center justify-center'>
       {
         error && (
-          <div className='animate__slideInRight animate__animated  max-w-[35vh] drop-shadow-md lg:max-w-[29vw] flex lg:min-h-[8vw] fixed top-20 right-0 z-50'>
+          <div className='animate__slideInRight animate__animated selection:bg-transparent max-w-[35vh] drop-shadow-md lg:max-w-[29vw] flex lg:min-h-[8vw] fixed top-20 right-0 z-50'>
             <div className='text-white'>
-              <p onClick={quitarAlerta} className='h-full w-9 md:w-7 bg-[#0600ff] flex justify-center items-center rounded-l-md md:rounded-l-lg text-xl'>X</p>
+              <p onClick={quitarAlerta} className='h-full w-9 md:w-7 bg-[#FF0080] cursor-pointer flex justify-center items-center rounded-l-md md:rounded-l-lg text-xl'>X</p>
             </div>
-            <div className='h-full flex flex-col md:py-3 py-2 pl-2 md:pl-4 bg-white'>
-              <h2 className='font-semibold flex flex-wrap mb-2 md:mb-3'>Por favor rellena los campos obligatorios</h2>
+            <div className='h-full flex flex-col md:py-3 py-2 pl-2 md:pl-4 bg-white cursor-default'>
+              <h2 className='font-semibold flex flex-wrap mb-2 md:mb-3'>Por favor llena los campos obligatorios:</h2>
               {
                 campos?.length > 0 ? campos?.map((eachCampo, index) => (
-                  <p key={index} className='text-xs md:text-sm font-light h-4 text-[#0600ff]'>{eachCampo}</p>
+                  <p key={index} className='text-xs md:text-sm font-light h-4 text-[#FF0080]'>{eachCampo}</p>
                 ))
                   :
                   null
@@ -99,7 +99,7 @@ function Contact() {
       }
 
       <div className='px-6 py-14 md:p-0 lg:w-[60%] h-[90vh] flex flex-col justify-evenly'>
-        <div className='text-mono w-full flex flex-col items-center'>
+        <div className='text-mono w-full flex flex-col items-center selection:bg-transparent'>
           <p className='text-4xl md:text-[6rem] text-[#0600ff] font-[900] md:h-16'>Contáctame</p>
           <p className='text-sm text-center lg:text-start lg:text-lg'>Serás atendido dentro de las <b className='text-[#0600ff]'>24hs</b></p>
         </div>
@@ -110,8 +110,8 @@ function Contact() {
               <input className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]' type="text" ref={apellido} onKeyDown={() => { console.log(apellido?.current.value) }} placeholder='Apellido' />
             </div>
             <div className='w-full flex gap-x-4 text-mono'>
-              <input className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]' type="text" ref={correo} onKeyDown={() => { console.log(correo?.current.value) }} placeholder='Correo electrónico *' />
-              <input className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]' type="text" ref={telefono} onKeyDown={() => { console.log(telefono?.current.value) }} placeholder='Teléfono *' />
+              <input className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]' type="email" ref={correo} required onKeyDown={() => { console.log(correo?.current.value) }} placeholder='Correo *' />
+              <input className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff] appearance-none' id='input-num' type="number" inputmode="numeric" ref={telefono} onKeyDown={() => { console.log(telefono?.current.value) }} placeholder='Teléfono *' />
             </div>
             <div>
               <input ref={comentarios} onKeyDown={() => { console.log(comentarios?.current.value) }} className='w-full border-b-[1px] bg-transparent focus:outline-none focu h-fit text-mono border-[#000000] placeholder:text-[#0600ff]' type="text" placeholder='Comentarios *' />
