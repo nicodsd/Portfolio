@@ -12,15 +12,15 @@ function CentroInfo(props) {
         <>
             <div className='relative md:w-fit min-h-screen gap-y-10 flex flex-col pl-10 z-20'>
                 <div>
-                    <h1 className="text-4xl font-[600] mb-7">{titulo} -</h1>
-                    <p className="text-sm w-[85%]">{descripcion} </p>
+                    <h1 className="text-5xl font-[700] mb-7">{titulo} </h1>
+                    <p className="text- w-[85%]">{descripcion} </p>
                 </div>
                 <div className='flex flex-col items-start gap-y-6'>
 
                     {fotos?.length > 0 ? fotos?.map((eachInfo, index) => (
                         <div key={index}>
-                            <h2>{eachInfo.titulo}</h2>
-                            <img className='h-[24rem] object-contain' src={eachInfo.foto} alt="" />
+                            <h2># {eachInfo.titulo}</h2>
+                            <img className='max-h-[35vw] object-contain' src={eachInfo.foto} alt="" />
                         </div>
                     ))
                         :
