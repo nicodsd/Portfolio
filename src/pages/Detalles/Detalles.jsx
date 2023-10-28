@@ -4,6 +4,7 @@ import CentroInfo from '../../components/Detalles/CentroInfo'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from '../../../api'
+import ProductDetails from '../../components/skeletons/SkeletonDetallesInfo'
 
 function Detalles() {
 
@@ -30,8 +31,19 @@ function Detalles() {
   return (
     <>
       <div className='min-h-screen selection:bg-transparent w-full flex text-mono bg-[#E2E8EE] lg:py-[4vw] relative '>
-        <BarraLateralDet info={info} />
-        <CentroInfo info={info} />
+        {!info?.length > 0 ? (
+          <>
+            <BarraLateralDet info={info} />
+            <CentroInfo info={info} />
+          </>
+        )
+          :
+          (
+            <div className='w-full flex justify-center items-center flex-col gap-10 md:flex-row flex-wrap'>
+              <ProductDetails />
+            </div>
+          )
+        }
       </div>
     </>
   )
