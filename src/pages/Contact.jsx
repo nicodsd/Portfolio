@@ -57,18 +57,21 @@ function Contact() {
         })
     } if (nombre?.current?.value.length == 0) {
       setError(true)
+      quitarAlertaTemp()
       mensajes("Nombre")
     } if (correo?.current?.value.length == 0) {
       setError(true)
+      quitarAlertaTemp()
       mensajes("Correo")
     } if (telefono?.current?.value.length == 0) {
       setError(true)
+      quitarAlertaTemp()
       mensajes("Teléfono")
     } if (comentarios?.current?.value.length == 0) {
       setError(true)
+      quitarAlertaTemp()
       mensajes("Comentarios")
     }
-
   }
 
   const quitarAlerta = () => {
@@ -76,13 +79,20 @@ function Contact() {
     setCampo([])
   }
 
+  const quitarAlertaTemp = () => {
+    const tiempoDeEspera = 5000;
+    const timer = setTimeout(() => {
+      quitarAlerta()
+    }, tiempoDeEspera)
+  } 
+
   return (
     <div id='contacto' className='relative h-screen w-full flex items-center justify-center'>
       {
         error && (
           <div className='animate__slideInRight animate__animated selection:bg-transparent max-w-[35vh] drop-shadow-md lg:max-w-[29vw] flex lg:min-h-[8vw] fixed top-20 right-0 z-50'>
             <div className='text-white'>
-              <p onClick={quitarAlerta} className='h-full w-9 md:w-7 bg-[#FF0080] cursor-pointer flex justify-center items-center rounded-l-md md:rounded-l-lg text-xl'>X</p>
+              <p onClick={quitarAlerta} className='h-full w-9 md:w-7 bg-[#FF0080] hover:bg-[#ff51a8] cursor-pointer flex justify-center items-center rounded-l-md md:rounded-l-lg text-xl'>X</p>
             </div>
             <div className='h-full flex flex-col md:py-3 py-2 pl-2 md:pl-4 bg-white cursor-default'>
               <h2 className='font-semibold flex flex-wrap mb-2 md:mb-3'>Por favor llena los campos obligatorios:</h2>
