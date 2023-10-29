@@ -24,7 +24,7 @@ function Cards(props) {
                     <Anchor to={`/detalles/${eachData._id}`} onClick={() => { parriba() }} className='h-fit relative cursor-pointer'>
                         <img className='object-contain w-fit' src={eachData.infoPrincipal?.miniatura} alt={eachData.infoPrincipal?.titulo} />
                     </Anchor>
-                    <div className='font-mono flex flex-col p-2 justify-between text-white h-[8rem] bg-[#0600ff]'>
+                    <div className='font-mono flex flex-col p-2 justify-between text-white min-h-[8rem] bg-[#0600ff]'>
                         <div>
                             <h2 className='font-[600] text-lg lg:text-xl'>{eachData.infoPrincipal?.titulo}</h2>
                             <Anchor to={`/detalles/${eachData._id}`} onClick={() => { parriba() }}>

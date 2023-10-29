@@ -80,7 +80,7 @@ function Contact() {
   }
 
   const quitarAlertaTemp = () => {
-    const tiempoDeEspera = 5000;
+    const tiempoDeEspera = 3000;
     const timer = setTimeout(() => {
       quitarAlerta()
     }, tiempoDeEspera)
