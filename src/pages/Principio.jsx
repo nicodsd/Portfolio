@@ -9,7 +9,7 @@ function Principio() {
     return (
         <>
             <div className='mt-24 md:h-fit px-5 selection:bg-transparent md:cuerpo text-mono md:mt-10 z-20 overflow-x-hidden'>
-                        <img className='animate__fadeIn animate__animated absolute h-[16vw] text-[#FFD400] md:top-38 left-[10%] sm:left-[10%] md:left-[37%] drop-shadow-xl z-20 asterixco' src={asterixco} alt="asterixco" />
+                <img className='animate__fadeIn animate__animated absolute h-[16vw] md:h-[14vw] md:top-38 left-[10%] sm:left-[10%] md:left-[37%] lg:left-[38%] drop-shadow-xl z-20 asterixco' src={asterixco} alt="asterixco" />
                 <div className='flex flex-col items-center md:flex-row md:items-end justify-between'>
                     <div className='flex text-2xl md:-indent-2 flex-col font-[700] animate__fadeInLeft animate__animated'>
                         <p className='nicoBarrera nico text-[10vw] h-[8vw] md:h-[7.6vw]'> Nico </p>
