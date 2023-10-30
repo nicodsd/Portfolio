@@ -20,7 +20,7 @@ function CentroInfo(props) {
 
                     {fotos?.length > 0 ? fotos?.map((eachInfo, index) => (
                         <div key={index}>
-                            <h2><span className="text-xl">#</span> {eachInfo.titulo}</h2>
+                            <h2 ><span style={{ color: color }} className="text-xl">#</span> {eachInfo.titulo}</h2>
                             <img className='max-w-full  mt-2 object-contain shadow-sm' src={eachInfo.foto} alt="" />
                         </div>
                     ))
