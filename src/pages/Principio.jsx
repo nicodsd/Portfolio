@@ -1,9 +1,9 @@
 import Carrousel from '../components/Carrousel'
 
-import flecha from '../../public/Images/diseño-grafico/300ppi/arrow2.svg'
-import mundo from '../../public/Images/logos/Recurso51.svg'
-import burbuja from '../../public/Images/logos/Recurso52.svg'
-import asterixco from '../../public/Images/diseño-grafico/300ppi/asterixco.svg'
+import flecha from '../../public/Images/diseño-grafico/objetos-graficos/arrow2.svg'
+import mundo from '../../public/Images/diseño-grafico/iconos/Recurso51.svg'
+import burbuja from '../../public/Images/diseño-grafico/iconos/Recurso52.svg'
+import asterixco from '../../public/Images/diseño-grafico/objetos-graficos/asterixco.svg'
 
 function Principio() {
     return (

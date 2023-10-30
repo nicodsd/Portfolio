@@ -1,5 +1,5 @@
 import React from 'react'
-import avion from '../../public/Images/diseño-grafico/300ppi/avioncito.svg'
+import avion from '../../public/Images/diseño-grafico/iconos/avioncito.svg'
 import { useEffect, useState, useRef } from 'react'
 import axios from 'axios'
 import apiUrl from '../../api'

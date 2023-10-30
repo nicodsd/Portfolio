@@ -6,7 +6,7 @@ import axios from 'axios'
 import apiUrl from '../../../api'
 import ProductDetails from '../../components/skeletons/SkeletonDetallesInfo'
 import SidebarDetalles from '../../components/SidebarDetalles'
-import sideIcon from '../../../public/Images/diseño-grafico/sidebar.svg'
+import sideIcon from '../../../public/Images/diseño-grafico/iconos/sidebar.svg'
 
 function Detalles() {
 
