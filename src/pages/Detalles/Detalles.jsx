@@ -31,18 +31,15 @@ function Detalles() {
   return (
     <>
       <div className='min-h-screen selection:bg-transparent w-full flex text-mono bg-[#E2E8EE] lg:pt-[4vw] relative '>
-        {!info?.length > 0 ? (
+        {info?.infoSecundaria.fotos.length > 0 ?
           <>
             <BarraLateralDet info={info} />
             <CentroInfo info={info} />
           </>
-        )
           :
-          (
-            <div className='w-full flex justify-center items-center flex-col gap-10 md:flex-row flex-wrap'>
-              <ProductDetails />
-            </div>
-          )
+          <div className='w-full flex justify-center items-center flex-col gap-10 md:flex-row flex-wrap'>
+            <ProductDetails />
+          </div>
         }
       </div>
     </>
