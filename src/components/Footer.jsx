@@ -4,7 +4,7 @@ import { Link as Anchor } from 'react-router-dom'
 
 function Footer() {
   return (
-    <footer className='bg-[#0600ff] h-[10.5rem] selection:bg-transparent w-full text-white text-mono p-5 md:p-8 z-40  flex justify-between'>
+    <footer className='bg-[#0600ff] h-[10.5rem] selection:bg-transparent w-full text-white text-mono p-5 md:p-8 z-40 relative flex justify-between'>
 
       <div id='redes' className='h-full md:w-[10%] flex flex-col justify-between'>
         <p className='text-lg md:text-[2.8vh] font-[700]'>redes<span className='animate-pulse-slow'>_</span></p>
