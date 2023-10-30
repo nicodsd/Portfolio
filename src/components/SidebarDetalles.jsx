@@ -12,13 +12,13 @@ function SidebarDetalles(props) {
             <div className='w-full h-screen md:w-0 text-mono md:h-0 z-40 relative md:text-[0] md:absolute md:invisible animate__animated animate__faster animate__fadeInLeft'>
                 <div onClick={open} className='absolute md:invisible right-4 text-xl font-semibold py-1 px-3 bg-white rounded-full top-4 z-50 shadow-md'>X</div>
                 <img className='h-fit max-w-72 object-contain' src={info?.infoPrincipal?.miniatura} alt={info?.infoPrincipal?.titulo} />
-                <div className='py-8 px-6 md:text-[0] justify-end items-end bg-white '>
-                    <a href={"https://" + info?.infoPrincipal?.enlace} target="_blank" rel="noopener noreferrer" className='mt-6 flex cursor-pointer'>
-                        <p className='mr-3 font-bold'>Ir al sitio</p>
+                <div className='px-6 justify-between items-center bg-white flex py-3 border-y border-gray'>
+                    <a href={"https://" + info?.infoPrincipal?.enlace} target="_blank" rel="noopener noreferrer" className='flex items-center cursor-pointer'>
+                        <p className='text-[14px] mr-3 font-bold'>Ir al sitio</p>
                         <img className='h-4' src={arrow} alt="Ir al sitio" />
                     </a>
-                    <a href={info?.infoPrincipal?.github} target="_blank" rel="noopener noreferrer" className='flex cursor-pointer'>
-                        <p className='mr-3 font-bold'>Repo Github</p>
+                    <a href={info?.infoPrincipal?.github} target="_blank" rel="noopener noreferrer" className='flex items-center cursor-pointer'>
+                        <p className='text-[14px] mr-3 font-bold'>Repo Github</p>
                         <img className='h-5' src={gitIcon} alt="Ir al github" />
                     </a>
                 </div>
