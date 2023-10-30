@@ -24,7 +24,7 @@ function WordCarousel() {
         <div className="palabra-carousel w-full">
             <Slider {...settings}>
                 {palabras.map((palabra, index) => (
-                    <div key={index} className="palabra-item border-[1px] hover:opacity-70 duration-150 p-2 md:p-2 border-[#000000] text-[#000000] bg-[#FFD400] text-center">
+                    <div key={index} className=" palabra-item border-[1px] hover:opacity-70 duration-150 p-2 md:p-2 border-[#000000] text-[#000000] bg-[#FFD400] text-center">
                         <p className='palabras_slide text-[11px] md:text-lg text-mono'>{palabra}</p>
                     </div>
                 ))}
