@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import arrow from '../../public/Images/diseño-grafico/iconos/flecha-sitio.svg'
 import { Link as Anchor } from 'react-router-dom'
 import MyLoader from './skeletons/LoaderSkeletonCard';
+import gitIcon from '../../public/Images/diseño-grafico/iconos/github2.svg'
 
 function Cards(props) {
 
@@ -31,19 +32,25 @@ function Cards(props) {
                                 <p className='text-[10.5px] md:text-xs font-thin text-[#E2E8EE]'>{eachData.infoPrincipal?.descripcion}<span className='font-[900] ml-1 text-white cursor-pointer'>Ver más</span></p>
                             </Anchor>
                         </div>
-                        <a href={"https://" + eachData.infoPrincipal?.enlace} target="_blank" rel="noopener noreferrer" className='w-full flex justify-end items-center cursor-pointer'>
-                            <p className='text-xs md:text-[14px] mr-3 font-bold'>Ir al sitio</p>
-                            <img className='h-3' src={arrow} alt="Ir al sitio" />
-                        </a>
+                        <div className='flex justify-between pt-3 mt-3 border-t border-white'>
+                            <a href={"https://" + eachData.infoPrincipal?.enlace} target="_blank" rel="noopener noreferrer" className='flex items-center cursor-pointer'>
+                                <p className='text-xs md:text-[14px] mr-3 font-bold'>Ir al sitio</p>
+                                <img className='h-3' src={arrow} alt="Ir al sitio" />
+                            </a>
+                            <a href={eachData?.infoPrincipal?.github} target="_blank" rel="noopener noreferrer" className='flex items-center cursor-pointer'>
+                                <p className='text-xs md:text-[14px] mr-3 font-bold'>Repo Github</p>
+                                <img className='h-4' src={gitIcon} alt="Ir al github" />
+                            </a>
+                        </div>
                     </div>
                 </div>
-            )) : 
-            <div className='flex flex-wrap gap-2 w-fit'>
-                <MyLoader />
-                <MyLoader />
-                <MyLoader />
-                <MyLoader />
-            </div>
+            )) :
+                <div className='flex flex-wrap gap-2 w-fit'>
+                    <MyLoader />
+                    <MyLoader />
+                    <MyLoader />
+                    <MyLoader />
+                </div>
             }
         </>
 
