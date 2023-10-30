@@ -5,12 +5,15 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from '../../../api'
 import ProductDetails from '../../components/skeletons/SkeletonDetallesInfo'
+import SidebarDetalles from '../../components/SidebarDetalles'
+import sideIcon from '../../../public/Images/diseño-grafico/sidebar.svg'
 
 function Detalles() {
 
   let { id } = useParams()
 
   const [info, setInfo] = useState(null)
+  const [openSide, setOpenSide] = useState(false)
 
   useEffect(
     () => {
@@ -28,9 +31,21 @@ function Detalles() {
         )
     }, [])
 
+  const open = () => {
+    if (openSide == false) {
+      setOpenSide(true)
+    } else {
+      setOpenSide(false)
+    }
+  }
+
   return (
     <>
-      <div className='min-h-screen selection:bg-transparent w-full flex text-mono bg-[#E2E8EE] lg:pt-[4vw] relative '>
+      {openSide &&
+        <SidebarDetalles open={open} info={info} />
+      }
+      <div className='min-h-screen selection:bg-transparent w-full flex text-mono bg-[#E2E8EE] relative'>
+        <img src={sideIcon} alt='sideIcon' onClick={open} className='w-7 h-7 md:w-0 md:h-0 absolute left-5 top-2 z-30' />
         {info?.infoSecundaria.fotos.length > 0 ?
           <>
             <BarraLateralDet info={info} />
