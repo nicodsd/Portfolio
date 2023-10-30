@@ -9,7 +9,7 @@ function SidebarDetalles(props) {
 
     return (
         <>
-            <div className='w-full h-screen md:w-0 md:h-0 z-40 relative md:text-[0] md:absolute md:invisible animate__animated animate__faster animate__fadeInLeft'>
+            <div className='w-full h-screen md:w-0 text-mono md:h-0 z-40 relative md:text-[0] md:absolute md:invisible animate__animated animate__faster animate__fadeInLeft'>
                 <div onClick={open} className='absolute md:invisible right-4 text-xl font-semibold py-1 px-3 bg-white rounded-full top-4 z-50 shadow-md'>X</div>
                 <img className='h-fit max-w-72 object-contain' src={info?.infoPrincipal?.miniatura} alt={info?.infoPrincipal?.titulo} />
                 <div className='py-8 px-6 md:text-[0] justify-end items-end bg-white '>
