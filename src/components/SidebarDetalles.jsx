@@ -1,31 +1,31 @@
 import React from 'react'
-import { Link as Anchor } from 'react-router-dom'
-import arrow from '../../../public/Images/diseño-grafico/300ppi/flecha-sitio2.svg'
-import gitIcon from '../../../public/Images/diseño-grafico/github.svg'
+import arrow from '../../public/Images/diseño-grafico/300ppi/flecha-sitio2.svg'
+import sideIcon from '../../public/Images/diseño-grafico/sidebar.svg'
+import gitIcon from '../../public/Images/diseño-grafico/github.svg'
 
-function BarraLateralDet(props) {
+function SidebarDetalles(props) {
 
-    const { info } = props
-
+    const { info, open } = props
     const color = info?.infoSecundaria.color
 
     return (
         <>
-            <div style={{ backgroundColor: color }} className='md:max-w-[26vw] max-w-0 invisible md:visible z-0 md:z-20'>
-                <img className='md:h-fit md:max-w-72 object-contain' src={info?.infoPrincipal?.miniatura} alt={info?.infoPrincipal?.titulo} />
-                <div className='py-10 md:px-6 lg:px-10 justify-end items-end bg-white '>
+            <div className='w-full h-screen md:w-0 md:h-0 z-40 relative md:text-[0] md:absolute md:invisible animate__animated animate__faster animate__fadeInLeft'>
+                <div onClick={open} className='absolute md:invisible right-4 text-xl font-semibold py-1 px-3 bg-white rounded-full top-4 z-50 shadow-md'>X</div>
+                <img className='h-fit max-w-72 object-contain' src={info?.infoPrincipal?.miniatura} alt={info?.infoPrincipal?.titulo} />
+                <div className='py-8 px-6 md:text-[0] justify-end items-end bg-white '>
                     <a href={"https://" + info?.infoPrincipal?.enlace} target="_blank" rel="noopener noreferrer" className='mt-6 flex cursor-pointer'>
-                        <p className='text-[0] md:text-[14px] mr-3 font-bold'>Ir al sitio</p>
+                        <p className='mr-3 font-bold'>Ir al sitio</p>
                         <img className='h-4' src={arrow} alt="Ir al sitio" />
                     </a>
-                    <a href={info?.infoPrincipal?.github} target="_blank" rel="noopener noreferrer" className='flex cursor-pointer drop-shadow-md'>
-                        <p className='text-[0] md:text-[14px] mr-3 font-bold'>Repo Github</p>
+                    <a href={info?.infoPrincipal?.github} target="_blank" rel="noopener noreferrer" className='flex cursor-pointer'>
+                        <p className='mr-3 font-bold'>Repo Github</p>
                         <img className='h-5' src={gitIcon} alt="Ir al github" />
                     </a>
                 </div>
 
-                <div className='h-fit text-white md:px-6 lg:px-10 md:py-8 text-[0] md:text-sm lg:text-md gap-3 md:gap-2 flex flex-col'>
-                    <h2 className='md:text-2xl font-semibold'>Datos de interés</h2>
+                <div style={{ backgroundColor: color }} className='h-full md:text-[0] text-white px-6 py-8 text-sm gap-3 flex flex-col'>
+                    <h2 className='text-2xl md:text-[0] font-semibold'>Datos de interés</h2>
                     <div className='flex flex-col'>
                         <p className=' font-[600] '>Duración de proyecto:</p><p className=' font-[300]'>{info?.infoSecundaria?.duraciónDeProyecto}</p>
                     </div>
@@ -47,4 +47,4 @@ function BarraLateralDet(props) {
     )
 }
 
-export default BarraLateralDet
+export default SidebarDetalles
