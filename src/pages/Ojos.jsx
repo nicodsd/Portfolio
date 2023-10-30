@@ -1,6 +1,5 @@
 import React from 'react'
-import ojo from '../../public/Images/Primer-plano/300ppi/300ppi/ojos.png'
-import ojos from '../../public/Images/contenido/SVG/Recurso82.svg'
+import ojos from '../../public/Images/diseño-grafico/objetos-graficos/Recurso82.svg'
 
 function Ojos() {
   return (

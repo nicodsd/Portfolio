@@ -1,5 +1,5 @@
 import React from 'react'
-import flechaMid from '../../public/Images/diseño-grafico/300ppi/flecha-dis.svg'
+import flechaMid from '../../public/Images/diseño-grafico/objetos-graficos/flecha-dis.svg'
 import img1 from '../../public/Images/contenido/calaka.webp'
 import img2 from '../../public/Images/contenido/nico.webp'
 import img3 from '../../public/Images/contenido/nico2.jpg'

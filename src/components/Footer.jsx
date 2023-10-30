@@ -1,5 +1,5 @@
 import React from 'react'
-import flech1 from '../../public/Images/diseño-grafico/300ppi/flecha-contact.svg'
+import flech1 from '../../public/Images/diseño-grafico/iconos/flecha-contact.svg'
 import { Link as Anchor } from 'react-router-dom'
 
 function Footer() {

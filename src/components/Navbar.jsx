@@ -1,7 +1,7 @@
 import { Link as Anchor } from 'react-router-dom'
 import { useState } from 'react'
 import Sidebar from './Sidebar'
-import burger from '../../public/Images/diseño-grafico/menu.svg'
+import burger from '../../public/Images/diseño-grafico/iconos/menu.svg'
 
 function Navbar() {
 

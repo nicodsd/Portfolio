@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import arrow from '../../public/Images/diseño-grafico/300ppi/flecha-sitio.svg'
+import arrow from '../../public/Images/diseño-grafico/iconos/flecha-sitio.svg'
 import { Link as Anchor } from 'react-router-dom'
 import MyLoader from './skeletons/LoaderSkeletonCard';
 

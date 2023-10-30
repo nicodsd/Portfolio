@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import arr from '../../public/Images/diseño-grafico/300ppi/FlechaUp.svg';
+import arr from '../../public/Images/diseño-grafico/iconos/FlechaUp.svg';
 
 function ATop() {
 

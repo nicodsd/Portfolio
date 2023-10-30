@@ -1,10 +1,10 @@
 import React from 'react'
-import rueda from '../../public/Images/Primer-plano/300ppi/300ppi/Recurso34.png'
-import img from '../../public/Images/Primer-plano/300ppi/300ppi/Cap_pta.png'
-import img2 from '../../public/Images/Primer-plano/300ppi/300ppi/Cap_pta2.png'
-import img3 from '../../public/Images/Primer-plano/300ppi/300ppi/Cap_pta3.png'
-import devsa from '../../public/Images/diseño-grafico/300ppi/devsarrollo.svg'
-import flecha from '../../public/Images/contenido/SVG/flecha.svg'
+import rueda from '../../public/Images/Primer-plano/Recurso34.png'
+import img from '../../public/Images/Primer-plano/Cap_pta.png'
+import img2 from '../../public/Images/Primer-plano/Cap_pta2.png'
+import img3 from '../../public/Images/Primer-plano/Cap_pta3.png'
+import devsa from '../../public/Images/diseño-grafico/objetos-graficos/devsarrollo.svg'
+import flecha from '../../public/Images/diseño-grafico/objetos-graficos/flecha.svg'
 
 function Tecnologias() {
     return (

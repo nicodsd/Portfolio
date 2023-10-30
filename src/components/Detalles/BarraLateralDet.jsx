@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link as Anchor } from 'react-router-dom'
-import arrow from '../../../public/Images/diseño-grafico/300ppi/flecha-sitio2.svg'
-import gitIcon from '../../../public/Images/diseño-grafico/github.svg'
+import arrow from '../../../public/Images/diseño-grafico/iconos/flecha-sitio2.svg'
+import gitIcon from '../../../public/Images/diseño-grafico/iconos/github.svg'
 
 function BarraLateralDet(props) {
 
