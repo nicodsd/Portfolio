@@ -12,14 +12,14 @@ function BarraLateralDet(props) {
         <>
             <div style={{ backgroundColor: color }} className='md:max-w-[26vw] max-w-0 invisible md:visible z-0 md:z-20'>
                 <img className='md:h-fit md:max-w-72 object-contain' src={info?.infoPrincipal?.miniatura} alt={info?.infoPrincipal?.titulo} />
-                <div className='py-10 md:px-6 lg:px-10 justify-end items-end bg-white '>
-                    <a href={"https://" + info?.infoPrincipal?.enlace} target="_blank" rel="noopener noreferrer" className='mt-6 flex cursor-pointer'>
-                        <p className='text-[0] md:text-[14px] mr-3 font-bold'>Ir al sitio</p>
-                        <img className='h-4' src={arrow} alt="Ir al sitio" />
+                <div className='md:px-3 lg:px-10 justify-between items-center bg-white flex py-3 border-y border-gray'>
+                    <a href={"https://" + info?.infoPrincipal?.enlace} target="_blank" rel="noopener noreferrer" className='flex items-center cursor-pointer'>
+                        <p className='text-[10px] lg:text-[14px] mr-1 lg:mr-3 font-bold'>Ir al sitio</p>
+                        <img className='h-3 lg:h-4' src={arrow} alt="Ir al sitio" />
                     </a>
-                    <a href={info?.infoPrincipal?.github} target="_blank" rel="noopener noreferrer" className='flex cursor-pointer drop-shadow-md'>
-                        <p className='text-[0] md:text-[14px] mr-3 font-bold'>Repo Github</p>
-                        <img className='h-5' src={gitIcon} alt="Ir al github" />
+                    <a href={info?.infoPrincipal?.github} target="_blank" rel="noopener noreferrer" className='flex items-center cursor-pointer drop-shsmwlg'>
+                        <p className='text-[10px] lg:text-[14px] mr-1 lg:mr-3 font-bold'>Repo Github</p>
+                        <img className='h-4 lg:h-5' src={gitIcon} alt="Ir al github" />
                     </a>
                 </div>
 
