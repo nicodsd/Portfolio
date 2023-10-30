@@ -8,8 +8,8 @@ function Footer() {
 
       <div id='redes' className='h-full md:w-[10%] flex flex-col justify-between'>
         <p className='text-lg md:text-[2.8vh] font-[700]'>redes<span className='animate-pulse-slow'>_</span></p>
-        <div className='text-sm'>
-          <Anchor href='https://www.behance.net/nicobaj' >
+        <div>
+          <Anchor href='https://github.com/nicodsd' >
             <p className='h-5'>Github</p>
           </Anchor>
           <Anchor to={'https://www.behance.net/nicobaj'}>
@@ -22,7 +22,7 @@ function Footer() {
       </div>
 
       <div className='w-fit pl-5 md:w-[30%] border-s-2 flex flex-col justify-between items-end'>
-        <Anchor className='flex text-sm md:text-[2.8vh] hover:animate-pulse font-[700] justify-between items-center'>
+        <Anchor to={'/'} className='flex text-sm md:text-[2.8vh] hover:animate-pulse font-[700] justify-between items-center'>
           <p className='mr-2'>Contacta conmigo</p>
           <img className='h-3 md:h-5' src={flech1} alt="" />
         </Anchor>
