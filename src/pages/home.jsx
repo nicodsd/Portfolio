@@ -16,7 +16,7 @@ function Index() {
   return (
     <>
       <div className='flex text-mono flex-col h-fit scroll-smooth'>
-        <div className='fixed w-full h-[10.5rem] bottom-0 z-20 md:invisible bg-gradient-to-t from-[#000000] via-[#00000054] to-transparent opacity-80'></div>
+        <div className='fixed w-full h-[10.5rem] bottom-0 z-20 md:invisible bg-gradient-to-t from-[#000000c4] via-[#00000041] to-transparent opacity-80'></div>
         <Principio />
         <Presentacion />
         <Presentacion_2 />
