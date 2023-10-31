@@ -72,9 +72,9 @@ function Tecnologias() {
                     </div>
                     <div className='relative w-full h-[45vw] md:h-[30vw] flex items-center justify-center selection:bg-transparent z-10'>
                         <img className='absolute h-fit w-[50vw] md:w-[44vw] rounded md:rounded-md shadow-[0px_5px_0_rgba(0,0,250,1)] z-10 md:shadow-[0px_12px_0_rgba(0,0,250,1)]' src={img} alt="imagen" />
-                        <img className='absolute h-fit w-[40vw] rotate-6 md:rotate-0 opacity-95 md:w-[30vw] rounded md:rounded-md -right-2 shadow-[0px_4px_0_rgba(260,0,100,1)] md:shadow-[0px_9px_0_rgba(260,0,100,1)]' src={img2} alt="imagen_2" />
-                        <img className='absolute h-fit w-[40vw] -rotate-6 md:rotate-0 opacity-95 md:w-[30vw] rounded md:rounded-md -left-2 shadow-[0px_4px_0_rgba(260,0,100,1)] md:shadow-[0px_9px_0_rgba(260,0,100,1)]' src={img3} alt="imagen_3" />
-                        <img className='z-20 absolute bottom-0 opacity-0 md:opacity-100' src={devsa} alt="devsarrollo" />
+                        <img className='absolute h-fit w-[40vw] rotate-6 md:rotate-0 md:opacity-90 md:w-[30vw] rounded md:rounded-md -right-2 shadow-[0px_4px_0_rgba(260,0,100,1)] md:shadow-[0px_9px_0_rgba(260,0,100,1)]' src={img2} alt="imagen_2" />
+                        <img className='absolute h-fit w-[40vw] -rotate-6 md:rotate-0 md:opacity-90 md:w-[30vw] rounded md:rounded-md -left-2 shadow-[0px_4px_0_rgba(260,0,100,1)] md:shadow-[0px_9px_0_rgba(260,0,100,1)]' src={img3} alt="imagen_3" />
+                        <img className='z-20 absolute bottom-0 opacity-0 md:opacity-100 drop-shadow-md' src={devsa} alt="devsarrollo" />
                     </div>
                 </div>
             </div>

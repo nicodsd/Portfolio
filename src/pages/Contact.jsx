@@ -90,7 +90,7 @@ function Contact() {
     <div id='contacto' className='relative h-screen w-full flex items-center justify-center'>
       {
         error && (
-          <div className='animate__slideInRight animate__animated selection:bg-transparent max-w-[35vh] drop-shadow-md lg:max-w-[29vw] flex lg:min-h-[8vw] fixed top-20 right-0 z-50'>
+          <div className='animate__slideInRight animate__animated selection:bg-transparent max-w-[35vh] drop-shadow-md lg:max-w-[29vw] flex lg:min-h-[8vw] bg-white rounded-l-md md:rounded-l-lg fixed top-20 right-0 z-50'>
             <div className='text-white'>
               <p onClick={quitarAlerta} className='h-full w-9 md:w-7 bg-[#FF0080] hover:bg-[#ff51a8] cursor-pointer flex justify-center items-center rounded-l-md md:rounded-l-lg text-xl'>X</p>
             </div>
