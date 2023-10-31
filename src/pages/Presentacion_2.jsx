@@ -26,7 +26,7 @@ function Presentacion_2() {
                     Es así como fui ganando experiencia y marcando un trayecto en lo que hoy en dia me apasiona como es el área
                     del diseño.
                     De esta manera fui aprendiendo y conociendo las herramientas de diseño de manera autodidacta.</p>
-                <p className='text-[11px] md:text-sm py-2 text-black font-[400]'>Teniendo en cuenta esto como referencia para crear mi marca y generar una imagen de dinamismo, en
+                <p className='text-[12px] md:text-sm py-2 text-black font-[400]'>Teniendo en cuenta esto como referencia para crear mi marca y generar una imagen de dinamismo, en
                     las formas por los cambios y lo multifacético de mi personalidad.</p>
             </div>
             <div className='relative md:right-24 lg:right-32'>
