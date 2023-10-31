@@ -84,7 +84,7 @@ function Contact() {
     const timer = setTimeout(() => {
       quitarAlerta()
     }, tiempoDeEspera)
-  } 
+  }
 
   return (
     <div id='contacto' className='relative h-screen w-full flex items-center justify-center'>
