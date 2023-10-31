@@ -29,7 +29,7 @@ function Cards(props) {
                         <div>
                             <h2 className='font-bold text-lg lg:text-xl'>{eachData.infoPrincipal?.titulo}</h2>
                             <Anchor to={`/detalles/${eachData._id}`} onClick={() => { parriba() }}>
-                                <p className='text-[10.5px] md:text-xs font-thin text-[#E2E8EE]'>{eachData.infoPrincipal?.descripcion}<span className='font-[900] ml-1 text-white cursor-pointer'>Ver más</span></p>
+                                <p className='leading-[15px] text-xs font-thin text-[#E2E8EE]'>{eachData.infoPrincipal?.descripcion}<span className='font-[900] ml-1 text-white cursor-pointer'>Ver más</span></p>
                             </Anchor>
                         </div>
                         <div className='flex justify-between pt-3 mt-3 border-t border-white'>

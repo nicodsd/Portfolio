@@ -13,8 +13,8 @@ function CentroInfo(props) {
         <>
             <div className='relative md:w-fit min-h-screen gap-y-16 flex flex-col pt-12 md:pt-3 md:px-5 lg:px-8 xl:px-10 p-4 z-20 md:pb-10'>
                 <div>
-                    <h1 style={{ color: color }} className="text-[2.1rem] md:text-[3rem] lg:text-[7vw] xl:text-[5.6rem] font-[300] md:font-[100] mb-2 md:mb-2">{titulo}*</h1>
-                    <p className="font-[300] md:font-[400] md:text- lg:text-base">{descripcion}</p>
+                    <h1 style={{ color: color }} className="text-[2.5rem] leading-none font-bold md:text-[3rem] lg:text-[7vw] xl:text-[5.6rem] md:font-[300] lg:font-[100] mb-2 md:mb-2">{titulo}*</h1>
+                    <p className="font-[300] leading-5 md:font-[400] md:text- lg:text-base">{descripcion}</p>
                 </div>
                 <div className='flex flex-col items-start gap-y-10 md:gap-y-8 md:font-[600]'>
 
