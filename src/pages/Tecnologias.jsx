@@ -21,11 +21,10 @@ function Tecnologias() {
                             <p className='text-sm leading-5 font-[300] md:w-[80%] pt-2'>Mi trabajo comienza desde un maquetado en Figma, buscando dar sentido a las ideas creativas, luego voy desarrollando las funcionalidades de las aplicaciones.</p>
                         </div>
 
-                        <div className='flex z-10 md:w-[48%] justify-center'>
+                        <div className='flex z-10 md:w-[48%] justify-center items-start'>
                             <div>
                                 <div className='bg-black md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-ee-[15px] text-white'>
                                     <p>Frontend</p>
-                                    <p className='text-xs'>librerias & CMS</p>
                                 </div>
                                 <div className='bg-[#FF0080] md:p-2 relative z-20 p-[7.5px] text-[11px] md:text-sm rounded-se-[15px] text-white'>
                                     <p>Html</p>
@@ -39,8 +38,10 @@ function Tecnologias() {
                                 </div>
                             </div>
 
-                            <div className='text-white flex flex-col mt-4'>
-                                <div className='bg-black md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-ee-[15px] rounded-es-[15px]'>Backend</div>
+                            <div className='text-white flex flex-col '>
+                                <div className='bg-black md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-ee-[15px] rounded-es-[15px]'>
+                                    <p>Backend</p>
+                                </div>
                                 <div className='bg-[#FF0080] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-se-[15px] rounded-ss-[15px]'>
                                     <p>NodeJs</p>
                                     <p>ExpressJs</p>
@@ -49,7 +50,7 @@ function Tecnologias() {
                                 </div>
                             </div>
 
-                            <div className='flex flex-col mt-4'>
+                            <div className='flex flex-col '>
                                 <div className='bg-[#000000] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-es-[15px] rounded-ee-[15px] text-white'>Base de Datos</div>
                                 <div className='bg-[#FF0080] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-ss-[15px] rounded-se-[15px] text-white'>
                                     <p>Firebase</p>
@@ -57,7 +58,7 @@ function Tecnologias() {
                                     <p>MySql</p>
                                 </div>
                             </div>
-                            <div className='flex flex-col mt-4'>
+                            <div className='flex flex-col'>
                                 <div className='bg-[#000000] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-es-[15px] text-white'>Herramientas</div>
                                 <div className='bg-[#FFD400] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-ss-[15px]'>
                                     <p>Postman</p>

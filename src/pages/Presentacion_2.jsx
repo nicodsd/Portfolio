@@ -31,10 +31,10 @@ function Presentacion_2() {
             </div>
             <div className='relative md:right-24 lg:right-32'>
                 <p className='absolute lg:visible text-[20rem] md:text-[10rem] lg:text-[15rem] font-bold text-[#ffffff] md:-left-10 -left-20 -top-20'>@</p>
-                <img src={img3} alt="imagen" className='cap w-[60vw] md:w-[26vh] lg:w-[32vh] object-cover relative -right-14 md:-right-20 md:h-[20vh] lg:h-[25vh] rotate-3 bg-[#a1a1a1]' />
+                {img3 && <img src={img3} alt="imagen" className='cap w-[60vw] md:w-[26vh] drop-shadow-md lg:w-[32vh] object-cover relative -right-14 md:-right-20 md:h-[20vh] lg:h-[25vh] rotate-3 bg-[#a1a1a1]' />}
                 <img className='absolute h-[150vw] md:h-[37vh] z-10 rotate-[10deg] md:-rotate-[30deg] top-32 left-0' src={flechaMid} alt="flecha" />
-                <img src={img2} alt="imagen" className='cap w-[60vw] md:w-[26vh] lg:w-[30vh] object-cover relative right-10 md:right-8 md:h-[24vh] lg:h-[30vh] z-10 -rotate-3 bg-[#cecece]' />
-                <img src={img1} alt="imagen" className='cap w-[64vw] md:w-[26vh] lg:w-[30vh] object-cover relative -right-6 md:-right-10 md:h-[20vh] lg:h-[21vh] rotate-[6deg] bg-[#cecece]' />
+                {img2 && <img src={img2} alt="imagen" className='cap w-[60vw] md:w-[26vh] drop-shadow-md lg:w-[30vh] object-cover relative right-10 md:right-8 md:h-[24vh] lg:h-[30vh] z-10 -rotate-3 bg-[#cecece]' />}
+                {img1 && <img src={img1} alt="imagen" className='cap w-[64vw] md:w-[26vh] drop-shadow-md lg:w-[30vh] object-cover relative -right-6 md:-right-10 md:h-[20vh] lg:h-[21vh] rotate-[6deg] bg-[#cecece]' />}
             </div>
         </div>
     )

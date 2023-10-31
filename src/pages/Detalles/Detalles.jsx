@@ -44,8 +44,8 @@ function Detalles() {
       {openSide &&
         <SidebarDetalles open={open} info={info} />
       }
+      <img src={sideIcon} alt='sideIcon' onClick={open} className='w-7 h-7 md:w-0 md:h-0 absolute left-6 top-19 z-30' />
       <div className='min-h-screen selection:bg-transparent w-full flex text-mono bg-[#E2E8EE] relative'>
-        <img src={sideIcon} alt='sideIcon' onClick={open} className='w-7 h-7 md:w-0 md:h-0 absolute left-6 -top-1 z-30' />
         {info?.infoSecundaria.fotos.length > 0 ?
           <>
             <BarraLateralDet info={info} />
