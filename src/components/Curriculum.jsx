@@ -27,7 +27,7 @@ function Curriculum() {
             onClick={descargar}
             download="Curriculum Vitae - Barrera Julio Nicolas"
             className='flex fixed z-40 justify-center items-center right-[53px] bottom-[123px]'>
-            <div className='bg-[#0600ff] hover:opacity-80 text-white text-mono drop-shadow-md selection:bg-transparent cursor-pointer absolute rounded-[1rem] min-w-[55px] min-h-[45px] py-2 w-fit h-fit flex items-center justify-center'>
+            <div className='bg-[#ffd500] hover:opacity-80 text-black font-[700] text-mono drop-shadow-md selection:bg-transparent cursor-pointer absolute rounded-[1rem] min-w-[55px] min-h-[45px] py-2 w-fit h-fit flex items-center justify-center'>
                 {descarga === false ? (
                     <div className='flex flex-col items-center'>
                         <p className='animate__animated animate__fadeInUp'>CV</p>
