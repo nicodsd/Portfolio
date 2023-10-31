@@ -6,11 +6,9 @@ import img3 from '../../public/Images/contenido/nico2.jpg'
 
 function Presentacion_2() {
     return (
-        <div id='sobreMi' className='min-h-screen selection:bg-transparent lg:h-[60vw] flex flex-col md:flex-row justify-between items-center'>
-
-            <div className='md:w-[60%] lg:w-[60%] py-16 h-fit text-mono text-black texto2 flex flex-col justify-center px-5 lg:px-14 z-10'>
-                <h2 className='w-full text-2xl lg:text-3xl font-bold'>Sobre mi<span className=' animate-pulse-slow'>_</span></h2>
-                <h2 className='text-3xl md:text-5xl lg:text-7xl border-black font-normal text-[#0600ff] md:h-[85px]'>Primero, <b className='text-[#FF0080] font-black'>hola</b></h2>
+        <div id='sobreMi' className='min-h-screen selection:bg-transparent pt-16 md:py-14 flex flex-col md:flex-row justify-between items-center gap-y-12 md:gap-y-0'>
+            <div className='md:w-[60%] lg:w-[60%] h-full text-mono text-black flex flex-col justify-center px-5 lg:px-14 z-10'>
+                <h2 className='text-3xl md:text-5xl lg:text-5xl xl:text-7xl border-black font-normal text-[#0600ff]'>Primero, <b className='text-[#FF0080] font-black'>hola</b></h2>
                 <h3 className='haches'>Introducción</h3>
                 <p className='text-[12px] md:text-sm text-black font-[400]'>Soy Nicolas Barrera, me identifico como una persona multifacética e inquieta.
                     De pequeño me llamaba la atención las computadoras y las artes plásticas, tomando un gusto por los graffitis
