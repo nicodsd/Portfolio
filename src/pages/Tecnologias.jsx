@@ -51,7 +51,9 @@ function Tecnologias() {
                             </div>
 
                             <div className='flex flex-col '>
-                                <div className='bg-[#000000] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-es-[15px] rounded-ee-[15px] text-white'>Base de Datos</div>
+                                <div className='bg-[#000000] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-es-[15px] rounded-ee-[15px] text-white'>
+                                    <p>Databases</p>
+                                </div>
                                 <div className='bg-[#FF0080] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-ss-[15px] rounded-se-[15px] text-white'>
                                     <p>Firebase</p>
                                     <p>MongoDB</p>
@@ -59,7 +61,9 @@ function Tecnologias() {
                                 </div>
                             </div>
                             <div className='flex flex-col'>
-                                <div className='bg-[#000000] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-es-[15px] text-white'>Herramientas</div>
+                                <div className='bg-[#000000] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-es-[15px] text-white'>
+                                    <p>Herramientas</p>
+                                </div>
                                 <div className='bg-[#FFD400] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-ss-[15px]'>
                                     <p>Postman</p>
                                     <p>Figma</p>
