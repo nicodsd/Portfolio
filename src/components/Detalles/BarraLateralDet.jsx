@@ -7,6 +7,7 @@ function BarraLateralDet(props) {
     const { info } = props
 
     const color = info?.infoSecundaria.color
+    console.log(color)
 
     return (
         <>
