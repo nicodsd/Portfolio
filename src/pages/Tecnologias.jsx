@@ -44,6 +44,7 @@ function Tecnologias() {
                                 </div>
                                 <div className='bg-[#FF0080] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-se-[15px] rounded-ss-[15px]'>
                                     <p>NodeJs</p>
+                                    <p>NextJs</p>
                                     <p>ExpressJs</p>
                                     <p>php</p>
                                     <p>Testing</p>
