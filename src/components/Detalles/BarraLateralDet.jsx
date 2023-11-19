@@ -10,7 +10,7 @@ function BarraLateralDet(props) {
 
     return (
         <>
-            <div style={{ backgroundColor: color }} className='md:max-w-[26vw] max-w-0 invisible md:visible z-0 md:z-20'>
+            <div className='md:max-w-[26vw] bg-white max-w-0 invisible md:visible z-0 md:z-20'>
                 <img className='md:h-fit md:max-w-72 object-contain' src={info?.infoPrincipal?.miniatura} alt={info?.infoPrincipal?.titulo} />
                 <div className='md:px-3 lg:px-10 justify-between items-center bg-white flex py-3 border-y border-gray'>
                     <a href={"https://" + info?.infoPrincipal?.enlace} target="_blank" rel="noopener noreferrer" className='flex items-center cursor-pointer'>
@@ -23,7 +23,7 @@ function BarraLateralDet(props) {
                     </a>
                 </div>
 
-                <div className='h-fit text-white md:px-6 lg:px-10 md:py-8 text-[0] md:text-sm lg:text-md gap-3 md:gap-2 flex flex-col'>
+                <div className='h-fit text-black md:px-6 lg:px-10 md:py-8 text-[0] md:text-sm lg:text-md gap-3 md:gap-2 flex flex-col'>
                     <h2 className='md:text-2xl font-semibold'>Datos de interés</h2>
                     <div className='flex flex-col'>
                         <p className=' font-[600] '>Duración de proyecto:</p><p className=' font-[300]'>{info?.infoSecundaria?.duraciónDeProyecto}</p>
