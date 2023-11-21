@@ -9,13 +9,13 @@ function Footer() {
       <div id='redes' className='h-full md:w-[10%] flex flex-col justify-between'>
         <p className='text-lg md:text-[2.8vh] font-[700]'>redes<span className='animate-pulse-slow'>_</span></p>
         <div>
-          <Anchor href='https://github.com/nicodsd' >
+          <Anchor to={'https://github.com/nicodsd'}>
             <p className='h-5'>Github</p>
           </Anchor>
           <Anchor to={'https://www.behance.net/nicobaj'}>
             <p className='h-5'>Bēhance</p>
           </Anchor>
-          <Anchor href='https://www.linkedin.com/in/nicobarrerarg/'>
+          <Anchor to={'https://www.linkedin.com/in/nicobarreraj/'}>
             <p>Linkedin</p>
           </Anchor>
         </div>
