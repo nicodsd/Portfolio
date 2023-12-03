@@ -6,12 +6,13 @@ import Layout from './layouts/Layout';
 import Index from './pages/home.jsx'; 
 import Detalles from './pages/Detalles/Detalles'; 
 import ErrorPage from './pages/ErrorPage'; 
+import Mantenimiento from './pages/Mantenimiento.jsx';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Mantenimiento />}>
           <Route index element={<Index />} />
           <Route path="/detalles/:id" element={<Detalles />} />
         </Route>
