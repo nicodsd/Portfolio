@@ -32,7 +32,7 @@ function Cards(props) {
                                 <p className='leading-[15px] text-xs font-thin text-[#505050]'>{eachData?.descripcion.length > 50 ? (eachData?.descripcion.slice(0, 69) + '...  ') : (eachData?.descripcion)}<span className='font-[900] ml-1 text-black cursor-pointer'>Ver más</span></p>
                             </Anchor>
                         </div>
-                        <div className='flex justify-between pt-3 mt-3 border-t border-black'>
+                        <div className='flex justify-between pt-3 mt-3 border-t border-[#0000002a]'>
                             <a href={"https://" + eachData?.enlace} target="_blank" rel="noopener noreferrer" className='flex items-center cursor-pointer'>
                                 <p className='text-xs md:text-[14px] mr-3 font-bold'>Ir al sitio</p>
                                 <img className='h-3' src={arrow} alt="Ir al sitio" />
