@@ -12,9 +12,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Mantenimiento />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Index />} />
-          <Route path="/detalles/:id" element={<Detalles />} />
+          <Route path="/detalles/:pagina" element={<Detalles />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>

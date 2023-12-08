@@ -10,18 +10,23 @@ import sideIcon from '../../../public/Images/diseño-grafico/iconos/sidebar.svg'
 
 function Detalles() {
 
-  let { id } = useParams()
+  let { pagina } = useParams()
 
   const [info, setInfo] = useState(null)
   const [openSide, setOpenSide] = useState(false)
 
+  console.log(pagina)
+
+  let informacion = info?.data?.pages
+  console.log(informacion)
+
   useEffect(
     () => {
-      axios.get(apiUrl + `detalles?id=${id}`)
+      axios.get(apiUrl + `detalle?pagina=${pagina}`)
         .then(
           res => {
             if (res) {
-              setInfo(res.data.pages)
+              setInfo(res)
             }
           }
         ).catch(
@@ -42,14 +47,14 @@ function Detalles() {
   return (
     <>
       {openSide &&
-        <SidebarDetalles open={open} info={info} />
+        <SidebarDetalles open={open} informacion={informacion} />
       }
       <img src={sideIcon} alt='sideIcon' onClick={open} className='w-7 h-7 md:w-0 md:h-0 absolute left-6 top-19 z-30' />
       <div className='min-h-screen selection:bg-transparent w-full flex text-mono bg-[#E2E8EE] relative'>
-        {info?.infoSecundaria.fotos.length > 0 ?
+        {informacion?.fotos?.length > 0 ?
           <>
-            <BarraLateralDet info={info} />
-            <CentroInfo info={info} />
+            <BarraLateralDet informacion={informacion} />
+            <CentroInfo informacion={informacion} />
           </>
           :
           <div className='w-full flex justify-center items-center flex-col gap-10 md:flex-row flex-wrap'>

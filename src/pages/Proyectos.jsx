@@ -22,7 +22,7 @@ function Proyectos() {
     }, []);
 
     const datos = data
-
+    
     return (
         <div className='lg:min-h-screen pt-24 md:pt-0 pb-5 lg:h-[60vw] selection:bg-transparent text-mono flex flex-col md:flex-row md:items-start  w-full px-5 lg:px-14'>
             <div id='proyectos' className='md:w-[40%] lg:w-[35%] mb-10 lg:py-32 h-full'>
