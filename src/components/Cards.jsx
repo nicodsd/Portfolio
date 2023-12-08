@@ -21,18 +21,18 @@ function Cards(props) {
 
         <>
             {pages?.length > 0 ? pages?.map((eachData, index) => (
-                <div key={index} className='flex flex-col md:max-w-[20rem] lg:max-w-[20rem] duration-100 hover:shadow-[-10px_10px_0_rgba(0,0,0,1)] hover:translate-x-[10px] hover:-translate-y-[10px]'>
+                <div key={index} className='flex flex-col md:max-w-[20rem] lg:max-w-[20rem] border-[1px] border-[#0000002a] hover:shadow-[-10px_10px_0_rgba(0,0,0,0.1)] duration-75 hover:translate-x-[10px] hover:-translate-y-[10px] hover:bg-[#ffffff] rounded-ee-[1vh] rounded-[1vh]'>
                     <Anchor to={`/detalles/${eachData?.pagina}`} onClick={() => { parriba() }} className='h-fit relative cursor-pointer'>
-                        <img className='object-contain w-fit' src={eachData?.miniatura} alt={eachData?.titulo} />
+                        <img className='object-contain w-fit rounded-t-[1vh]' src={eachData?.miniatura} alt={eachData?.titulo} />
                     </Anchor>
-                    <div className='font-mono flex flex-col p-2 justify-between text-white min-h-[8rem] bg-[#0600ff]'>
+                    <div className='font-mono flex flex-col p-2 justify-between text-black min-h-[8rem]'>
                         <div>
-                            <h2 className='font-bold text-lg lg:text-xl'>{eachData?.titulo}</h2>
+                            <h2 className='font-bold text-lg lg:text-xl text-[#0600ff]'>{eachData?.titulo}</h2>
                             <Anchor to={`/detalles/${eachData?.pagina}`} onClick={() => { parriba() }}>
-                                <p className='leading-[15px] text-xs font-thin text-[#E2E8EE]'>{eachData?.descripcion.length > 50 ? (eachData?.descripcion.slice(0, 114) + '...  ') : (eachData?.descripcion)}<span className='font-[900] ml-1 text-white cursor-pointer'>Ver más</span></p>
+                                <p className='leading-[15px] text-xs font-thin text-[#505050]'>{eachData?.descripcion.length > 50 ? (eachData?.descripcion.slice(0, 69) + '...  ') : (eachData?.descripcion)}<span className='font-[900] ml-1 text-black cursor-pointer'>Ver más</span></p>
                             </Anchor>
                         </div>
-                        <div className='flex justify-between pt-3 mt-3 border-t border-white'>
+                        <div className='flex justify-between pt-3 mt-3 border-t border-black'>
                             <a href={"https://" + eachData?.enlace} target="_blank" rel="noopener noreferrer" className='flex items-center cursor-pointer'>
                                 <p className='text-xs md:text-[14px] mr-3 font-bold'>Ir al sitio</p>
                                 <img className='h-3' src={arrow} alt="Ir al sitio" />

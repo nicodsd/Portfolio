@@ -30,7 +30,7 @@ function Proyectos() {
                 <p className='text-sm leading-5 pt-2 w-full lg:w-[96%] font-[300]'>Se usaron las principales tecnologías del desarrollo web, complementando mis conocimientos de diseño y las últimas tecnologías.</p>
             </div>
             <div className='flex w-full h-full items-start mt-6'>
-                <div className='flex h-fit justify-start items-start flex-wrap lg:gap-y-4 gap-y-[6vw] md:gap-y-[2vw] gap-[1vw] lg:mt-20'>
+                <div className='flex h-fit justify-start items-start flex-wrap lg:gap-y-2 gap-y-[6vw] md:gap-y-[2vw] lg:gap-x-2 gap-[1vw] lg:mt-20'>
                     <Cards datos={datos?.data} />
                 </div>
             </div>
