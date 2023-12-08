@@ -2,12 +2,12 @@
 
 function CentroInfo(props) {
 
-    const { info } = props
+    const { informacion } = props
 
-    const titulo = info?.infoPrincipal.titulo
-    const descripcion = info?.infoPrincipal.descripcion
-    const fotos = info?.infoSecundaria.fotos
-    const color = info?.infoSecundaria.color
+    const titulo = informacion?.titulo
+    const descripcion = informacion?.descripcion
+    const fotos = informacion?.fotos
+    const color = informacion?.color
 
     return (
         <>
