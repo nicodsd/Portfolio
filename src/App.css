@@ -8,6 +8,12 @@ body {
     background-color: #E2E8EE;
 }
 
+.circulo-back-mobile {
+    position:absolute;
+    left:50%;
+    margin-left:-250px;
+}
+
 ::-webkit-scrollbar {
     background-color: transparent;
     width: 13px;

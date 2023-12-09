@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import BarraLateralDet from '../../components/Detalles/BarraLateralDet'
+import SeccionesDetalles from '../../components/Detalles/SeccionesDetalles'
 import CentroInfo from '../../components/Detalles/CentroInfo'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from '../../../api'
 import ProductDetails from '../../components/skeletons/SkeletonDetallesInfo'
 import SidebarDetalles from '../../components/SidebarDetalles'
+import SidebarSeccionesDetalles from '../../components/SidebarSeccionesDetalles'
 import sideIcon from '../../../public/Images/diseño-grafico/iconos/sidebar.svg'
 
 function Detalles() {
@@ -49,13 +51,20 @@ function Detalles() {
       {openSide &&
         <SidebarDetalles open={open} informacion={informacion} />
       }
+      {openSide &&
+        <SidebarSeccionesDetalles open={open} informacion={informacion} />
+      }
+      
       <img src={sideIcon} alt='sideIcon' onClick={open} className='w-7 h-7 md:w-0 md:h-0 absolute left-6 top-19 z-30' />
       <div className='min-h-screen selection:bg-transparent w-full flex text-mono bg-[#E2E8EE] relative'>
         {informacion?.fotos?.length > 0 ?
-          <>
+          <div className='flex gap-[10px]'>
             <BarraLateralDet informacion={informacion} />
+
             <CentroInfo informacion={informacion} />
-          </>
+
+            <SeccionesDetalles informacion={informacion} />
+          </div>
           :
           <div className='w-full flex justify-center items-center flex-col gap-10 md:flex-row flex-wrap'>
             <ProductDetails />
