@@ -9,22 +9,41 @@ body {
 }
 
 .circulo-back-mobile {
-    position:absolute;
-    left:50%;
-    margin-left:-250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.fondo-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    --animate-duration: 30s;
+}
+
+.a-texto {
+    position: absolute;
+    background: rgb(191, 113, 243);
+    background: linear-gradient(42deg, rgba(191, 113, 243, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(69, 91, 252, 1) 100%);
 }
 
 ::-webkit-scrollbar {
-    background-color: transparent;
-    width: 13px;
+    width: 3px;
+    border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #ffffff;
+    background: rgb(134, 134, 134);
+    border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #acacac;
+    background: rgba(134, 134, 134, 0.507);
 }
 
 

@@ -1,9 +1,4 @@
-<svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.2634 22.2589H1.69409V2.23291H12.2634" stroke="black" stroke-width="2"/>
-<mask id="mask0_457_21" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="3" y="0" width="25" height="25">
-<rect x="27.7656" y="24.2461" width="24" height="24" transform="rotate(-180 27.7656 24.2461)" fill="#D9D9D9"/>
-</mask>
-<g mask="url(#mask0_457_21)">
-<path d="M17.7656 6.24609L23.7656 12.2461L17.7656 18.2461L16.3656 16.7961L19.9156 13.2461L7.76563 13.2461V11.2461L19.9156 11.2461L16.3656 7.69609L17.7656 6.24609Z" fill="#000"/>
-</g>
+<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4V20M8 12H20M8 12L12 8M8 12L12 16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

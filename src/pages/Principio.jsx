@@ -28,7 +28,7 @@ function Principio() {
                 </div>
 
                 <section className='flex relative my-8 md:my-14 flex-col md:flex-row gap-y-10 md:gap-0 md:justify-between text-mono'>
-                    <div className='w-full md:w-[50%] flex flex-col gap-2 animate__fadeInLeft animate__animated'>
+                    <div className='w-full md:w-[50%] flex flex-col text-[#3f3f3f] gap-2 animate__fadeInLeft animate__animated'>
                         <div className='flex justify-between items-center'>
                             <p className='text-xs md:text-sm w-[80%] font-[300] md:w-[30vw] hover:border-b-[1px] hover:duration-200 border-b-[1px] border-[#0600ff] md:border-transparent hover:border-[#0600ff]'>En un mundo cambiante, sos el responsable de participar en el cambio.</p>
                             <img className='w-8 md:w-12' src={mundo} alt="mundo" />
@@ -42,7 +42,7 @@ function Principio() {
                         <div className='flex'>
                             <img className='h-16 md:h-[100px]' src={flecha} alt="flecha" />
                         </div>
-                        <div className='text-end text-xs md:text-sm font-[500] text-mono md:w-32'>
+                        <div className='text-end text-[#3f3f3f] text-xs md:text-sm font-[500] text-mono md:w-32'>
                             <p>UX & UI</p>
                             <p>Apps móviles</p>
                             <p>Páginas webs</p>

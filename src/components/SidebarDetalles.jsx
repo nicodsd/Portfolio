@@ -9,18 +9,18 @@ function SidebarDetalles(props) {
     const color = informacion?.color
 
     return (
-        <>
+        <>   
             <div className='w-full h-screen bg-white fixed md:w-0 text-mono md:h-0 z-50 top-0 md:text-[0] md:absolute md:invisible animate__animated animate__faster animate__fadeInLeft'>
-                <p onClick={open} className='absolute md:invisible right-4 text-xl font-semibold py-1 px-3 bg-white rounded-full top-4 z-50 shadow-md'>X</p>
+                <p onClick={open} className='absolute md:invisible right-4 font-semibold py-1 px-3 top-4 bg-white rounded-full z-50'>X</p>
                 <img className='h-fit max-w-72 object-contain' src={informacion?.miniatura} alt={informacion?.titulo} />
-                <div className='px-6 justify-between items-center bg-white flex py-3 border-y border-gray'>
-                    <Link to={"https://" + informacion?.enlace} target="_blank" rel="noopener noreferrer" className='flex items-center cursor-pointer'>
-                        <p className='text-[14px] mr-3 font-bold'>Ir al sitio</p>
+                <div className='px-3 justify-between items-center bg-white flex py-3 border-b border-gray'>
+                    <Link to={"https://" + informacion?.enlace} target="_blank" rel="noopener noreferrer" className='flex items-center cursor-pointer border border-transparent hover:border-black hover:translate-x-1 duration-75 hover:shadow-[-4px_4px_0_rgba(0,0,0,0.1)] hover:-translate-y-1 py-2 px-3 rounded-full'>
+                        <p className='text-xs mr-2 leading-none font-bold'>Ir al sitio</p>
                         <img className='h-4' src={arrow} alt="Ir al sitio" />
                     </Link>
                     <div className='w-[1px] h-5 bg-[#bdbdbd]'></div>
-                    <Link href={informacion?.github} target="_blank" rel="noopener noreferrer" className='flex items-center cursor-pointer'>
-                        <p className='text-[14px] mr-3 font-bold'>Repo Github</p>
+                    <Link href={informacion?.github} target="_blank" rel="noopener noreferrer" className='flex items-center cursor-pointer border border-transparent hover:border-black hover:translate-x-1 duration-75 hover:shadow-[-4px_4px_0_rgba(0,0,0,0.1)] hover:-translate-y-1 py-2 px-3 rounded-full'>
+                        <p className='text-xs mr-2 leading-none font-bold'>Repo Github</p>
                         <img className='h-5' src={gitIcon} alt="Ir al github" />
                     </Link>
                 </div>

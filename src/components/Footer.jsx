@@ -4,10 +4,10 @@ import { Link as Anchor } from 'react-router-dom'
 
 function Footer() {
   return (
-    <footer className='bg-[#0600ff] h-[10.5rem] selection:bg-transparent w-full text-white text-mono p-5 md:p-8 z-40 relative flex justify-between'>
+    <footer className='bg-[#0600ff] md:h-[10rem] mt-2 selection:bg-transparent w-full text-white text-mono p-3 md:p-8 z-40 relative flex justify-between'>
 
       <div id='redes' className='h-full md:w-[10%] flex flex-col justify-between'>
-        <p className='text-lg md:text-[2.8vh] font-[700]'>redes<span className='animate-pulse-slow'>_</span></p>
+        <p className='text-lg md:text-[2.5vh] font-[700]'>redes<span className='animate-pulse-slow'>_</span></p>
         <div>
           <Anchor to={'https://github.com/nicodsd'}>
             <p className='h-5'>Github</p>
@@ -21,7 +21,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className='w-fit pl-5 md:w-[30%] border-s-2 flex flex-col justify-between items-end'>
+      <div className='w-fit pl-5 md:w-[30%] md:border-s-4 md:border-[#ffffff] flex flex-col justify-between items-end'>
         <Anchor to={'/'} className='flex text-sm md:text-[2.8vh] hover:animate-pulse font-[700] justify-between items-center'>
           <p className='mr-2'>Contacta conmigo</p>
           <img className='h-3 md:h-5' src={flech1} alt="" />

@@ -16,6 +16,7 @@ function Detalles() {
 
   const [info, setInfo] = useState(null)
   const [openSide, setOpenSide] = useState(false)
+  const [openSecc, setOpenSecc] = useState(false)
 
   console.log(pagina)
 
@@ -45,20 +46,27 @@ function Detalles() {
       setOpenSide(false)
     }
   }
+  const openSecciones = () => {
+    if (openSecc == false) {
+      setOpenSecc(true)
+    } else {
+      setOpenSecc(false)
+    }
+  }
 
   return (
     <>
       {openSide &&
         <SidebarDetalles open={open} informacion={informacion} />
       }
-      {openSide &&
-        <SidebarSeccionesDetalles open={open} informacion={informacion} />
+      {openSecc &&
+        <SidebarSeccionesDetalles openSecciones={openSecciones} informacion={informacion} />
       }
-      
-      <img src={sideIcon} alt='sideIcon' onClick={open} className='w-7 h-7 md:w-0 md:h-0 absolute left-6 top-19 z-30' />
-      <div className='min-h-screen selection:bg-transparent w-full flex text-mono bg-[#E2E8EE] relative'>
+      <img src={sideIcon} alt='sideIcon' onClick={openSecciones} className='w-7 h-7 md:w-0 bg-white p-1 rounded-full md:h-0 fixed right-1 top-18 z-30' />
+      <img src={sideIcon} alt='sideIcon' onClick={open} className='w-7 h-7 md:w-0 bg-white p-1 rounded-full md:h-0 fixed rotate-180 left-1 top-18 z-30' />
+      <div className='min-h-screen md:max-h-screen selection:bg-transparent min-w-screen flex text-mono bg-[#E2E8EE] relative'>
         {informacion?.fotos?.length > 0 ?
-          <div className='flex gap-[10px]'>
+          <div className='flex md:gap-x-[4px]'>
             <BarraLateralDet informacion={informacion} />
 
             <CentroInfo informacion={informacion} />
