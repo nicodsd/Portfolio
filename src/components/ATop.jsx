@@ -21,7 +21,7 @@ function ATop() {
             onMouseLeave={() => {
                 setHover(!hover);
             }}
-            className='flex fixed z-40 justify-center items-center right-[80px] bottom-[85px]'
+            className='flex fixed z-40 justify-center md:h-0 md:hidden items-center right-[80px] bottom-[85px]'
         >
             {hover ? (
                 <div onClick={() => {

@@ -9,7 +9,7 @@ import flecha from '../../public/Images/diseño-grafico/objetos-graficos/flecha.
 function Tecnologias() {
     return (
         <div className='h-fit relative selection:bg-transparent w-full text-mono flex flex-col px-5 lg:px-14 items-center justify-evenly'>
-            <h2 id='tecnologias' className='w-full md:pt-20 text-2xl lg:text-3xl font-bold'>Tecnologias<span className=' animate-pulse-slow'>_</span></h2>
+            <h2 id='tecnologias' className='w-full md:pt-20 text-2xl lg:text-3xl font-bold'>Tecnologías<span className=' animate-pulse-slow'>_</span></h2>
             <img className='absolute h-[4.5rem] z-30 lg:h-[7rem] bottom-[40vw] sm:bottom-[34vw] lg:bottom-[30vw] right-10 lg:right-[10vw] animate-spin-slow' src={rueda} alt="rueda" />
 
             <div className='w-full'>
@@ -18,15 +18,15 @@ function Tecnologias() {
                     <div className='md:h-[45vw] lg:h-[30vw] gap-y-10 md:gap-y-0 flex flex-col md:flex-row w-full md:justify-between items-center'>
 
                         <div className='md:w-[50%] pb-6 border-b-2 md:border-b-0 border-[#0600ff] lg:border-e-4 lg:border-[#0600ff]'>
-                            <p className='text-sm leading-5 font-[300] md:w-[80%] pt-2'>Mi trabajo comienza desde un maquetado en Figma, buscando dar sentido a las ideas creativas, luego voy desarrollando las funcionalidades de las aplicaciones.</p>
+                            <p className='text-sm leading-5 font-[300] md:w-[80%] text-[#3f3f3f] pt-2'>Mi trabajo comienza desde un maquetado en Figma, buscando dar sentido a las ideas creativas, luego voy desarrollando las funcionalidades de las aplicaciones.</p>
                         </div>
 
-                        <div className='flex z-10 md:w-[48%] justify-center items-start'>
+                        <div className='flex z-10 md:w-[48%] tracking-tight justify-center items-start'>
                             <div>
-                                <div className='bg-black md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-ee-[15px] text-white'>
+                                <div className='bg-black md:p-2 py-[5px] px-[2px] text-xs md:text-sm md:rounded-ee-[15px] rounded-ee-[10px] text-white'>
                                     <p>Frontend</p>
                                 </div>
-                                <div className='bg-[#FF0080] md:p-2 relative z-20 p-[7.5px] text-[11px] md:text-sm rounded-se-[15px] text-white'>
+                                <div className='bg-[#FF0080] md:p-2 relative z-20 py-[5px] px-[2px] text-xs md:text-sm md:rounded-se-[15px] rounded-se-[10px] text-white'>
                                     <p>Html</p>
                                     <p>Javascript</p>
                                     <p>Css</p>
@@ -39,10 +39,10 @@ function Tecnologias() {
                             </div>
 
                             <div className='text-white flex flex-col '>
-                                <div className='bg-black md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-ee-[15px] rounded-es-[15px]'>
+                                <div className='bg-black md:p-2 py-[5px] px-[2px] text-xs md:text-sm md:rounded-ee-[15px] rounded-ee-[10px] md:rounded-es-[15px] rounded-es-[10px]'>
                                     <p>Backend</p>
                                 </div>
-                                <div className='bg-[#FF0080] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-se-[15px] rounded-ss-[15px]'>
+                                <div className='bg-[#FF0080] md:p-2 py-[5px] px-[2px] text-xs md:text-sm md:rounded-se-[15px] rounded-se-[10px] md:rounded-ss-[15px] rounded-ss-[10px]'>
                                     <p>NodeJs</p>
                                     <p>NextJs</p>
                                     <p>ExpressJs</p>
@@ -52,20 +52,20 @@ function Tecnologias() {
                             </div>
 
                             <div className='flex flex-col '>
-                                <div className='bg-[#000000] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-es-[15px] rounded-ee-[15px] text-white'>
+                                <div className='bg-[#000000] md:p-2 py-[5px] px-[2px] text-xs md:text-sm md:rounded-es-[15px] rounded-es-[10px] md:rounded-ee-[15px] rounded-ee-[10px] text-white'>
                                     <p>Databases</p>
                                 </div>
-                                <div className='bg-[#FF0080] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-ss-[15px] rounded-se-[15px] text-white'>
+                                <div className='bg-[#FF0080] md:p-2 py-[5px] px-[2px] text-xs md:text-sm md:rounded-ss-[15px] rounded-ss-[10px] md:rounded-se-[15px] rounded-se-[15px] text-white'>
                                     <p>Firebase</p>
                                     <p>MongoDB</p>
                                     <p>MySql</p>
                                 </div>
                             </div>
                             <div className='flex flex-col'>
-                                <div className='bg-[#000000] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-es-[15px] text-white'>
+                                <div className='bg-[#000000] md:p-2 py-[5px] px-[2px] text-xs md:text-sm md:rounded-es-[15px] rounded-es-[10px] text-white'>
                                     <p>Herramientas</p>
                                 </div>
-                                <div className='bg-[#FFD400] md:p-2 p-[7.5px] text-[11px] md:text-sm rounded-ss-[15px]'>
+                                <div className='bg-[#FFD400] md:p-2 py-[5px] px-[2px] text-xs md:text-sm md:rounded-ss-[15px] rounded-ss-[10px]'>
                                     <p>Postman</p>
                                     <p>Figma</p>
                                     <p>Git</p>

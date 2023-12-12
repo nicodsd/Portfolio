@@ -21,7 +21,7 @@ function WordCarousel() {
     const palabras = ["Diseño Gráfico", "Javascript", "Webs & Apps", "Nico Barrera", "UX/UI", "Full Stack MERN", "Wordpress"];
 
     return (
-        <div className="palabra-carousel w-full">
+        <div className="palabra-carousel w-full ">
             <Slider {...settings}>
                 {palabras.map((palabra, index) => (
                     <div key={index} className="palabra-item border-[1px] hover:opacity-70 duration-150 p-2 md:p-2 border-[#000000] text-[#000000] bg-[#FFD400] text-center">

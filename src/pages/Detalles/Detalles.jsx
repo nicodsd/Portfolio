@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import BarraLateralDet from '../../components/Detalles/BarraLateralDet'
+import SeccionesDetalles from '../../components/Detalles/SeccionesDetalles'
 import CentroInfo from '../../components/Detalles/CentroInfo'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from '../../../api'
 import ProductDetails from '../../components/skeletons/SkeletonDetallesInfo'
 import SidebarDetalles from '../../components/SidebarDetalles'
+import SidebarSeccionesDetalles from '../../components/SidebarSeccionesDetalles'
 import sideIcon from '../../../public/Images/diseño-grafico/iconos/sidebar.svg'
 
 function Detalles() {
@@ -14,6 +16,7 @@ function Detalles() {
 
   const [info, setInfo] = useState(null)
   const [openSide, setOpenSide] = useState(false)
+  const [openSecc, setOpenSecc] = useState(false)
 
   console.log(pagina)
 
@@ -43,19 +46,33 @@ function Detalles() {
       setOpenSide(false)
     }
   }
+  const openSecciones = () => {
+    if (openSecc == false) {
+      setOpenSecc(true)
+    } else {
+      setOpenSecc(false)
+    }
+  }
 
   return (
     <>
       {openSide &&
         <SidebarDetalles open={open} informacion={informacion} />
       }
-      <img src={sideIcon} alt='sideIcon' onClick={open} className='w-7 h-7 md:w-0 md:h-0 absolute left-6 top-19 z-30' />
-      <div className='min-h-screen selection:bg-transparent w-full flex text-mono bg-[#E2E8EE] relative'>
+      {openSecc &&
+        <SidebarSeccionesDetalles openSecciones={openSecciones} informacion={informacion} />
+      }
+      <img src={sideIcon} alt='sideIcon' onClick={openSecciones} className='w-7 h-7 md:w-0 bg-white p-1 rounded-full md:h-0 fixed right-1 top-18 z-30' />
+      <img src={sideIcon} alt='sideIcon' onClick={open} className='w-7 h-7 md:w-0 bg-white p-1 rounded-full md:h-0 fixed rotate-180 left-1 top-18 z-30' />
+      <div className='min-h-screen md:max-h-screen selection:bg-transparent min-w-screen flex text-mono bg-[#E2E8EE] relative'>
         {informacion?.fotos?.length > 0 ?
-          <>
+          <div className='flex md:gap-x-[4px]'>
             <BarraLateralDet informacion={informacion} />
+
             <CentroInfo informacion={informacion} />
-          </>
+
+            <SeccionesDetalles informacion={informacion} />
+          </div>
           :
           <div className='w-full flex justify-center items-center flex-col gap-10 md:flex-row flex-wrap'>
             <ProductDetails />
