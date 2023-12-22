@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-body {
+HTML {
     background-color: #E2E8EE;
 }
 
@@ -105,6 +105,10 @@ body {
 .cuerpo {
     padding-right: 30px;
     padding-left: 30px;
+}
+
+.boton-enviar:disabled {
+    background-color: #ff00a2;
 }
 
 .cap {

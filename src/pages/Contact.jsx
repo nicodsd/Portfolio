@@ -3,6 +3,7 @@ import avion from '../../public/Images/diseño-grafico/iconos/avioncito.svg'
 import { useEffect, useState, useRef } from 'react'
 import axios from 'axios'
 import apiUrl from '../../api'
+import { Suspense } from 'react'
 
 function Contact() {
 
@@ -11,12 +12,30 @@ function Contact() {
   const [error, setError] = useState(false)
   const [campos, setCampo] = useState([])
   const [enviar, setEnviar] = useState(false)
+  const [formulario, setFormulario] = useState({
+    nombre: '',
+    comentarios: '',
+    correo: '',
+    telefono: ''
+  });
 
   const nombre = useRef("")
   const apellido = useRef("")
   const correo = useRef("")
   const telefono = useRef("")
   const comentarios = useRef("")
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormulario({
+      ...formulario,
+      [name]: value,
+    });
+  };
+  const areCamposObligatoriosCompletos = () => {
+    const camposObligatorios = ['nombre', 'comentarios', 'correo', 'telefono'];
+    return camposObligatorios.every((campo) => formulario[campo].trim() !== '');
+  };
 
   const sendMail = (e) => {
 
@@ -87,7 +106,7 @@ function Contact() {
   }
 
   return (
-    <div id='contacto' className='relative h-screen w-full flex items-center justify-center'>
+    <div id='contacto' className='relative min-h-[20vw] max-w-full flex items-center justify-center rounded-t-[20vh] rounded-b-xl bg-white mx-6'>
       {
         error && (
           <div className='animate__slideInRight animate__animated selection:bg-transparent max-w-[35vh] drop-shadow-md lg:max-w-[29vw] flex lg:min-h-[8vw] bg-white rounded-l-md md:rounded-l-lg fixed top-20 right-0 z-50'>
@@ -108,7 +127,7 @@ function Contact() {
         )
       }
 
-      <div className='px-6 py-14 md:p-0 lg:w-[60%] h-[90vh] flex flex-col justify-evenly'>
+      <div className='px-6 py-14 md:p-0 lg:w-[60%] h-[70vh] flex flex-col justify-evenly'>
         <div className='text-mono w-full flex flex-col items-center selection:bg-transparent'>
           <p className='text-4xl md:text-[6rem] text-[#0600ff] font-[900] md:h-16'>Contáctame</p>
           <p className='text-sm text-center lg:text-start lg:text-lg'>Serás atendido dentro de las <b className='text-[#0600ff]'>24hs</b></p>
@@ -116,31 +135,60 @@ function Contact() {
         <div className='flex justify-center w-full'>
           <form className='flex flex-col w-full text-sm gap-y-10'>
             <div className='w-full flex gap-x-4 text-mono'>
-              <input className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]' type="text" ref={nombre} onKeyDown={() => { console.log(nombre?.current.value) }} placeholder='Nombre *' />
-              <input className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]' type="text" ref={apellido} onKeyDown={() => { console.log(apellido?.current.value) }} placeholder='Apellido' />
+              <input
+                className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]'
+                type="text"
+                ref={nombre}
+                required
+                onChange={handleChange}
+                value={formulario.nombre}
+                placeholder='Nombre *' />
+              <input
+                className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]'
+                type="text"
+                ref={apellido}
+                placeholder='Apellido' />
             </div>
             <div className='w-full flex gap-x-4 text-mono'>
-              <input className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]' type="email" ref={correo} required onKeyDown={() => { console.log(correo?.current.value) }} placeholder='Correo *' />
-              <input className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff] appearance-none' id='input-num' type="number" inputmode="numeric" ref={telefono} onKeyDown={() => { console.log(telefono?.current.value) }} placeholder='Teléfono *' />
+              <input
+                className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]'
+                type="email"
+                ref={correo}
+                required
+                value={formulario.correo}
+                onChange={handleChange}
+                placeholder='Correo *' />
+              <input
+                className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff] appearance-none'
+                id='input-num'
+                type="number"
+                inputmode="numeric"
+                required
+                value={formulario.telefono}
+                ref={telefono}
+                onChange={handleChange}
+                placeholder='Teléfono *' />
             </div>
             <div>
-              <input ref={comentarios} onKeyDown={() => { console.log(comentarios?.current.value) }} className='w-full border-b-[1px] bg-transparent focus:outline-none focu h-fit text-mono border-[#000000] placeholder:text-[#0600ff]' type="text" placeholder='Comentarios *' />
+              <input
+                ref={comentarios}
+                className='w-full border-b-[1px] bg-transparent focus:outline-none h-fit text-mono border-[#000000] placeholder:text-[#0600ff]'
+                type="text"
+                required
+                value={formulario.comentarios}
+                onChange={handleChange}
+                placeholder='Comentarios *' />
             </div>
             <div className='flex w-full justify-center pt-12'>
-              <div onClick={sendMail} className='flex cursor-pointer z-50'>
-                <input className='bg-[#0600ff] w-24 cursor-pointer text-sm p-3 text-white text-mono' type="submit" value="Enviar" />
 
-                {enviar == true ? (
-                  <div className='w-[2.7rem] flex items-center border-2 border-[#0600ff] rounded-ee-lg justify-center'>
-                    <img className='h-6 animate__animated animate__zoomOut' src={avion} alt="avion-enviar" />
-                  </div>
-                ) : (
-                  <div className='w-[2.7rem] flex items-center border-2 border-[#0600ff] rounded-ee-lg justify-center'>
-                    <img className='h-6 ' src={avion} alt="avion-enviar" />
-                  </div>
-                )}
-
+              <div className='flex cursor-pointer z-50'>
+                <button onClick={sendMail} disabled={!areCamposObligatoriosCompletos()} className='bg-[#0600ff] rounded-md boton-enviar w-24 cursor-pointer text-sm p-3 text-white text-mono'
+                  type="submit"
+                  value="Enviar">
+                  Enviar
+                </button>
               </div>
+
             </div>
           </form>
         </div>
