@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom"
 
 function CentroInfo(props) {
 
-    const { informacion } = props
+    const { informacion, opnVisor } = props
 
     const navigate = useNavigate()
     const titulo = informacion?.titulo
@@ -10,7 +10,7 @@ function CentroInfo(props) {
     const fotos = informacion?.fotos
     const color = informacion?.color
 
-    function contactame(){
+    function contactame() {
         navigate('/')
     }
 
@@ -27,7 +27,7 @@ function CentroInfo(props) {
                     {fotos?.length > 0 ? fotos?.map((eachInfo, index) => (
                         <div className="border-b border-gray pt-5 pb-10" id={eachInfo.titulo} key={index}>
                             <h2 className=""><span style={{ color: color }} className="text-xl">#</span> {eachInfo.titulo}</h2>
-                            <img className='max-w-full mt-2 object-contain shadow-sm' src={eachInfo.foto} alt="" />
+                            <img onClick={() => { opnVisor(eachInfo.foto, color) }} className='max-w-full mt-2 object-contain shadow-sm cursor-pointer' src={eachInfo.foto} alt="imagen" />
                         </div>
                     ))
                         :

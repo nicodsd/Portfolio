@@ -9,6 +9,7 @@ import ProductDetails from '../../components/skeletons/SkeletonDetallesInfo'
 import SidebarDetalles from '../../components/SidebarDetalles'
 import SidebarSeccionesDetalles from '../../components/SidebarSeccionesDetalles'
 import sideIcon from '../../../public/Images/diseño-grafico/iconos/sidebar.svg'
+import VisorDeFotos from '../../components/VisorDeFotos'
 
 function Detalles() {
 
@@ -17,8 +18,10 @@ function Detalles() {
   const [info, setInfo] = useState(null)
   const [openSide, setOpenSide] = useState(false)
   const [openSecc, setOpenSecc] = useState(false)
-
-  console.log(pagina)
+  const [openVisor, setOpenVisor] = useState(false)
+  const [verImagen, setVerImagen] = useState(null)
+  const [verColor, setColor] = useState(null)
+  console.log(verColor)
 
   let informacion = info?.data?.pages
   console.log(informacion)
@@ -53,6 +56,16 @@ function Detalles() {
       setOpenSecc(false)
     }
   }
+  const opnVisor = (imagen, color) => {
+    if (openVisor == false) {
+      setOpenVisor(true)
+      setVerImagen(imagen)
+      setColor(color)
+      
+    } else {
+      setOpenVisor(false)
+    }
+  }
 
   return (
     <>
@@ -62,6 +75,9 @@ function Detalles() {
       {openSecc &&
         <SidebarSeccionesDetalles openSecciones={openSecciones} informacion={informacion} />
       }
+      {openVisor &&
+        <VisorDeFotos opnVisor={opnVisor} imagen={verImagen} verColor={verColor} />
+      }
       <img src={sideIcon} alt='sideIcon' onClick={openSecciones} className='w-7 h-7 md:w-0 bg-white p-1 rounded-full md:h-0 fixed right-1 top-18 z-30' />
       <img src={sideIcon} alt='sideIcon' onClick={open} className='w-7 h-7 md:w-0 bg-white p-1 rounded-full md:h-0 fixed rotate-180 left-1 top-18 z-30' />
       <div className='min-h-screen md:max-h-screen selection:bg-transparent min-w-screen flex text-mono bg-[#E2E8EE] relative'>
@@ -69,7 +85,7 @@ function Detalles() {
           <div className='flex md:gap-x-[4px]'>
             <BarraLateralDet informacion={informacion} />
 
-            <CentroInfo informacion={informacion} />
+            <CentroInfo opnVisor={opnVisor} informacion={informacion} />
 
             <SeccionesDetalles informacion={informacion} />
           </div>

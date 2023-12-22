@@ -16,6 +16,7 @@ HTML {
     bottom: 0;
     margin: auto;
 }
+
 .fondo-blur {
     position: absolute;
     top: 0;
@@ -101,6 +102,11 @@ HTML {
     transform: scale(1.2) rotate(-360deg);
     cursor: default;
 }
+
+.animate__animated.animate__fadeInBottomLeft {
+    --animate-duration: 2s;
+}
+
 
 .cuerpo {
     padding-right: 30px;
