@@ -8,7 +8,7 @@ import asterixco from '../../public/Images/diseño-grafico/objetos-graficos/aste
 function Principio() {
     return (
         <>
-            <div className='mt-4 md:h-fit px-5 selection:bg-transparent md:cuerpo text-mono md:mt-10 z-20 overflow-x-hidden'>
+            <div className='mt-4 md:h-fit px-5 selection:bg-transparent md:cuerpo text-mono md:mt-10 z-20'>
                 <img className='animate__fadeIn animate__animated absolute h-[25vw] md:h-[14vw] top-24 md:top-38 left-[5%] sm:left-[10%] md:left-[37%] lg:left-[38%] drop-shadow-xl z-20 asterixco' src={asterixco} alt="asterixco" />
                 <div className='flex flex-col items-center md:flex-row md:items-end justify-between'>
                     <div className='flex md:-indent-2 md:text-[10vw] px-1 bg-white md:bg-transparent text-[16vw] flex-col font-[700] z-40 animate__fadeInLeft animate__animated'>
