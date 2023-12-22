@@ -11,6 +11,7 @@ import Prueba from './Prueba'
 import '../App.css'
 import 'animate.css';
 import Ojos from './Ojos'
+import Prueba from './Prueba'
 
 function Index() {
 
@@ -18,6 +19,7 @@ function Index() {
     <>
       <div className='flex text-mono flex-col h-fit scroll-smooth overflow-x-hidden'>
         <Principio />
+        <Prueba />
         <Presentacion />
         <Presentacion_2 />
         <Proyectos />
