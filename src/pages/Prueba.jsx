@@ -1,4 +1,4 @@
-
+/* 
 import React, { useEffect, useState } from 'react';
 
 const TuComponente = () => {
@@ -34,7 +34,7 @@ const TuComponente = () => {
       <div className={scrolled ? 'bg-white text-[2rem] duration-500 p-5 border-2 w-fit rounded-xl md:text-5xl lg:text-5xl border-black font-normal text-[#0600ff]' : 'text-[2rem] duration-150 p-5 border-2 w-fit rounded-xl md:text-5xl lg:text-5xl border-black font-normal text-[#0600ff]'}>Contenido con animación</div>
       <div className='h-[40vh]'>Contenido con ID</div>
       <div className='mt-20' id="miElemento">dsadasdas</div>
-      {/* El div de arriba cambiará de clase dependiendo de si el scroll alcanza cierta posición */}
+    
 
 import React, { useState } from 'react';
 
@@ -51,7 +51,7 @@ const TuFormulario = () => {
     const { name, value } = e.target;
     setFormulario({
       ...formulario,
-      [name]: value,
+      [ame]: value,
     });
   };
 
@@ -68,7 +68,7 @@ const TuFormulario = () => {
     return camposObligatorios.every((campo) => formulario[campo].trim() !== '');
   };
 
-  return (
+  return (n
     <div className='w-full h-screen flex justify-center items-center'>
     <form onSubmit={handleSubmit}>
       <label>
@@ -91,7 +91,7 @@ const TuFormulario = () => {
         />
       </label>
       <br />
-      {/* Agrega más campos según sea necesario */}
+
       
       <button className='bg-black' type="submit" disabled={!areCamposObligatoriosCompletos()}>
         Enviar
@@ -106,3 +106,4 @@ const TuFormulario = () => {
 export default TuComponente;
 
 export default TuFormulario;
+ */

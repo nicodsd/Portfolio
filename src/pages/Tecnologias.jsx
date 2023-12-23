@@ -15,7 +15,7 @@ function Tecnologias() {
             <div className='w-full'>
                 <div className='flex w-full flex-col items-center gap-y-10 md:gap-4 z-10'>
 
-                    <div className='md:h-[45vw] lg:h-[30vw] gap-y-10 md:gap-y-0 flex flex-col md:flex-row w-full md:justify-between items-center'>
+                    <div className='md:h-[45vw] lg:h-[20vw] gap-y-10 md:gap-y-0 flex flex-col md:flex-row w-full md:justify-between items-center'>
 
                         <div className='md:w-[50%] pb-6 border-b-2 md:border-b-0 border-[#0600ff] lg:border-e-4 lg:border-[#0600ff]'>
                             <p className='text-sm leading-5 font-[300] md:w-[80%] text-[#3f3f3f] pt-2'>Mi trabajo comienza desde un maquetado en Figma, buscando dar sentido a las ideas creativas, luego voy desarrollando las funcionalidades de las aplicaciones.</p>
