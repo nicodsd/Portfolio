@@ -7,35 +7,17 @@ import { Suspense } from 'react'
 
 function Contact() {
 
-  const [res, setRes] = useState(null)
-  const [pending, setPending] = useState(null)
-  const [error, setError] = useState(false)
-  const [campos, setCampo] = useState([])
-  const [enviar, setEnviar] = useState(false)
-  const [formulario, setFormulario] = useState({
-    nombre: '',
-    comentarios: '',
-    correo: '',
-    telefono: ''
-  });
-
   const nombre = useRef("")
   const apellido = useRef("")
   const correo = useRef("")
   const telefono = useRef("")
   const comentarios = useRef("")
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormulario({
-      ...formulario,
-      [name]: value,
-    });
-  };
-  const areCamposObligatoriosCompletos = () => {
-    const camposObligatorios = ['nombre', 'comentarios', 'correo', 'telefono'];
-    return camposObligatorios.every((campo) => formulario[campo].trim() !== '');
-  };
+  const [res, setRes] = useState(null)
+  const [pending, setPending] = useState(null)
+  const [error, setError] = useState(false)
+  const [campos, setCampo] = useState([])
+  const [enviar, setEnviar] = useState(false)
 
   const sendMail = (e) => {
 
@@ -58,6 +40,8 @@ function Contact() {
       correo?.current?.value.length > 0
       &&
       telefono?.current?.value.length > 0
+      &&
+      telefono?.current?.value === number
       &&
       comentarios?.current?.value.length > 0
     ) {
@@ -90,6 +74,10 @@ function Contact() {
       setError(true)
       quitarAlertaTemp()
       mensajes("Comentarios")
+    } if (telefono?.current === number) {
+      setError(true)
+      quitarAlertaTemp()
+      mensajes("Escriba un teléfono valido")
     }
   }
 
@@ -106,7 +94,7 @@ function Contact() {
   }
 
   return (
-    <div id='contacto' className='relative min-h-[20vw] max-w-full flex items-center justify-center rounded-t-[20vh] rounded-b-xl bg-white mx-6'>
+    <div id='contacto' className='relative min-h-[20vw] mt-[14vh] max-w-full flex items-center justify-center rounded-t-[20vh] rounded-b-xl bg-white mx-10'>
       {
         error && (
           <div className='animate__slideInRight animate__animated selection:bg-transparent max-w-[35vh] drop-shadow-md lg:max-w-[29vw] flex lg:min-h-[8vw] bg-white rounded-l-md md:rounded-l-lg fixed top-20 right-0 z-50'>
@@ -140,8 +128,6 @@ function Contact() {
                 type="text"
                 ref={nombre}
                 required
-                onChange={handleChange}
-                value={formulario.nombre}
                 placeholder='Nombre *' />
               <input
                 className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]'
@@ -155,18 +141,14 @@ function Contact() {
                 type="email"
                 ref={correo}
                 required
-                value={formulario.correo}
-                onChange={handleChange}
                 placeholder='Correo *' />
               <input
                 className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff] appearance-none'
                 id='input-num'
-                type="number"
-                inputmode="numeric"
+                type="tel"
+                inputMode="numeric"
                 required
-                value={formulario.telefono}
                 ref={telefono}
-                onChange={handleChange}
                 placeholder='Teléfono *' />
             </div>
             <div>
@@ -175,14 +157,12 @@ function Contact() {
                 className='w-full border-b-[1px] bg-transparent focus:outline-none h-fit text-mono border-[#000000] placeholder:text-[#0600ff]'
                 type="text"
                 required
-                value={formulario.comentarios}
-                onChange={handleChange}
                 placeholder='Comentarios *' />
             </div>
             <div className='flex w-full justify-center pt-12'>
 
               <div className='flex cursor-pointer z-50'>
-                <button onClick={sendMail} disabled={!areCamposObligatoriosCompletos()} className='bg-[#0600ff] rounded-md boton-enviar w-24 cursor-pointer text-sm p-3 text-white text-mono'
+                <button onClick={sendMail} className='bg-[#0600ff] rounded-md boton-enviar w-24 cursor-pointer text-sm p-3 text-white text-mono'
                   type="submit"
                   value="Enviar">
                   Enviar

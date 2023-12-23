@@ -11,7 +11,7 @@ function BarraLateralDet(props) {
 
     return (
         <>
-            <div className='md:max-w-[24vw] overflow-y-auto bg-gradient-to-b bg-white max-w-0 invisible md:visible z-0 md:z-20 rounded-lg'>
+            <div className='md:max-w-[24vw] xl:max-w-[20vw] overflow-y-auto bg-gradient-to-b bg-white max-w-0 invisible md:visible z-0 md:z-20 rounded-lg'>
                 <img className='md:h-fit md:max-w-72 object-contain rounded-lg' src={informacion?.miniatura} alt={informacion?.titulo} />
                 <div className='md:px-1 lg:px-7 justify-between items-center bg-white flex py-3 pt-10 border-b border-gray'>
                     <Link to={"https://" + informacion?.enlace} target="_blank" rel="noopener noreferrer" className='flex items-center cursor-pointer border border-transparent hover:border-black hover:translate-x-1 duration-75 hover:shadow-[-4px_4px_0_rgba(0,0,0,0.1)] hover:-translate-y-1 py-2 px-3 rounded-full'>
