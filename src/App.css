@@ -27,10 +27,24 @@ HTML {
     --animate-duration: 30s;
 }
 
+.modal-enviado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
 .a-texto {
     position: absolute;
     background: rgb(191, 113, 243);
     background: linear-gradient(42deg, rgba(191, 113, 243, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(69, 91, 252, 1) 100%);
+}
+
+.b-texto {
+    position: absolute;
+    background: rgb(191, 113, 243);
+    background: linear-gradient(42deg, rgb(211, 255, 14) 0%, rgba(255, 255, 255, 0.253) 50%, rgb(36, 36, 36) 100%);
 }
 
 ::-webkit-scrollbar {
@@ -78,6 +92,7 @@ HTML {
 
 .linea1 {
     background-color: #FFD400;
+    color: #2222223b;
 }
 
 .linea2 {
@@ -107,7 +122,6 @@ HTML {
     --animate-duration: 2s;
 }
 
-
 .cuerpo {
     padding-right: 30px;
     padding-left: 30px;
@@ -119,10 +133,16 @@ HTML {
 
 .haches {
     font-weight: bold;
-    margin-top: 2rem;
-    margin-bottom: .2rem;
     color: #000000;
     font-size: 19px;
+    margin-bottom: 0.2rem;
+}
+
+.parrafo {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
 }
 
 .fontt {

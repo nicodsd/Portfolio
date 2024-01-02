@@ -21,11 +21,11 @@ function Cards(props) {
 
         <>
             {pages?.length > 0 ? pages?.map((eachData, index) => (
-                <div key={index} className='flex flex-col md:max-w-[20rem] min-h-[35vh] justify-between group/card lg:max-w-[16rem] border-[1px] hover:z-10 hover:border-[#1b1b1b] hover:shadow-[-10px_10px_0_rgba(0,0,0,0.1)] duration-75 hover:translate-x-[10px] hover:-translate-y-[10px] bg-[#ffffff] rounded-ee-[1vh] rounded-[1vh]'>
+                <div key={index} className='flex flex-col md:max-w-[20rem] min-h-[35vh] justify-between group/card lg:max-w-[16rem] border-[1px] border-[#0000002a] hover:z-10 hover:border-[#1b1b1b] hover:shadow-[-10px_10px_0_rgba(0,0,0,0.1)] duration-75 hover:translate-x-[10px] hover:-translate-y-[10px] bg-[#E2E8EE] rounded-ee-[1vh] rounded-[1vh]'>
                     <Anchor to={`/detalles/${eachData?.pagina}`} onClick={() => { parriba() }} className='h-fit relative cursor-pointer'>
                         <img className='object-contain w-fit rounded-t-[1vh]' src={eachData?.miniatura} alt={eachData?.titulo} />
                     </Anchor>
-                    <div className='font-mono flex flex-col p-2 justify-between text-black min-h-[8rem]'>
+                    <div className='font-mono flex flex-col p-2 justify-between text-black min-h-[8rem] group-hover/card:bg-white rounded-b-[1vh]'>
                         <div>
                             <h2 className='font-bold text-[#8d8d8d] group-hover/card:text-[#0600ff] leading-none mb-2 text-[3vh]'>{eachData?.titulo}</h2>
                             <Anchor to={`/detalles/${eachData?.pagina}`} onClick={() => { parriba() }}>

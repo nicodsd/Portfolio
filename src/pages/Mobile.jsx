@@ -4,7 +4,7 @@ import mobile from '../../public/Images/contenido/mobile-hom.webp'
 function Mobile() {
   return (
     <div className='md:min-h-screen relative selection:bg-transparent md:px-14 py-32 flex w-full justify-between items-center text-mono'>
-      <div className='circulo-back-mobile bg-white w-[60vh] drop-shadow-[0px_1px_20px_rgba(0,0,0,0.1)] border h-[50vh] z-0 rounded-full'></div>
+      <div className='circulo-back-mobile bg-white w-[80vw] h-[70vw] md:w-[60vh] md:h-[50vh] drop-shadow-[0px_1px_20px_rgba(0,0,0,0.1)] border z-0 rounded-full'></div>
       <svg className='h-20 z-10 md:h-[17vw]' width="200" height="200" viewBox="0 0 268 293" fill="none" xmlns="http://www.w3.org/2000/svg"><path id='forma' d="M145.084 81.2607C212.462 81.2607 267.083 135.882 267.083 203.261V292.506H232.319C177.091 292.506 132.319 247.734 132.319 192.506V81.2607H145.084Z" fill="#FFD400" /><path id='forma' d="M132.318 81.2612V192.506C132.318 247.734 87.5468 292.506 32.3184 292.506H0.648697L0.648697 81.2612L132.318 81.2612Z" fill="#0019FF" /><path id='forma' d="M267.083 0.536133C267.083 45.1193 230.942 81.2611 186.359 81.2611H132.319V0.536133L267.083 0.536133Z" fill="#0019FF" /><path id='forma' d="M132.318 0.536133V81.2611L0.648697 81.2611C0.648697 36.6779 36.7905 0.536133 81.3736 0.536133L132.318 0.536133Z" fill="black" /></svg>
       <div className='flex text-[#000000] flex-col z-20 items-center gap-y-5 md:gap-y-8 h-full'>
         <h2 className='md:text-5xl text-2xl font-[800] bg-white p-2 px-3 md:p-5 md:px-6 rounded-lg md:rounded-none cap'>@Apps</h2>

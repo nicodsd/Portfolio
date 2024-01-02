@@ -1,9 +1,7 @@
 import React from 'react'
-import avion from '../../public/Images/diseño-grafico/iconos/avioncito.svg'
-import { useEffect, useState, useRef } from 'react'
+import { useState, useRef } from 'react'
 import axios from 'axios'
 import apiUrl from '../../api'
-import { Suspense } from 'react'
 
 function Contact() {
 
@@ -14,10 +12,7 @@ function Contact() {
   const comentarios = useRef("")
 
   const [res, setRes] = useState(null)
-  const [pending, setPending] = useState(null)
-  const [error, setError] = useState(false)
-  const [campos, setCampo] = useState([])
-  const [enviar, setEnviar] = useState(false)
+  const [enviado, setEnviado] = useState(false)
 
   const sendMail = (e) => {
 
@@ -31,146 +26,112 @@ function Contact() {
       comentarios: comentarios?.current?.value
     }
 
-    const mensajes = (campoAlerta) => {
-      campos.push(campoAlerta)
-    }
-
     if (nombre?.current?.value.length > 0
       &&
       correo?.current?.value.length > 0
       &&
       telefono?.current?.value.length > 0
       &&
-      telefono?.current?.value === number
-      &&
       comentarios?.current?.value.length > 0
     ) {
       axios.post(apiUrl + "enviar-correo", data)
         .then(res => {
-          setRes(res)
-          setCampo([])
           if (res?.data == "Correo enviado con éxito") {
-            setEnviar(true)
-            setPending(true)
-            setError(false)
-            window.location.reload()
+            setRes("Mensaje enviado!")
+            setEnviado(true)
+            quitarAlertaTemp()
           }
         }).catch(err => {
           console.log(err)
         })
-    } if (nombre?.current?.value.length == 0) {
-      setError(true)
-      quitarAlertaTemp()
-      mensajes("Nombre")
-    } if (correo?.current?.value.length == 0) {
-      setError(true)
-      quitarAlertaTemp()
-      mensajes("Correo")
-    } if (telefono?.current?.value.length == 0) {
-      setError(true)
-      quitarAlertaTemp()
-      mensajes("Teléfono")
-    } if (comentarios?.current?.value.length == 0) {
-      setError(true)
-      quitarAlertaTemp()
-      mensajes("Comentarios")
-    } if (telefono?.current === number) {
-      setError(true)
-      quitarAlertaTemp()
-      mensajes("Escriba un teléfono valido")
     }
   }
 
   const quitarAlerta = () => {
-    setError(false)
-    setCampo([])
+    setEnviado(false)
   }
 
   const quitarAlertaTemp = () => {
-    const tiempoDeEspera = 3000;
+    const tiempoDeEspera = 4000;
     const timer = setTimeout(() => {
       quitarAlerta()
     }, tiempoDeEspera)
   }
 
   return (
-    <div id='contacto' className='relative min-h-[20vw] mt-[14vh] max-w-full flex items-center justify-center rounded-t-[20vh] rounded-b-xl bg-white mx-10'>
-      {
-        error && (
-          <div className='animate__slideInRight animate__animated selection:bg-transparent max-w-[35vh] drop-shadow-md lg:max-w-[29vw] flex lg:min-h-[8vw] bg-white rounded-l-md md:rounded-l-lg fixed top-20 right-0 z-50'>
-            <div className='text-white'>
-              <p onClick={quitarAlerta} className='h-full w-9 md:w-7 bg-[#FF0080] hover:bg-[#ff51a8] cursor-pointer flex justify-center items-center rounded-l-md md:rounded-l-lg text-xl'>X</p>
-            </div>
-            <div className='h-full flex flex-col md:py-3 py-2 pl-2 md:pl-4 bg-white cursor-default'>
-              <h2 className='font-semibold flex flex-wrap mb-2 md:mb-3'>Por favor llena los campos obligatorios:</h2>
-              {
-                campos?.length > 0 ? campos?.map((eachCampo, index) => (
-                  <p key={index} className='text-xs md:text-sm font-light h-4 text-[#FF0080]'>{eachCampo}</p>
-                ))
-                  :
-                  null
-              }
-            </div>
+    <div className='relative mt-14'>
+      {enviado &&
+        <div className='selection:bg-transparent w-fit drop-shadow-md flex bg-white -translate-y-16 md:-translate-y-20 rounded-md md:rounded-lg fixed h-fit modal-enviado z-10'>
+          <div className='text-white'>
+            <p onClick={quitarAlerta} className='h-full w-9 md:w-7 bg-[#0600ff] hover:opacity-80 cursor-pointer flex justify-center items-center rounded-l-md md:rounded-l-lg text-xl'>X</p>
           </div>
-        )
+          <div className='flex flex-col bg-white cursor-default p-4 md:p-6 rounded-md md:rounded-lg'>
+            <h2 className='font-semibold flex flex-wrap'>{res}</h2>
+          </div>
+        </div>
       }
 
-      <div className='px-6 py-14 md:p-0 lg:w-[60%] h-[70vh] flex flex-col justify-evenly'>
-        <div className='text-mono w-full flex flex-col items-center selection:bg-transparent'>
-          <p className='text-4xl md:text-[6rem] text-[#0600ff] font-[900] md:h-16'>Contáctame</p>
-          <p className='text-sm text-center lg:text-start lg:text-lg'>Serás atendido dentro de las <b className='text-[#0600ff]'>24hs</b></p>
-        </div>
-        <div className='flex justify-center w-full'>
-          <form className='flex flex-col w-full text-sm gap-y-10'>
-            <div className='w-full flex gap-x-4 text-mono'>
-              <input
-                className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]'
-                type="text"
-                ref={nombre}
-                required
-                placeholder='Nombre *' />
-              <input
-                className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]'
-                type="text"
-                ref={apellido}
-                placeholder='Apellido' />
-            </div>
-            <div className='w-full flex gap-x-4 text-mono'>
-              <input
-                className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]'
-                type="email"
-                ref={correo}
-                required
-                placeholder='Correo *' />
-              <input
-                className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff] appearance-none'
-                id='input-num'
-                type="tel"
-                inputMode="numeric"
-                required
-                ref={telefono}
-                placeholder='Teléfono *' />
-            </div>
-            <div>
-              <input
-                ref={comentarios}
-                className='w-full border-b-[1px] bg-transparent focus:outline-none h-fit text-mono border-[#000000] placeholder:text-[#0600ff]'
-                type="text"
-                required
-                placeholder='Comentarios *' />
-            </div>
-            <div className='flex w-full justify-center pt-12'>
-
-              <div className='flex cursor-pointer z-50'>
-                <button onClick={sendMail} className='bg-[#0600ff] rounded-md boton-enviar w-24 cursor-pointer text-sm p-3 text-white text-mono'
-                  type="submit"
-                  value="Enviar">
-                  Enviar
-                </button>
+      <div id='contacto' className='z-20 relative min-h-[20vw] max-w-full flex items-center justify-center rounded-t-[13vh] md:rounded-t-[20vh] rounded-b-xl bg-white lg:mx-10'>
+        <div className='px-6 md:p-0 lg:w-[60%] h-[80vh] flex flex-col justify-evenly'>
+          <div className='text-mono w-full flex flex-col items-center selection:bg-transparent'>
+            <p className='text-[5vh] md:text-[6rem] text-[#0600ff] font-[900] lg:h-[18vh]'>Contáctame</p>
+            <p className='text-sm text-center lg:text-start lg:text-lg'>Serás atendido dentro de las <b className='text-[#0600ff]'>24hs</b></p>
+          </div>
+          <div className='flex justify-center w-full'>
+            <form onSubmit={sendMail} className='flex flex-col w-full text-sm gap-y-10'>
+              <div className='w-full flex gap-x-4 text-mono'>
+                <input
+                  className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]'
+                  type="text"
+                  ref={nombre}
+                  required
+                  autoComplete='off'
+                  placeholder='Nombre *' />
+                <input
+                  className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]'
+                  type="text"
+                  ref={apellido}
+                  autoComplete='off'
+                  placeholder='Apellido' />
               </div>
+              <div className='w-full flex gap-x-4 text-mono'>
+                <input
+                  className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]'
+                  type="email"
+                  ref={correo}
+                  required
+                  autoComplete='off'
+                  placeholder='Correo *' />
+                <input
+                  className='w-[49%] border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff] appearance-none'
+                  id='input-num'
+                  type="tel"
+                  inputMode="numeric"
+                  required
+                  autoComplete='off'
+                  ref={telefono}
+                  placeholder='Teléfono *' />
+              </div>
+              <div>
+                <input
+                  ref={comentarios}
+                  className='w-full border-b-[1px] bg-transparent focus:outline-none h-fit text-mono border-[#000000] placeholder:text-[#0600ff]'
+                  type="text"
+                  required
+                  autoComplete='off'
+                  placeholder='Comentarios *' />
+              </div>
+              <div className='flex w-full justify-center pt-12'>
 
-            </div>
-          </form>
+                <input
+                  className='bg-[#0600ff] rounded-md w-24 cursor-pointer text-sm p-3 text-white text-mono'
+                  type="submit"
+                  value="Enviar"
+                />
+
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

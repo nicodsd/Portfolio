@@ -21,10 +21,8 @@ function Detalles() {
   const [openVisor, setOpenVisor] = useState(false)
   const [verImagen, setVerImagen] = useState(null)
   const [verColor, setColor] = useState(null)
-  console.log(verColor)
 
   let informacion = info?.data?.pages
-  console.log(informacion)
 
   useEffect(
     () => {
@@ -61,7 +59,7 @@ function Detalles() {
       setOpenVisor(true)
       setVerImagen(imagen)
       setColor(color)
-      
+
     } else {
       setOpenVisor(false)
     }
@@ -75,9 +73,9 @@ function Detalles() {
       {openSecc &&
         <SidebarSeccionesDetalles openSecciones={openSecciones} informacion={informacion} />
       }
-      {openVisor &&
+      {/* {openVisor &&
         <VisorDeFotos opnVisor={opnVisor} imagen={verImagen} verColor={verColor} />
-      }
+      } */}
       <img src={sideIcon} alt='sideIcon' onClick={openSecciones} className='w-7 h-7 md:w-0 bg-white p-1 rounded-full md:h-0 fixed right-1 top-18 z-30' />
       <img src={sideIcon} alt='sideIcon' onClick={open} className='w-7 h-7 md:w-0 bg-white p-1 rounded-full md:h-0 fixed rotate-180 left-1 top-18 z-30' />
       <div className='min-h-screen md:max-h-screen selection:bg-transparent min-w-screen flex text-mono bg-[#E2E8EE] relative'>
