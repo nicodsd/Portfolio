@@ -19,8 +19,6 @@ function Detalles() {
   const [openSide, setOpenSide] = useState(false)
   const [openSecc, setOpenSecc] = useState(false)
   const [openVisor, setOpenVisor] = useState(false)
-  const [verImagen, setVerImagen] = useState(null)
-  const [verColor, setColor] = useState(null)
 
   let informacion = info?.data?.pages
 
