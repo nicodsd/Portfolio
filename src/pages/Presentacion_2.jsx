@@ -43,7 +43,7 @@ function Presentacion_2() {
                         </p>
                     </div>
                     <div className={scrolled ? "animate__animated animate__fadeInUp text-sm leading-5 text-[#3f3f3f] font-[300]" : "animate__animated animate__fadeOutBottomLeft text-sm leading-5 text-[#3f3f3f] font-[300]"}>
-                        <h3 className='haches'>- Me gusta emprender cosas nuevas</h3>
+                        <h3 className='haches'><span>-</span> Me gusta emprender cosas nuevas</h3>
                         <p className='parrafo'>Estudié dos carreras las cuales estaban fuera del rango del arte, hoy por hoy
                             descontinuadas, cabe recalcar que tuve un buen desempeño y siempre me focalizé en tomar de otras
                             disciplinas para expandir mi mirada en la vida en general.
@@ -53,7 +53,7 @@ function Presentacion_2() {
                     </div>
 
                     <div className={scrolled ? "animate__animated animate__fadeInUp text-sm leading-5 text-[#3f3f3f] font-[300]" : "animate__animated animate__fadeOutBottomLeft text-sm leading-5 text-[#3f3f3f] font-[300]"}>
-                        <h3 className='haches'>- Virando al diseño...</h3>
+                        <h3 className='haches'><span>-</span> Virando al diseño...</h3>
                         <p className='parrafo'>Al principio solo deseaba expresar mis emociones haciendo ilustraciones
                             visuales, dejándome fluir e inconscientemente daba un mensaje de lo que transitaba en esos momentos,
                             a su vez me llama mucho la moda, y muy pendiente a los detalles que para mí son los que marcan una marcada diferencia.</p>
@@ -65,8 +65,8 @@ function Presentacion_2() {
                 <div className='h-[40vh] rounded-full relative w-12 border-2 shadow-xl border-black'></div>
                 <div className='h-[30vh] rounded-full relative w-8 border-2 shadow-xl border-black'></div>
                 <div id="titular" className={scrolled ? 'mt-10 md:mt-0 z-10 shadow-xl relative border-2 border-black rounded-[10vh] animate__fadeInUp animate__animated animate__faster ' : ' relative md:right-24 lg:right-32 animate__fadeOutBottomRight animate__animated'}>
-                    {img3 && <img src={img3} alt="imagen" className='cap w-[75vw] h-[20vh] md:w-[26vh] drop-shadow-md lg:w-[32vh] object-cover relative -right-14 md:-right-20 md:h-[20vh] lg:h-[25vh] rotate-3 bg-[#a1a1a1]' />}
-                    <img className='absolute h-[150vw] md:h-[35vh] z-10 rotate-[10deg] md:-rotate-[36deg] -top-16 lg:top-44 left-0' src={flechaMid} alt="flecha" />
+                    {img3 && <img src={img3} alt="imagen" className='cap z-10 w-[75vw] h-[20vh] md:w-[26vh] drop-shadow-md lg:w-[32vh] object-cover relative -right-14 md:-right-20 md:h-[20vh] lg:h-[25vh] rotate-3 bg-[#a1a1a1]' />}
+                    <img className='absolute h-[150vw] md:h-[35vh] rotate-[10deg] md:-rotate-[36deg] -top-16 lg:top-44 left-0' src={flechaMid} alt="flecha" />
                     {img2 && <img src={img2} alt="imagen" className='cap w-[90vw] md:w-[30vh] z-30 drop-shadow-md lg:w-[30vh] object-cover relative right-12 scale-105 md:right-8 md:h-[24vh] lg:h-[30vh] -rotate-3 bg-[#cecece]' />}
                     {img1 && <img src={img1} alt="imagen" className='cap w-[100vw] md:w-[26vh] z-20 drop-shadow-md lg:w-[30vh] object-cover relative -right-8 md:-right-10 md:h-[20vh] lg:h-[21vh] rotate-[6deg] bg-[#cecece]' />}
                 </div>
