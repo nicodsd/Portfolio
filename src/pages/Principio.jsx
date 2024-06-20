@@ -8,9 +8,9 @@ import asterixco from '../../public/Images/diseño-grafico/objetos-graficos/aste
 function Principio() {
     return (
         <>
-            <div className='mt-4 md:h-fit px-5 selection:bg-transparent md:cuerpo text-mono md:mt-10 z-20'>
+            <div className='mt-4 px-5 selection:bg-transparent md:cuerpo text-mono md:mt-20 z-20'>
 
-                <img className='animate__fadeIn animate__animated absolute h-[25vw] md:h-[14vw] top-24 md:top-38 left-[5%] sm:left-[10%] md:left-[37%] lg:left-[38%] drop-shadow-xl z-20 asterixco' src={asterixco} alt="asterixco" />
+                <img className='animate__fadeIn animate__animated absolute h-[25vw] md:h-[14vw] top-24 md:top-40 left-[5%] sm:left-[10%] md:left-[37%] lg:left-[38%] drop-shadow-xl z-20 asterixco' src={asterixco} alt="asterixco" />
                 <div className='flex flex-col items-center md:flex-row md:items-end justify-between'>
                     <div className='flex md:-indent-2 md:text-[10vw] px-1 bg-white md:bg-transparent text-[16vw] flex-col font-[700] z-40 animate__fadeInLeft animate__animated'>
                         <p className='nicoBarrera nico h-[12vw] md:h-[7.6vw]'> Nico </p>
@@ -20,7 +20,7 @@ function Principio() {
                 </div>
 
                 <div className='flex items-start justify-between w-full'>
-                    <div className='flex mt-8 md:mt-10 w-full md:w-[50%] animate__fadeInLeft animate__animated'>
+                    <div className='flex mt-8 md:mt-12 w-full md:w-[50%] animate__fadeInLeft animate__animated'>
                         <div className='linea1 h-1 w-[20%] '></div>
                         <div className='linea2 h-1 w-[20%] '></div>
                         <div className='linea3 h-1 w-[20%] '></div>
@@ -28,8 +28,8 @@ function Principio() {
                     </div>
                 </div>
 
-                <section className='flex relative my-8 md:my-14 flex-col md:flex-row gap-y-10 md:gap-0 md:justify-between text-mono'>
-                    <div className='w-full md:w-[50%] flex flex-col text-[#3f3f3f] gap-2 animate__fadeInLeft animate__animated'>
+                <section className='flex relative my-8 md:my-20 flex-col md:flex-row gap-y-10 md:gap-0 md:justify-between text-mono'>
+                    <div className='w-full md:w-[50%] flex flex-col gap-2 animate__fadeInLeft animate__animated'>
                         <div className='flex justify-between items-center'>
                             <p className='text-xs md:text-sm w-[80%] font-[300] md:w-[30vw] hover:border-b-[1px] hover:duration-200 border-b-[1px] border-[#0600ff] md:border-transparent hover:border-[#0600ff]'>En un mundo cambiante, sos el responsable de participar en el cambio.</p>
                             <img className='w-8 md:w-12' src={mundo} alt="mundo" />
