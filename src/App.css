@@ -132,17 +132,15 @@ HTML {
 }
 
 .haches {
-    font-weight: bold;
     color: #000000;
-    font-size: 19px;
-    margin-bottom: 0.2rem;
+    font-size: 50px;
+    margin-bottom: 1rem;
+    font-weight: 100;
+    line-height: 0.9;
 }
 
 .parrafo {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    border-radius: 4px;
+    font-family:'Nunito';
 }
 
 .fontt {

@@ -71,11 +71,11 @@ function Contact() {
         </div>
       }
 
-      <div id='contacto' className='z-20 relative min-h-[20vw] max-w-full flex items-center justify-center rounded-t-[13vh] md:rounded-t-[20vh] rounded-b-xl bg-white lg:mx-10'>
+      <div id='contacto' className='z-20 relative min-h-[20vw] max-w-full flex items-center justify-center rounded-t-[13vh] md:rounded-t-[20vh] rounded-b-xl bg-white lg:mx-40'>
         <div className='px-6 md:p-0 lg:w-[60%] h-[80vh] flex flex-col justify-evenly'>
           <div className='text-mono w-full flex flex-col items-center selection:bg-transparent'>
             <p className='text-[5vh] md:text-[6rem] text-[#0600ff] font-[900] lg:h-[18vh]'>Contáctame</p>
-            <p className='text-sm text-center lg:text-start lg:text-lg'>Serás atendido dentro de las <b className='text-[#0600ff]'>24hs</b></p>
+            <p className='text-sm parrafo text-center lg:text-start lg:text-lg'>Serás atendido dentro de las <b className='text-[#0600ff] font-[900]'>24hs</b></p>
           </div>
           <div className='flex justify-center w-full'>
             <form onSubmit={sendMail} className='flex flex-col w-full text-sm gap-y-10'>
