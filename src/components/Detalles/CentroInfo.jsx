@@ -29,9 +29,9 @@ function CentroInfo(props) {
                         <div className="border-b border-gray pt-5 pb-10" id={eachInfo.titulo} key={index}>
                             <h2 className=""><span style={{ color: color }} className="text-xl">#</span> {eachInfo.titulo}</h2>
                             {fotos.foto === "" ?
-                                <div className="mt-9 skeleton-charge"></div>
-                                :
                                 <img /* onClick={() => { opnVisor(eachInfo.foto ) }} */ className='max-w-full mt-2 object-contain shadow-sm cursor-pointer' src={fotos[index].foto} alt="imagen" />
+                                :
+                                <div className="mt-9 skeleton-charge"></div>
                             }
                         </div>
                     ))
