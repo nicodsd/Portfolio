@@ -31,11 +31,11 @@ function Presentacion_2() {
     }, []);
 
     return (
-        <div id='sobreMi' className='min-h-screen selection:bg-transparent lg:mx-2 xl:mx-14 pt-16 md:py-14'>
-            <div className=' flex flex-col md:flex-row justify-between items-center gap-y-10 md:gap-y-0'>
+        <div id='sobreMi' className='min-h-screen selection:bg-transparent lg:px-[13vw] pt-16 md:py-14'>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-y-10 md:gap-y-0'>
 
             <div className='w-[93%] relative lg:w-[45%] rounded-3xl md:rounded-[3rem] border-[2px] border-[#000000] xl:w-[60%] text-mono text-black flex flex-col justify-center p-10 z-10'>
-                <h2 id="titular" className="lg:text-[23rem] text-[7rem] absolute lg:-top-[19rem] -top-[5rem] tracking-tighter font-[500]">Hol@</h2>
+                <h2 id="titular" className="lg:text-[19rem] text-[7rem] absolute lg:-top-[16rem] -top-[5rem] tracking-tighter font-[500]">Hola</h2>
                 <div className='flex flex-col gap-y-14 pt-16 lg:pt-[10rem]'>
                     <div className=" font-[300]">
                         <h3 className='haches tracking-tighter'>Te cuento</h3>
@@ -64,7 +64,7 @@ function Presentacion_2() {
                 </div>
             </div>
             <div className='flex justify-between items-center gap-x-4 h-full relative w-[93%] md:w-fit md:px-0 md:mr-6'>
-                <div id="titular" className='z-10 relative bg-black border-2 border-black h-full rounded-[3rem]'>
+                <div id="titular" className='z-10 relative h-full rounded-[3rem]'>
                     {img3 && <img src={img3} alt="imagen" className='cap w-[80vw] h-[35vh] md:w-[26vh] drop-shadow-md lg:w-[32vh] object-cover relative -right-10 md:right-1 md:h-[20vh] lg:h-[25vh] rotate-3 bg-[#a1a1a1]' />}
                     {img2 && <img src={img2} alt="imagen" className='cap w-[80vw] md:w-[30vh] z-30 drop-shadow-md lg:w-[30vh] object-cover relative lg:right-12 left-2 scale-105 md:right-8 md:h-[24vh] lg:h-[30vh] -rotate-3 bg-[#cecece]' />}
                     {img1 && <img src={img1} alt="imagen" className='cap w-[100vw] md:w-[26vh] z-20 drop-shadow-md lg:w-[30vh] object-cover relative -right-2 md:-right-10 md:h-[20vh] lg:h-[21vh] rotate-[6deg] bg-[#cecece]' />}
