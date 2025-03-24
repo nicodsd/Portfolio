@@ -8,7 +8,7 @@ import flecha from '../../public/Images/diseño-grafico/objetos-graficos/flecha.
 
 function Tecnologias() {
     return (
-        <div className='h-fit relative selection:bg-transparent w-full text-mono flex flex-col px-5 lg:px-14 items-center justify-evenly'>
+        <div className='h-fit relative selection:bg-transparent w-full text-mono flex flex-col px-5 lg:px-[13vw] items-center justify-evenly'>
             <h2 id='tecnologias' className='w-full md:pt-20 text-2xl lg:text-3xl font-bold'>Tecnologías</h2>
             <img className='absolute h-[4.5rem] z-30 lg:h-[7rem] bottom-[40vw] sm:bottom-[34vw] lg:bottom-[30vw] right-10 lg:right-[10vw] animate-spin-slow' src={rueda} alt="rueda" />
 
