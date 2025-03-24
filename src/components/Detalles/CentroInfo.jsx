@@ -12,7 +12,6 @@ function CentroInfo(props) {
     const color = informacion?.color
     const guardarFoto = useRef("")
 
-    console.log(guardarFoto.current.currentSrc)
 
     function contactame() {
         navigate('/')
