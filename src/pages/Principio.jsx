@@ -6,7 +6,7 @@ import burbuja from '../../public/Images/diseño-grafico/iconos/Recurso52.svg'
 function Principio() {
     return (
         <>
-            <div className='mt-4 mx-10 md:mx-[10vh] selection:bg-transparent md:cuerpo text-mono md:mt-20 z-20'>
+            <div className='mt-4 mx-10 md:px-10 md:mx-[10vh] selection:bg-transparent md:cuerpo text-mono md:mt-20 z-20'>
 
                 <div className='flex flex-col items-center md:flex-row md:items-end justify-between'>
                     <div className='flex md:-indent-2 md:text-[10vw] px-1 bg-white md:bg-transparent text-[16vw] flex-col font-[700] z-40 animate__fadeInLeft animate__animated'>
