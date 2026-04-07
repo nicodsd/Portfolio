@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './index.css';
 import Layout from './layouts/Layout';
-import Index from './pages/home.jsx'; 
-import Detalles from './pages/Detalles/Detalles'; 
-import ErrorPage from './pages/ErrorPage'; 
-import Mantenimiento from './pages/Mantenimiento.jsx';
+import Index from './pages/home.jsx';
+import Detalles from './pages/Detalles/Detalles';
+import ErrorPage from './pages/ErrorPage';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
