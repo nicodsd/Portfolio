@@ -3,42 +3,24 @@ import BarraLateralDet from '../../components/Detalles/BarraLateralDet'
 import SeccionesDetalles from '../../components/Detalles/SeccionesDetalles'
 import CentroInfo from '../../components/Detalles/CentroInfo'
 import { useParams } from 'react-router-dom'
-import axios from 'axios'
-import apiUrl from '../../../api'
 import ProductDetails from '../../components/skeletons/SkeletonDetallesInfo'
 import SidebarDetalles from '../../components/SidebarDetalles'
 import SidebarSeccionesDetalles from '../../components/SidebarSeccionesDetalles'
 import sideIcon from '../../../public/Images/diseño-grafico/iconos/sidebar.svg'
 import VisorDeFotos from '../../components/VisorDeFotos'
+import { details } from '../../data/details'
 
 function Detalles() {
 
   let { pagina } = useParams()
 
-  const [info, setInfo] = useState(null)
   const [openSide, setOpenSide] = useState(false)
   const [openSecc, setOpenSecc] = useState(false)
   const [openVisor, setOpenVisor] = useState(false)
   const [verImagen, setVerImagen] = useState(null)
   const [verColor, setColor] = useState(null)
 
-  let informacion = info?.data?.pages
-
-  useEffect(
-    () => {
-      axios.get(apiUrl + `detalle?pagina=${pagina}`)
-        .then(
-          res => {
-            if (res) {
-              setInfo(res)
-            }
-          }
-        ).catch(
-          err => {
-            console.log(err)
-          }
-        )
-    }, [])
+  let informacion = details.find(item => item.pagina === pagina)
 
   const open = () => {
     if (openSide == false) {

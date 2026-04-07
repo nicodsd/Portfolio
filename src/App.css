@@ -5,7 +5,7 @@
 }
 
 HTML {
-    background-color: #E2E8EE;
+    background-color: #ffffff;
 }
 
 .circulo-back-mobile {
@@ -132,7 +132,6 @@ HTML {
 }
 
 .haches {
-    color: #000000;
     font-size: 50px;
     margin-bottom: 1rem;
     font-weight: 100;

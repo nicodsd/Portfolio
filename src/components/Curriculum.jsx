@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import icon from '../../public/Images/diseño-grafico/iconos/file_save.svg'
 import icon2 from '../../public/Images/diseño-grafico/iconos/progress_activity.svg'
-import pdf from '../../public/Images/contenido/PDF/Curriculum_Vitae_Barrera_Julio_Nicolas.pdf'
+import pdf from '../../public/Images/contenido/PDF/CV_BARRERA_JULIO_NICOLAS.pdf'
 
 function Curriculum() {
 

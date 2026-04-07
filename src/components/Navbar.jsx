@@ -2,6 +2,7 @@ import { Link as Anchor } from 'react-router-dom'
 import { useState } from 'react'
 import Sidebar from './Sidebar'
 import burger from '../../public/Images/diseño-grafico/iconos/menu.svg'
+import ButtonTheme from './ButtonTheme'
 
 function Navbar() {
 
@@ -39,8 +40,7 @@ function Navbar() {
 
   return (
     <>
-      <div className='w-full h-[9rem] blur-[35px] bg-[#ffffff] absolute z-10'></div>
-      <div className='w-full h-[12rem] blur-[35px] bg-[#ffffff] absolute z-10'></div>
+
       {open ? <Sidebar open={open} close={close} /> : null}
       <nav className="relative w-full text-mono z-10 p-2 md:p-0">
         <div className="w-full text-[#000000] flex justify-between px-1 py-[4px] lg:px-6 lg:py-[20px] items-center">
@@ -59,7 +59,6 @@ function Navbar() {
               <li className='cursor-default'><p className='border-l-2 text-[#00000077] border-black px-2 lg:px-6'>Diseño Grāfico</p></li>
             </ul>
           </div>
-
           <p className="text-xl font-semibold cursor-default">`portafolio`</p>
         </div>
       </nav>
