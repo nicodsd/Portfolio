@@ -60,7 +60,7 @@ function Contact() {
         </div>
       }
 
-      <div id='contacto' className='z-20 px-10 md:px-0 w-full md:pb-16 pb-40 relative max-w-full flex items-center justify-center'>
+      <div id='contacto' className='z-20 px-10 md:px- w-full md:pb-16 pb-40 relative max-w-full flex items-center justify-center'>
         <div className='w-full md:px-20 flex flex-col items-center md:flex-row justify-between'>
           <div className='text-mono flex flex-col md:w-[40%] h-full gap-y-4 md:items-start w-full items-center py-10 md:justify-center selection:bg-transparent'>
             {/* <svg className='h-[10vw]' width="150" height="200" viewBox="0 0 220 315" fill="none" xmlns="http://www.w3.org/2000/svg"><path id='forma' d="M0.749025 148.53C0.749024 93.3018 45.5206 48.5303 100.749 48.5303L219.48 48.5303L219.48 205.599C219.48 266 170.515 314.965 110.115 314.965V314.965C49.7136 314.965 0.749027 266 0.749026 205.599L0.749025 148.53Z" fill="#0019FF" /><path id='forma' d="M0.749025 87.0551C0.749024 39.3014 39.461 0.589355 87.2147 0.589354L173.68 0.589352L173.68 124.77C173.68 172.524 134.968 211.236 87.2148 211.236V211.236C39.4611 211.236 0.749026 172.524 0.749026 124.77L0.749025 87.0551Z" fill="#FF0080" /></svg> */}
