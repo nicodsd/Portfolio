@@ -28,7 +28,6 @@ function Index() {
     <div className='relative overflow-hidden'>
       <Principio />
       <div className='flex text-mono flex-col h-fit scroll-smooth px-10 md:mx-[10vh] overflow-x-hidden'>
-        <Presentacion_2 />
         <Proyectos />
         <Mobile />
         <Tecnologias />

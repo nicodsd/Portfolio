@@ -142,7 +142,7 @@ export let details = [
         id: 4,
         pagina: "homeessentials",
         titulo: "Home Essentials",
-        enlace: "home-essentials-front.vercel.app",
+        enlace: "home-essentials-one.vercel.app",
         github: "https://github.com/zErhiz/HomeEssentials-front.git",
         descripcion: "E-Commerce de productos para el hogar con un diseño vanguardista y moderno, con un amplio catálogo de productos en diferentes categorías, además de un carrito de compras y creación de usuarios.",
         descExtendido: "",
