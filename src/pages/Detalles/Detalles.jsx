@@ -58,14 +58,14 @@ function Detalles() {
       {/* {openVisor &&
         <VisorDeFotos opnVisor={opnVisor} imagen={verImagen} verColor={verColor} />
       } */}
-      <img src={sideIcon} alt='sideIcon' onClick={openSecciones} className='w-7 h-7 md:w-0 bg-white p-1 rounded-full md:h-0 fixed right-1 top-18 z-30' />
-      <img src={sideIcon} alt='sideIcon' onClick={open} className='w-7 h-7 md:w-0 bg-white p-1 rounded-full md:h-0 fixed rotate-180 left-1 top-18 z-30' />
-      <div className='min-h-screen md:max-h-screen selection:bg-transparent min-w-screen flex text-mono bg-[#E2E8EE] relative'>
+      <img src={sideIcon} alt='sideIcon' onClick={openSecciones} className='w-7 h-7 md:hidden md:w-0 bg-white p-1 rounded-full md:h-0 fixed right-1 top-18 z-30' />
+      <img src={sideIcon} alt='sideIcon' onClick={open} className='w-7 h-7 md:hidden md:w-0 bg-white p-1 rounded-full md:h-0 fixed rotate-180 left-1 top-18 z-30' />
+      <div className='min-h-screen md:max-h-screen selection:bg-transparent min-w-full p-1 flex text-mono bg-[#E2E8EE] relative'>
         {informacion?.fotos?.length > 0 ?
           <div className='flex md:gap-x-[4px]'>
             <BarraLateralDet informacion={informacion} />
 
-            <CentroInfo opnVisor={opnVisor} informacion={informacion} />
+            <CentroInfo informacion={informacion} />
 
             <SeccionesDetalles informacion={informacion} />
           </div>

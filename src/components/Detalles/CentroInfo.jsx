@@ -1,17 +1,14 @@
-import { useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 function CentroInfo(props) {
 
-    const { informacion, opnVisor } = props
+    const { informacion } = props
 
     const navigate = useNavigate()
     const titulo = informacion?.titulo
     const descripcion = informacion?.descripcion
     const fotos = informacion?.fotos
     const color = informacion?.color
-    const guardarFoto = useRef("")
-
 
     function contactame() {
         navigate('/')
@@ -20,22 +17,28 @@ function CentroInfo(props) {
     return (
         <>
             <div style={{ backgroundColor: color }} className='w-full h-[20rem] fondo-blur animate__flash animate__animated animate__infinite blur-[200px] absolute opacity-30'></div>
-            <div className='w-screen bg-white md:max-w-[64vw] min-h-screen md:h-screen md:overflow-auto gap-y-16 flex flex-col pt-12 md:pt-6 md:px-5 lg:px-8 xl:px-10 px-4 pb-10 z-20 md:pb-[10vh] rounded-lg'>
+            <div className='w-full bg-white md:max-w-[64vw] min-h-screen md:h-screen md:overflow-auto gap-y-16 flex flex-col pt-12 md:pt-6 md:px-5 lg:px-8 xl:px-10 px-4 pb-10 z-20 md:pb-[10vh] rounded-lg'>
                 <div>
-                    <h1 style={{ color: color }} className="text-[3.1rem] leading-none -tracking-[5px] md:text-[3rem] lg:text-[7vw] xl:text-[6rem] font-[400] md:font-[300] lg:font-[100] mb-2 md:mb-4">{titulo}*</h1>
+                    <h2 style={{ color: color }} className="text-[3.1rem] leading-none -tracking-[8px] md:text-[3rem] lg:text-[7vw] xl:text-[6rem] font-[400] md:font-[300] lg:font-[100] mb-2 md:mb-4 animate__animated animate__fadeInDown">{titulo}</h2>
                     <p className="font-[300] leading-5 text-sm text-[#3f3f3f]">{descripcion}</p>
                 </div>
                 <div className='flex flex-col items-start gap-y-10 md:font-[600]'>
 
-                    {fotos?.length > 0 ? fotos?.map((eachInfo, index) => (
-                        <div className="border-b border-gray pt-5 pb-10" id={eachInfo.titulo} key={index}>
-                            <h2><span style={{ color: color }} className="text-xl">#</span> {eachInfo.titulo}</h2>
-                            <img className='max-w-full mt-2 object-contain shadow-sm cursor-pointer' src={fotos[index].foto} alt="imagen" />
+                    {informacion?.pagina === "homeessentials" ? (
+                        <div className="border-b border-gray pt-5 pb-10" id="video">
+                            <h2><span style={{ color: color }} className="text-xl">#</span> Demo en video</h2>
+                            <video className='max-w-full mt-2 object-contain shadow-sm' src="/videos/video_home.webm" autoPlay loop muted controls playsInline />
                         </div>
-                    ))
-                        :
-                        null
-                    }
+                    ) : (
+                        fotos?.length > 0 ? fotos?.map((eachInfo, index) => (
+                            <div className="border-b border-gray pt-5 pb-10" id={eachInfo.titulo} key={index}>
+                                <h2><span style={{ color: color }} className="text-xl">#</span> {eachInfo.titulo}</h2>
+                                <img className='max-w-full mt-2 object-contain shadow-sm cursor-pointer' src={fotos[index].foto} alt="imagen" />
+                            </div>
+                        ))
+                            :
+                            null
+                    )}
 
                 </div>
                 <div className="flex text-[#919191] w-full justify-center md:text-sm text-xs md:pb-2 pb-10">

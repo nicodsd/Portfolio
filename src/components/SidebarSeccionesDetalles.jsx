@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SidebarSeccionesDetalles(props) { 
+function SidebarSeccionesDetalles(props) {
   const { informacion, openSecciones } = props
   const fotos = informacion?.fotos
 
@@ -22,12 +22,15 @@ function SidebarSeccionesDetalles(props) {
         <p onClick={openSecciones} className='absolute md:invisible right-2 font-semibold py-1 px-3 top-2 z-50'>X</p>
         <h2 style={{ color: informacion.color }} className='font-bold text-lg mb-2'>Secciones</h2>
         <div className='flex gap-y-2 flex-col'>
-          {fotos?.length > 0 ? fotos?.map((eachInfo, index) => (
-            <h2 onClick={() => { irSeccion(eachInfo.titulo) }} className=" hover:scale-[1.03] hover:translate-x-1 text-[16px] cursor-pointer" key={index}> <span style={{ color: informacion.color }}>#</span> {eachInfo.titulo}</h2>
-          ))
-            :
-            null
-          }
+          {informacion?.pagina === "homeessentials" ? (
+            <h2 onClick={() => { irSeccion('video') }} className=" hover:scale-[1.03] hover:translate-x-1 text-[16px] cursor-pointer"> <span style={{ color: informacion.color }}>#</span> Demo en video</h2>
+          ) : (
+            fotos?.length > 0 ? fotos?.map((eachInfo, index) => (
+              <h2 onClick={() => { irSeccion(eachInfo.titulo) }} className=" hover:scale-[1.03] hover:translate-x-1 text-[16px] cursor-pointer" key={index}> <span style={{ color: informacion.color }}>#</span> {eachInfo.titulo}</h2>
+            ))
+              :
+              null
+          )}
         </div>
       </div>
     </>
