@@ -5,7 +5,7 @@ export let cardsPages = [
         titulo: "Qmenú",
         enlace: "qmenu.digital",
         github: "https://github.com/zErhiz/HomeEssentials-front.git",
-        descripcion: "E-Commerce de productos para el hogar con un diseño vanguardista y moderno, con un amplio catálogo de productos en diferentes categorías, con carrito y creación de usuarios.",
+        descripcion: "Aplicación web para locales gastronómicos donde podrán gestionar sus platos y pedidos.",
         descExtendido: "",
         miniatura: "../Images/portadas/qmenu.webp",
         color: "#7847E0",
