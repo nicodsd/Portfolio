@@ -1,41 +1,6 @@
 export let details = [
-
     {
         id: 1,
-        pagina: "amazingevents",
-        titulo: "Amazing Events",
-        enlace: "amazing-events-sigma.vercel.app",
-        github: "https://github.com/nicodsd/AmazingEvents.git",
-        descripcion: "Una de mis primeras páginas web que hice, donde se publican eventos de diferentes tipos, divididos en categorias y cronologicamente, con una tabla de estadisticas de los eventos.",
-        descExtendido: "",
-        miniatura: "https://i.postimg.cc/hP7bW0yQ/amazing-events.webp",
-        color: "#dc3545",
-        duraciónDeProyecto: "2 semanas",
-        tecnologias: "Javascript, Css, Html",
-        appMovil: "No",
-        diseño: "Nicolas Barrera",
-        dirigidoHacia: "MindHub L.A.",
-        fotos: [
-            {
-                titulo: "Home",
-                foto: "https://i.postimg.cc/k4K6YjX7/Captura-de-pantalla-478.webp"
-            },
-            {
-                titulo: "Filtro",
-                foto: "https://i.postimg.cc/8CqfH8Gy/Captura-de-pantalla-480.webp"
-            },
-            {
-                titulo: "Contact",
-                foto: "https://i.postimg.cc/cLknvgbG/Captura-de-pantalla-482.webp"
-            },
-            {
-                titulo: "Stats",
-                foto: "https://i.postimg.cc/CKZfkh3B/Captura-de-pantalla-483.webp"
-            }
-        ],
-    },
-    {
-        id: 2,
         pagina: "huellasana",
         titulo: "Huella Sana",
         enlace: "pet-shop-challenge.netlify.app/",
@@ -51,45 +16,33 @@ export let details = [
         dirigidoHacia: "MindHub L.A.",
         fotos: [
             {
-                titulo: "Video introductorio",
-                foto: "https://i.postimg.cc/d3J1Hwx9/intro.webp",
-            },
-            {
                 titulo: "Home",
-                foto: "https://i.postimg.cc/8kbsFf7X/home.webp",
+                foto: "../Images/imag_details/huella_one.webp",
             },
             {
                 titulo: "Llamado a la acción",
-                foto: "https://i.postimg.cc/zXXvTDWz/navegacion.webp",
-            },
-            {
-                titulo: "Donde encontrarnos",
-                foto: "https://i.postimg.cc/Z5WqDfVX/mapa.webp",
+                foto: "../Images/imag_details/huella_two.webp",
             },
             {
                 titulo: "Pie de página",
-                foto: "https://i.postimg.cc/yxnN22qC/footer.webp",
+                foto: "../Images/imag_details/huella_three.webp",
             },
             {
                 titulo: "Filtro de veterinaria",
-                foto: "https://i.postimg.cc/bJcdnQ0W/filtro.webp",
+                foto: "../Images/imag_details/huella_four.webp",
             },
             {
                 titulo: "Filtros",
-                foto: "https://i.postimg.cc/hjLv1fpj/filtros.webp",
+                foto: "../Images/imag_details/huella_five.webp",
             },
             {
                 titulo: "Jugueteria",
-                foto: "https://i.postimg.cc/sD6XmF9p/tienda.webp",
+                foto: "../Images/imag_details/huella_six.webp",
             },
-            {
-                titulo: "Contacto",
-                foto: "https://i.postimg.cc/zGQyzmyJ/contact.webp",
-            }
         ],
     },
     {
-        id: 3,
+        id: 2,
         pagina: "minga",
         titulo: "Minga",
         enlace: "minga-naranja-front46.vercel.app/",
@@ -106,40 +59,40 @@ export let details = [
         fotos: [
             {
                 titulo: "Home",
-                foto: "https://i.postimg.cc/8P4SBhG9/Opera-Instant-nea-2023-10-23-221258-localhost.webp",
+                foto: "../Images/imag_details/minga_one.webp",
             },
             {
                 titulo: "Inicio de sesión",
-                foto: "https://i.postimg.cc/XYD6t4pg/Opera-Instant-nea-2023-10-23-221331-localhost.webp",
+                foto: "../Images/imag_details/minga_two.webp",
             },
             {
                 titulo: "Sidebar",
-                foto: "https://i.postimg.cc/sg2RnvDX/Opera-Instant-nea-2023-10-23-221351-localhost.webp",
+                foto: "../Images/imag_details/minga_tree.webp",
             },
             {
                 titulo: "Pagina de mangas",
-                foto: "https://i.postimg.cc/KjHsJrGr/Captura-de-pantalla-658.webp",
+                foto: "../Images/imag_details/minga_four.webp",
             },
             {
                 titulo: "Favoritos",
-                foto: "https://i.postimg.cc/1tMdN1bd/Captura-de-pantalla-660.webp",
+                foto: "../Images/imag_details/minga_five.webp",
             },
             {
                 titulo: "Apartado de donación",
-                foto: "https://i.postimg.cc/tCsc7fkr/Captura-de-pantalla-663.webp",
+                foto: "../Images/imag_details/minga_six.webp",
             },
             {
                 titulo: "Publica tu manga",
-                foto: "https://i.postimg.cc/kG4pQhmg/Captura-de-pantalla-659.webp",
+                foto: "../Images/imag_details/minga_seven.webp",
             },
             {
                 titulo: "Mis mangas",
-                foto: "https://i.postimg.cc/44LMfZ67/Captura-de-pantalla-664.webp"
+                foto: "../Images/imag_details/minga_eight.webp"
             }
         ],
     },
     {
-        id: 4,
+        id: 3,
         pagina: "homeessentials",
         titulo: "Home Essentials",
         enlace: "home-essentials-one.vercel.app",
@@ -228,6 +181,28 @@ export let details = [
                 foto: "https://i.postimg.cc/xd8t0CQc/Opera-Instant-nea-2023-10-22-195303-home-essentials-front-vercel-app.webp"
             }
         ],
-    }
+    },
+    {
+        id: 4,
+        pagina: "qmenu",
+        titulo: "QMenú",
+        enlace: "qmenu.digital",
+        github: "https://github.com/nicodsd/qMenuFrontend",
+        descripcion: "Aplicación web para locales gastronómicos donde podrán gestionar sus platos y pedidos.",
+        descExtendido: "",
+        miniatura: "../Images/portadas/qmenu_portada.webp",
+        color: "#FF1E01",
+        duraciónDeProyecto: "3 Semanas",
+        tecnologias: "Javascript, Html, Css, TailwindCss, Nodejs, React, ExpressJS, Firebase, MongoDB, Postman",
+        appMovil: "No",
+        diseño: "Nicolas Barrera",
+        dirigidoHacia: "Propietarios de locales gastronómicos",
+        fotos: [
+            {
+                titulo: "Imagen promocional",
+                foto: "../Images/imag_details/qmenu-promo-app.png",
+            },
+        ],
+    },
 
 ]

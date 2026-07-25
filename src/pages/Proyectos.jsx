@@ -1,4 +1,5 @@
 import Cards from '../components/Cards'
+import { motion } from "motion/react"
 import { cardsPages } from '../data/cardsPages'
 
 function Proyectos() {
@@ -12,7 +13,7 @@ function Proyectos() {
                 <p className='text-sm md:text-base leading-5 pt-2 w-full lg:w-[50%] parrafo font-[300]'>Se usaron las principales tecnologías del desarrollo web, complementando mis conocimientos de diseño y las últimas tecnologías.</p>
             </div>
             <div className='w-full h-fit flex justify-center items-center'>
-                <div className='w-full md:w-2/4 flex flex-col gap-y-5 md:gap-y-10'>
+                <div className='w-full md:w-[65%] flex flex-col gap-y-5 md:gap-y-10'>
                     <Cards datos={datos} />
                 </div>
             </div>
