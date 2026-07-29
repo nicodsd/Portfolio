@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react'
 import emailjs from 'emailjs-com'
+import { motion } from 'motion/react'
+import DitheredObject from '../components/canvasui/DitheredObject'
 
 function Contact() {
 
@@ -60,15 +62,50 @@ function Contact() {
         </div>
       }
 
-      <div id='contacto' className='z-20 px-10 md:px- w-full md:pb-16 pb-40 relative max-w-full flex items-center justify-center'>
+      <div id='contacto' className='z-20 px-10 w-full md:pb-16 pb-40 relative max-w-full flex items-center justify-center'>
         <div className='w-full md:px-20 flex flex-col items-center md:flex-row justify-between'>
-          <div className='text-mono flex flex-col md:w-[40%] h-full gap-y-4 md:items-start w-full items-center py-10 md:justify-center selection:bg-transparent'>
-            {/* <svg className='h-[10vw]' width="150" height="200" viewBox="0 0 220 315" fill="none" xmlns="http://www.w3.org/2000/svg"><path id='forma' d="M0.749025 148.53C0.749024 93.3018 45.5206 48.5303 100.749 48.5303L219.48 48.5303L219.48 205.599C219.48 266 170.515 314.965 110.115 314.965V314.965C49.7136 314.965 0.749027 266 0.749026 205.599L0.749025 148.53Z" fill="#0019FF" /><path id='forma' d="M0.749025 87.0551C0.749024 39.3014 39.461 0.589355 87.2147 0.589354L173.68 0.589352L173.68 124.77C173.68 172.524 134.968 211.236 87.2148 211.236V211.236C39.4611 211.236 0.749026 172.524 0.749026 124.77L0.749025 87.0551Z" fill="#FF0080" /></svg> */}
-            <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" fill="none" className="md:h-[20vw] h-20" viewBox="0 0 293 267"><path id="forma" fill="#0019ff" d="M81.068 122.012c0-67.379 54.622-122 122-122h89.245v34.765c0 55.228-44.771 99.999-100 99.999H81.068z" /><path id="forma" fill="#ffd400" d="M81.069 200.612c0-36.36 29.475-65.835 65.835-65.835h45.41c55.228 0 100 44.771 100 100v31.67H81.069zM.344.012c44.583 0 80.725 36.142 80.725 80.725v54.039H.344z" /><rect id="forma" width="80.725" height="131.67" x=".344" y="134.777" fill="#ff0080" rx="40.362" /></svg>
+          <div className='text-mono flex flex-col md:w-[40%] h-[60vw] md:h-[30vw] min-h-[250px] relative gap-y-4 md:items-start w-full items-center py-10 md:justify-center selection:bg-transparent'>
+            <DitheredObject
+              src="/Images/diseño-grafico/objetos-graficos/contact.svg"
+              method="halftone"
+              gridSize={2}
+              pixelSizeRatio={2}
+              environmentIntensity={1.2}
+              roughness={0}
+              scale={4}
+              xOffset={0}
+              yOffset={0}
+              floatIntensity={0}
+              rotationIntensity={1}
+              floatSpeed={0}
+              fov={60}
+              cameraDistance={5}
+              grayscale={false}
+              invert={false}
+              dither={true}
+              autoRotate={true}
+              zoom={false}
+              highlight="#FF0080"
+              className="w-full h-full absolute inset-0"
+            />
           </div>
           <div className='flex flex-col w-full md:w-[60%] h-full gap-y-16 items-start justify-center'>
             <div className='flex flex-col gap-y-4 selection:bg-transparent'>
-              <p className='md:text-7xl text-5xl text-[#0600ff] font-[900] tracking-tight'>Contáctame</p>
+              <motion.div
+                className='md:text-7xl text-5xl text-[#0600ff] font-[900] tracking-tight flex'
+                initial="hidden" whileInView="show" viewport={{ once: true }}
+                variants={{ hidden: { opacity: 1 }, show: { opacity: 1, transition: { staggerChildren: 0.08 } } }}
+              >
+                {"Contáctame".split("").map((char, index) => (
+                  <motion.span
+                    key={index}
+                    variants={{ hidden: { opacity: 0, y: 60, rotateX: -40 }, show: { opacity: 1, y: 0, rotateX: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } } }}
+                    className="inline-block"
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </motion.div>
               <p className='text-lg parrafo text- lg:text-start lg:text-lg'>
                 ¿Tenés alguna idea en mente? ¿Necesitás ayuda con algún proyecto? ¿Querés que trabajemos juntos?
                 <br className='hidden md:block' />

@@ -32,7 +32,7 @@ function Index() {
         <Mobile />
         <Tecnologias />
       </div>
-      <div className='md:my-10 my-5'>
+      <div className='md:mb-32 my-5'>
         <LogoLoop
           logos={techLogos}
           speed={100}

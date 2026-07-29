@@ -1,4 +1,3 @@
-import React from 'react'
 import arrow from '../../../public/Images/diseño-grafico/iconos/flecha-sitio2.svg'
 import gitIcon from '../../../public/Images/diseño-grafico/iconos/github.svg'
 import { Link } from 'react-router-dom'
@@ -6,8 +5,6 @@ import { Link } from 'react-router-dom'
 function BarraLateralDet(props) {
 
     const { informacion } = props
-
-    const color = informacion?.color
 
     return (
         <>
@@ -29,19 +26,19 @@ function BarraLateralDet(props) {
                     <h2 className='md:text-2xl font-semibold'>Datos de interés</h2>
                     <div className='flex flex-col gap-y-3 mt-2'>
                         <div className='flex flex-col'>
-                            <p className=' font-[200] text-xs '>Duración de proyecto:</p><p className=' font-[600]'>{informacion?.duraciónDeProyecto}</p>
+                            <p className=' font-[200] text-xs '>Duración de proyecto:</p><p className=' font-mono font-bold'>{informacion?.duraciónDeProyecto}</p>
                         </div>
                         <div className='flex flex-col'>
-                            <p className=' font-[200] text-xs '>Tecnologías:</p><p className=' font-[600]'>{informacion?.tecnologias}</p>
+                            <p className=' font-[200] text-xs '>Tecnologías:</p><p className=' font-mono font-bold'>{informacion?.tecnologias}</p>
                         </div>
                         <div className='flex flex-col'>
-                            <p className=' font-[200] text-xs '>Aplicación movil:</p><p className=' font-[600]'>{informacion?.appMovil}</p>
+                            <p className=' font-[200] text-xs '>Aplicación movil:</p><p className=' font-mono font-bold'>{informacion?.appMovil}</p>
                         </div>
                         <div className='flex flex-col'>
-                            <p className=' font-[200] text-xs '>Diseño:</p><p className=' font-[600]'>{informacion?.diseño}</p>
+                            <p className=' font-[200] text-xs '>Diseño:</p><p className=' font-mono font-bold'>{informacion?.diseño}</p>
                         </div>
                         <div className='flex flex-col'>
-                            <p className=' font-[200] text-xs '>Dirigido hacia:</p><p className=' font-[600]'>{informacion?.dirigidoHacia}</p>
+                            <p className=' font-[200] text-xs '>Dirigido hacia:</p><p className=' font-mono font-bold'>{informacion?.dirigidoHacia}</p>
                         </div>
                     </div>
                 </div>

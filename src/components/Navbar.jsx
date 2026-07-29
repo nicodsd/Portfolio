@@ -2,7 +2,7 @@ import { Link as Anchor } from 'react-router-dom'
 import { useState } from 'react'
 import Sidebar from './Sidebar'
 import burger from '../../public/Images/diseño-grafico/iconos/menu.svg'
-import ButtonTheme from './ButtonTheme'
+import { motion } from 'motion/react'
 
 function Navbar() {
 
@@ -59,7 +59,25 @@ function Navbar() {
               <li className='cursor-default'><p className='border-l-2 text-[#00000077] border-black px-2 lg:px-6'>Diseño Grāfico</p></li>
             </ul>
           </div>
-          <p className="text-xl font-semibold cursor-default">`portafolio`</p>
+          <motion.p
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 1 },
+              show: { opacity: 1, transition: { staggerChildren: 0.08 } }
+            }}
+            className="text-xl font-semibold cursor-default md:pr-5">
+            `{"portafolio".split("").map((char, index) => (
+              <motion.span
+                key={index}
+                variants={{ hidden: { opacity: 0, y: 100, rotateX: -40 }, show: { opacity: 1, y: 0, rotateX: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } } }}
+                className="inline-block"
+              >
+                {char}
+              </motion.span>
+            ))}`
+          </motion.p>
         </div>
       </nav>
     </>

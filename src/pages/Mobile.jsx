@@ -12,7 +12,22 @@ function Mobile() {
         <div className='circulo-back-mobile border border-transparent group-hover:border-2 group-hover:border-gray-400/40 transition-all duration-200 w-[60vw] h-[60vw] md:w-[50vh] md:h-[50vh] z-0 rounded-full'></div>
         <div className='circulo-back-mobile border border-transparent group-hover:border-2 group-hover:border-gray-400/30 transition-all duration-300 delay-100 w-[70vw] h-[70vw] md:w-[70vh] md:h-[70vh] z-0 rounded-full'></div>
         <div className='circulo-back-mobile border border-transparent group-hover:border-2 group-hover:border-gray-400/20 transition-all duration-400 delay-200 w-[80vw] h-[80vw] md:w-[90vh] md:h-[90vh] z-0 rounded-full'></div>
-        <h2 className='md:text-5xl text-3xl z-10 font-[800] p-2 px-3 md:p-5 md:px-6 rounded-lg md:rounded-none cap'><span className='text-xl'>@</span> Apps</h2>
+        <motion.h2
+          className='md:text-5xl text-3xl z-10 font-[800] p-2 px-3 md:p-5 md:px-6 rounded-lg md:rounded-none cap flex items-center'
+          initial="hidden" whileInView="show" viewport={{ once: true }}
+          variants={{ hidden: { opacity: 1 }, show: { opacity: 1, transition: { staggerChildren: 0.08 } } }}
+        >
+          <motion.span variants={{ hidden: { opacity: 0, y: 60, rotateX: -40 }, show: { opacity: 1, y: 0, rotateX: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } } }} className='text-xl inline-block mr-2'>@</motion.span>
+          {"Apps".split("").map((char, index) => (
+            <motion.span
+              key={index}
+              variants={{ hidden: { opacity: 0, y: 60, rotateX: -40 }, show: { opacity: 1, y: 0, rotateX: 0, transition: { duration: 2, ease: [0.16, 1, 0.3, 1] } } }}
+              className="inline-block"
+            >
+              {char}
+            </motion.span>
+          ))}
+        </motion.h2>
         <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, type: "spring", stiffness: 200 }}>
           <img className='w-64 relative z-10 h-fit hover:drop-shadow-[3px_5px_0_rgba(0,0,0,1)] md:hover:drop-shadow-[6px_10px_0_rgba(0,0,0,1)] hover:scale-[1.05] hover:-skew-x-2 hover:rotate-3 duration-200' src={mobile} alt="telefono" />
         </motion.div>
