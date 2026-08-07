@@ -90,8 +90,8 @@ const letterVariants = {
 }
 
 const imageSweepVariants = {
-    hidden: { opacity: 1, x: 150 },
-    show: { opacity: 1, x: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } }
+    hidden: { opacity: 1, y: 150 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } }
 }
 
 function Tecnologias() {
@@ -120,7 +120,7 @@ function Tecnologias() {
                             </motion.span>
                         ))}
                     </motion.h2>
-                    <p className='text-sm md:text-base leading-5 font-light md:w-[80%] parrafo pt-2'>
+                    <p className='text-sm md:text-base leading-5 font-light md:w-[80%] pt-2'>
                         Mi trabajo comienza desde un maquetado en Figma, buscando dar sentido a las ideas creativas, luego voy desarrollando las funcionalidades de las aplicaciones.
                     </p>
                 </div>
@@ -155,7 +155,7 @@ function Tecnologias() {
                                 {/* Lista de Skills */}
                                 <motion.div
                                     variants={itemRiseVariants}
-                                    className={`${cat.bgBody} parrafo md:p-3 relative z-20 py-1.25 px-1.5 text-sm md:text-lg ${cat.roundedBody} ${cat.textColor}`}
+                                    className={`${cat.bgBody} md:p-3 relative z-20 py-1.25 px-1.5 text-sm md:text-lg ${cat.roundedBody} ${cat.textColor}`}
                                 >
                                     {cat.skills.map((skill, sIdx) => (
                                         <p key={sIdx}>{skill}</p>

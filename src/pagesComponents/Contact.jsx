@@ -113,7 +113,7 @@ function Contact() {
                   </motion.span>
                 ))}
               </motion.div>
-              <p className='text-lg parrafo lg:text-start lg:text-lg'>
+              <p className='text-lg lg:text-start lg:text-lg'>
                 ¿Tenés alguna idea en mente? ¿Necesitás ayuda con algún proyecto? ¿Querés que trabajemos juntos?
                 <br className='hidden md:block' />
                 {" "}No dudes en escribirme, te responderé a la brevedad.
