@@ -1,5 +1,6 @@
 import mobile from '../../public/Images/contenido/mobile-hom.webp'
 import { motion } from 'motion/react'
+import { DitheredObject } from '../components/canvasui/DitheredObject';
 
 function Mobile() {
   return (
@@ -9,9 +10,9 @@ function Mobile() {
       </motion.div>
 
       <div className='flex group flex-col z-20 items-center gap-y-5 md:gap-y-8 h-full'>
-        <div className='circulo-back-mobile border border-transparent group-hover:border-2 group-hover:border-black/40 transition-all duration-200 w-[60vw] h-[60vw] md:w-[50vh] md:h-[50vh] z-0 rounded-full'></div>
-        <div className='circulo-back-mobile border border-transparent group-hover:border-2 group-hover:border-gray-400/70 transition-all duration-300 delay-100 w-[70vw] h-[70vw] md:w-[70vh] md:h-[70vh] z-0 rounded-full'></div>
-        <div className='circulo-back-mobile border border-transparent group-hover:border-2 group-hover:border-gray-400/30 transition-all duration-400 delay-200 w-[80vw] h-[80vw] md:w-[90vh] md:h-[90vh] z-0 rounded-full'></div>
+        <div className='circulo-back-mobile border border-transparent group-hover:border-2 group-hover:border-black/5 transition-all duration-200 w-[60vw] h-[60vw] md:w-[50vh] md:h-[50vh] z-0 rounded-full'></div>
+        <div className='circulo-back-mobile border border-transparent group-hover:border-2 group-hover:border-black/5 transition-all duration-300 delay-100 w-[70vw] h-[70vw] md:w-[70vh] md:h-[70vh] z-0 rounded-full'></div>
+        <div className='circulo-back-mobile border border-transparent group-hover:border-2 group-hover:border-black/5 transition-all duration-400 delay-200 w-[80vw] h-[80vw] md:w-[90vh] md:h-[90vh] z-0 rounded-full'></div>
         <motion.h2
           className='md:text-5xl text-3xl z-10 font-[800] p-2 px-3 md:p-5 md:px-6 rounded-lg md:rounded-none cap flex items-center'
           initial="hidden" whileInView="show" viewport={{ once: true }}
@@ -29,12 +30,35 @@ function Mobile() {
           ))}
         </motion.h2>
         <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, type: "spring", stiffness: 200 }}>
-          <img
+          {/*           <img
             className='w-64 relative z-10 h-fit hover:drop-shadow-[3px_5px_0_rgba(0,0,0,1)] md:hover:drop-shadow-[6px_10px_0_rgba(0,0,0,1)] hover:scale-[1.05] hover:-skew-x-2 hover:rotate-3 duration-200'
             src={mobile?.src}
             alt="telefono"
             loading='lazy'
             decoding='async'
+          /> */}
+          <DitheredObject
+            src={"/Images/contenido/mobile-hom.webp"}
+            method="floyd"
+            gridSize={0}
+            pixelSizeRatio={0}
+            environmentIntensity={1}
+            roughness={0.2}
+            scale={4}
+            xOffset={0}
+            yOffset={-0.3}
+            floatIntensity={0}
+            rotationIntensity={0}
+            floatSpeed={4}
+            fov={55}
+            cameraDistance={4.8}
+            grayscale={false}
+            invert={false}
+            dither={false}
+            autoRotate={true}
+            zoom={false}
+            highlight="#000"
+            className="w-64 h-80 md:w-100 md:h-110"
           />
         </motion.div>
         <div className='flex w-52 md:w-fit flex-col font-[300] relative md:font-[200] text-[13px] md:text-sm text-center'>

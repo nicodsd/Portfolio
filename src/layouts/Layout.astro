@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import "animate.css";
 import Navbar from "../components/Navbar";
+import ATop from "../components/ATop";
 ---
 
 <!doctype html>
@@ -22,6 +23,7 @@ import Navbar from "../components/Navbar";
 	</head>
 	<body>
 		<Navbar client:load />
+		<ATop client:visible />
 		<slot />
 	</body>
 </html>

@@ -20,14 +20,14 @@ function WordCarousel() {
         arrows: false,
     };
 
-    const palabras = ["Diseño Gráfico", "Javascript", "Webs & Apps", "Nico Barrera", "UX/UI", "Wordpress"];
+    const palabras = ["Diseño Gráfico", "Javascript", "Webs & Apps", "UX/UI", "Wordpress"];
 
     return (
         <div className="palabra-carousel translate-y-5 w-full">
             <Slider {...settings}>
                 {palabras.map((palabra, index) => (
-                    <div key={index} className="rounded-3xl border duration-150 p-3 md:p-4 border-[#000000] text-[#000000] bg-[#FFD400] text-center">
-                        <p className='palabras_slide md:text-xl text-mono'>{palabra}</p>
+                    <div key={index} className="rounded-3xl border duration-150 p-3 md:p-10 border-[#000000] text-[#000000] bg-[#FFD400] text-center">
+                        <p className='palabras_slide md:text-2xl text-mono'>{palabra}</p>
                     </div>
                 ))}
             </Slider>

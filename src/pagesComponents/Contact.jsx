@@ -75,9 +75,9 @@ function Contact() {
             <DitheredObject
               src="/Images/diseño-grafico/objetos-graficos/contact.svg"
               method="halftone"
-              gridSize={1.3}
-              pixelSizeRatio={2}
-              environmentIntensity={1.2}
+              gridSize={0}
+              pixelSizeRatio={1}
+              environmentIntensity={1}
               roughness={0}
               scale={4}
               xOffset={0}
@@ -92,7 +92,7 @@ function Contact() {
               dither={true}
               autoRotate={true}
               zoom={false}
-              highlight="#FF0080"
+              highlight="#FFD440"
               className="w-full h-full absolute inset-0"
             />
           </div>

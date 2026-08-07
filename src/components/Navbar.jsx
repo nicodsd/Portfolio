@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Sidebar from './Sidebar'
-import { motion } from 'motion/react'
 
 function Navbar() {
 
@@ -11,29 +10,6 @@ function Navbar() {
   }
   function close() {
     setOpen(false)
-  }
-
-  function scrollToSection(id) {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  }
-
-  function irSobreMi() {
-    scrollToSection("sobreMi");
-  }
-
-  function irProyectos() {
-    scrollToSection("proyectos");
-  }
-
-  function irTecnologias() {
-    scrollToSection("tecnologias");
-  }
-
-  function irContacto() {
-    scrollToSection("contacto");
   }
 
   return (

@@ -11,22 +11,22 @@ import { SiTailwindcss, SiNextdotjs, SiExpress, SiPhp, SiMysql, SiPostman, SiAst
 // --- DATOS Y CONFIGURACIÓN ---
 
 const techLogos = [
-    { node: <FaHtml5 className="text-[#0004ff]" /> },
-    { node: <FaCss3Alt className="text-[#0004ff]" /> },
-    { node: <FaJs className="text-[#0004ff]" /> },
-    { node: <FaReact className="text-[#0004ff]" /> },
-    { node: <SiAstro className="text-[#0004ff]" /> },
-    { node: <SiTailwindcss className="text-[#0004ff]" /> },
-    { node: <SiMui className="text-[#0004ff]" /> },
-    { node: <FaNodeJs className="text-[#0004ff]" /> },
-    { node: <SiNextdotjs className="text-[#0004ff]" /> },
-    { node: <SiExpress className="text-[#0004ff]" /> },
-    { node: <SiPhp className="text-[#0004ff]" /> },
-    { node: <SiMysql className="text-[#0004ff]" /> },
-    { node: <SiPostman className="text-[#0004ff]" /> },
-    { node: <FaFigma className="text-[#0004ff]" /> },
-    { node: <FaGitAlt className="text-[#0004ff]" /> },
-    { node: <FaAws className="text-[#0004ff]" /> }
+    { node: <FaHtml5 className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> },
+    { node: <FaCss3Alt className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> },
+    { node: <FaJs className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> },
+    { node: <FaReact className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> },
+    { node: <SiAstro className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> },
+    { node: <SiTailwindcss className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> },
+    { node: <SiMui className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> },
+    { node: <FaNodeJs className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> },
+    { node: <SiNextdotjs className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> },
+    { node: <SiExpress className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> },
+    { node: <SiPhp className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> },
+    { node: <SiMysql className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> },
+    { node: <SiPostman className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> },
+    { node: <FaFigma className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> },
+    { node: <FaGitAlt className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> },
+    { node: <FaAws className="text-[#0004ff] w-8 h-8 md:w-14 md:h-14" /> }
 ]
 const TECH_CATEGORIES = [
     {
@@ -205,8 +205,8 @@ function Tecnologias() {
                     alt="Captura secundaria izquierda"
                 />
             </motion.div>
-            <div className="w-full h-32 md:h-40 mt-10 overflow-hidden flex items-center bg-[#f8f9fa] border-y mask-[linear-gradient(to_right,transparent,black,transparent)] border-gray-100">
-                <LogoLoop logos={techLogos} speed={40} direction="left" logoHeight={60} gap={60} className="w-full" />
+            <div className="w-full h-20 md:h-40 mt-10 overflow-hidden flex items-center bg-[#f8f9fa] border-y mask-[linear-gradient(to_right,transparent,black,transparent)] border-gray-100">
+                <LogoLoop logos={techLogos} speed={40} direction="left" gap={20} className="w-full" />
             </div>
         </div>
     )
