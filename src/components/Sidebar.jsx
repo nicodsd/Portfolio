@@ -1,10 +1,8 @@
 import React from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const NAV_ITEMS = [
     { label: 'Inicio', targetId: null },
-    { label: 'Sobre mí', targetId: 'sobreMi' },
     { label: 'Proyectos', targetId: 'proyectos' },
     { label: 'Tecnologías', targetId: 'tecnologias' },
     { label: 'Contacto', targetId: 'contacto' },
@@ -40,15 +38,13 @@ const itemVariants = {
 }
 
 function Sidebar({ open, close }) {
-    const navigate = useNavigate()
-    const location = useLocation()
 
     const handleNavigation = (targetId) => {
         close()
 
         // Si no es la página principal, navegar primero a '/'
-        if (location.pathname !== '/') {
-            navigate('/')
+        if (typeof window !== 'undefined' && window.location.pathname !== '/') {
+            window.location.href = '/'
             if (targetId) {
                 setTimeout(() => scrollToSection(targetId), 100)
             }

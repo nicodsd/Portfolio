@@ -4,9 +4,7 @@ import icon2 from '../../public/Images/diseño-grafico/iconos/progress_activity.
 import pdf from '../../public/Images/contenido/PDF/CV_BARRERA_JULIO_NICOLAS.pdf'
 
 function Curriculum() {
-
     const [descarga, setDes] = useState(false)
-
     const descargar = () => {
         setDes(true)
         espera()
@@ -14,11 +12,9 @@ function Curriculum() {
 
     const espera = () => {
         const tiempoDeEspera = 1000;
-
-        const timer = setTimeout(() => {
+        setTimeout(() => {
             setDes(false)
         }, tiempoDeEspera)
-
     }
 
     return (
@@ -26,15 +22,15 @@ function Curriculum() {
             href={pdf}
             onClick={descargar}
             download="Curriculum Vitae - Barrera Julio Nicolas"
-            className='flex fixed z-40 justify-center items-center right-[53px] bottom-[123px]'>
-            <div className='bg-[#ffd500] hover:opacity-80 text-black font-[700] text-mono drop-shadow-md selection:bg-transparent cursor-pointer absolute rounded-[1rem] min-w-[55px] min-h-[45px] py-2 w-fit h-fit flex items-center justify-center'>
+            className='flex fixed z-40 justify-center items-center right-13 bottom-31'>
+            <div className='bg-[#ffd500] hover:opacity-80 text-black font-bold text-mono drop-shadow-md selection:bg-transparent cursor-pointer absolute rounded-2xl min-w-13.75 min-h-11.25 py-2 w-fit h-fit flex items-center justify-center'>
                 {descarga === false ? (
                     <div className='flex flex-col items-center'>
                         <p className='animate__animated animate__fadeInUp'>CV</p>
-                        <img className='w-6 animate__animated animate__fadeInUp' src={icon} alt='descargar curriculum' />
+                        <img className='w-6 animate__animated animate__fadeInUp' src={icon?.src} alt='descargar curriculum' />
                     </div>
                 ) : (
-                    <img className='w-9 absolute animate-spin-speed animate__animated animate__rotateOut' src={icon2} alt='cargando' />
+                    <img className='w-9 absolute animate-spin-speed animate__animated animate__rotateOut' src={icon2?.src} alt='cargando' />
                 )
                 }
             </div>

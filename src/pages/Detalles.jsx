@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import BarraLateralDet from '../../components/Detalles/BarraLateralDet'
-import SeccionesDetalles from '../../components/Detalles/SeccionesDetalles'
-import CentroInfo from '../../components/Detalles/CentroInfo'
-import { useParams } from 'react-router-dom'
-import ProductDetails from '../../components/skeletons/SkeletonDetallesInfo'
-import SidebarDetalles from '../../components/SidebarDetalles'
-import SidebarSeccionesDetalles from '../../components/SidebarSeccionesDetalles'
-import sideIcon from '../../../public/Images/diseño-grafico/iconos/sidebar.svg'
-import VisorDeFotos from '../../components/VisorDeFotos'
-import { details } from '../../data/details'
+import BarraLateralDet from '../components/Detalles/BarraLateralDet'
+import SeccionesDetalles from '../components/Detalles/SeccionesDetalles'
+import CentroInfo from '../components/Detalles/CentroInfo'
+import ProductDetails from '../components/skeletons/SkeletonDetallesInfo'
+import SidebarDetalles from '../components/SidebarDetalles'
+import SidebarSeccionesDetalles from '../components/SidebarSeccionesDetalles'
+import sideIcon from '../../public/Images/diseño-grafico/iconos/sidebar.svg'
+import VisorDeFotos from '../components/VisorDeFotos'
+import { details } from '../data/details'
 
-function Detalles() {
-
-  let { pagina } = useParams()
+function Detalles({ pagina }) {
 
   const [openSide, setOpenSide] = useState(false)
   const [openSecc, setOpenSecc] = useState(false)
@@ -58,16 +55,14 @@ function Detalles() {
       {/* {openVisor &&
         <VisorDeFotos opnVisor={opnVisor} imagen={verImagen} verColor={verColor} />
       } */}
-      <img src={sideIcon} alt='sideIcon' onClick={openSecciones} className='w-7 h-7 md:hidden md:w-0 bg-white p-1 rounded-full md:h-0 fixed right-1 top-18 z-30' />
-      <img src={sideIcon} alt='sideIcon' onClick={open} className='w-7 h-7 md:hidden md:w-0 bg-white p-1 rounded-full md:h-0 fixed rotate-180 left-1 top-18 z-30' />
-      <div className='min-h-screen md:max-h-screen selection:bg-transparent min-w-full p-1 flex text-mono bg-[#E2E8EE] relative'>
+      <img src={sideIcon?.src || sideIcon} alt='sideIcon' onClick={openSecciones} className='w-7 h-7 md:hidden md:w-0 bg-white p-1 rounded-full md:h-0 fixed right-1 top-18 z-30' />
+      <img src={sideIcon?.src || sideIcon} alt='sideIcon' onClick={open} className='w-7 h-7 md:hidden md:w-0 bg-white p-1 rounded-full md:h-0 fixed rotate-180 left-1 top-18 z-30' />
+      <div className='min-h-screen md:max-h-screen selection:bg-transparent min-w-full w-full p-1 flex text-mono relative'>
         {informacion?.fotos?.length > 0 ?
-          <div className='flex md:gap-x-[4px]'>
+          <div className='md:flex md:gap-x-1 w-full'>
             <BarraLateralDet informacion={informacion} />
-
             <CentroInfo informacion={informacion} />
-
-            <SeccionesDetalles informacion={informacion} />
+            {/* <SeccionesDetalles informacion={informacion} /> */}
           </div>
           :
           <div className='w-full flex justify-center items-center flex-col gap-10 md:flex-row flex-wrap'>

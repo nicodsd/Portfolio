@@ -1,0 +1,19 @@
+---
+import Detalles from "../Detalles.jsx";
+import { details } from "../../data/details.js";
+import Layout from "../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+    return details.map((item: { pagina: any }) => {
+        return {
+            params: { page: item.pagina },
+        };
+    });
+}
+
+const { page } = Astro.params;
+---
+
+<Layout>
+    <Detalles pagina={page} client:only="react" />
+</Layout>

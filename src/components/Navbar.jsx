@@ -1,7 +1,5 @@
-import { Link as Anchor } from 'react-router-dom'
 import { useState } from 'react'
 import Sidebar from './Sidebar'
-import burger from '../../public/Images/diseño-grafico/iconos/menu.svg'
 import { motion } from 'motion/react'
 
 function Navbar() {
@@ -42,42 +40,28 @@ function Navbar() {
     <>
 
       {open ? <Sidebar open={open} close={close} /> : null}
-      <nav className="relative w-full text-mono z-10 p-2 md:p-0">
-        <div className="w-full text-[#000000] flex justify-between px-1 py-[4px] lg:px-6 lg:py-[20px] items-center">
+      <nav className="relative w-full text-mono z-10 p-2 md:p-4">
+        <div className="w-full text-[#000000] flex justify-between px-1 py-1 lg:px-6 items-center">
           <div onClick={() => sideBar()} className="w-10 visible md:invisible md:absolute h-10 z-10 md:z-0 lg:w-8 flex items-center justify-center lg:h-8 bg-[#000000] rounded-full animate__flash animate__animated animate__delay-1s animate__faster">
-            <img className='w-5' src={burger} alt="icon" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" viewBox="0 0 25 25"><mask id="mask0_450_7" width="25" height="25" x="0" y="0" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse"><path fill="#d9d9d9" d="M.125.479h24v24h-24z" /></mask><g mask="url(#mask0_450_7)"><path fill="#fff" d="M3.125 18.479v-2h18v2zm0-5v-2h18v2zm0-5v-2h18v2z" /></g></svg>
           </div>
 
-          <div className='flex gap-x-8'>
+          <div className='flex gap-x-8 w-full justify-between'>
             <div className="w-4 h-4 md:w-8 md:h-8 bg-[#000000] invisible md:visible rounded-full animate__flash animate__animated animate__delay-1s animate__faster"></div>
-            <ul className='flex lg:gap-x-7 md:gap-2 text-[0px] md:text-xs lg:text-base absolute md:relative invisible md:visible font-[400] items-center'>
-              <li className='cursor-pointer'><Anchor to={'/'} >Inicio</Anchor></li>
-              <li className='cursor-pointer'><Anchor to={'/'} onClick={irSobreMi}>Sobre mí</Anchor></li>
-              <li className='cursor-pointer'><Anchor to={'/'} onClick={irProyectos}>Proyectos</Anchor></li>
-              <li className='cursor-pointer'><Anchor to={'/'} onClick={irTecnologias}>Tecnologías</Anchor></li>
-              <li className='cursor-pointer'><Anchor to={'/'} onClick={irContacto}>Contacto</Anchor></li>
-              <li className='cursor-default'><p className='border-l-2 text-[#00000077] border-black px-2 lg:px-6'>Diseño Grāfico</p></li>
-            </ul>
+            <div className='flex'>
+              <ul className='flex w-fit lg:gap-x-7 md:gap-2 text-[0px] md:text-xs lg:text-sm absolute md:relative invisible md:visible font-normal items-center'>
+                <li className='cursor-pointer'><a href={'/#inicio'}>Inicio</a></li>
+                <li className='cursor-pointer'><a href={'/#proyectos'}>Proyectos</a></li>
+                <li className='cursor-pointer'><a href={'/#tecnologias'}>Tecnologías</a></li>
+                <li className='cursor-pointer'><a href={'/#contacto'}>Contacto</a></li>
+                <li className='cursor-default'><p className='border-l-2 text-[#00000077] border-black px-2 lg:px-6'>Diseño Grāfico</p></li>
+              </ul>
+              <p className="text-xl font-semibold cursor-default md:px-5">
+                portafolio
+              </p>
+            </div>
+
           </div>
-          <motion.p
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            variants={{
-              hidden: { opacity: 1 },
-              show: { opacity: 1, transition: { staggerChildren: 0.08 } }
-            }}
-            className="text-xl font-semibold cursor-default md:pr-5">
-            `{"portafolio".split("").map((char, index) => (
-              <motion.span
-                key={index}
-                variants={{ hidden: { opacity: 0, y: 100, rotateX: -40 }, show: { opacity: 1, y: 0, rotateX: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } } }}
-                className="inline-block"
-              >
-                {char}
-              </motion.span>
-            ))}`
-          </motion.p>
         </div>
       </nav>
     </>

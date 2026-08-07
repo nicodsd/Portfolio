@@ -1,7 +1,9 @@
 import React from 'react';
-import Slider from 'react-slick';
+import SlickSlider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
+const Slider = SlickSlider.default;
 
 function WordCarousel() {
     const settings = {
@@ -15,17 +17,17 @@ function WordCarousel() {
         slidesToShow: 1,
         autoplay: true,
         autoplaySpeed: 1500,
-        arrows: false
+        arrows: false,
     };
 
-    const palabras = ["Diseño Gráfico", "Javascript", "Webs & Apps", "Nico Barrera", "UX/UI", "Full Stack MERN", "Wordpress"];
+    const palabras = ["Diseño Gráfico", "Javascript", "Webs & Apps", "Nico Barrera", "UX/UI", "Wordpress"];
 
     return (
-        <div className="palabra-carousel w-full">
+        <div className="palabra-carousel translate-y-5 w-full">
             <Slider {...settings}>
                 {palabras.map((palabra, index) => (
-                    <div key={index} className="palabra-item border-[1px] hover:opacity-70 duration-150 p-2 md:p-2 border-[#000000] text-[#000000] bg-[#FFD400] text-center">
-                        <p className='palabras_slide text-[11px] md:text-lg text-mono'>{palabra}</p>
+                    <div key={index} className="rounded-3xl border duration-150 p-3 md:p-4 border-[#000000] text-[#000000] bg-[#FFD400] text-center">
+                        <p className='palabras_slide md:text-xl text-mono'>{palabra}</p>
                     </div>
                 ))}
             </Slider>

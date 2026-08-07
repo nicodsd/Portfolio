@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Principio from "../pagesComponents/Principio.jsx";
+import Proyectos from "../pagesComponents/Proyectos.jsx";
+import Mobile from "../pagesComponents/Mobile";
+import Tecnologias from "../pagesComponents/Tecnologias.jsx";
+import Contacto from "../pagesComponents/Contact.jsx";
+import Atop from "../components/ATop.jsx";
+import Curriculum from "../components/Curriculum";
+import Footer from "../components/Footer";
+---
+
+<Layout>
+	<Atop />
+	<Curriculum client:visible />
+	<Principio class:list="inicio" client:visible />
+	<Proyectos class:list="proyectos" client:visible />
+	<Mobile class:list="mobile" client:visible />
+	<Tecnologias class:list="tecnologias" client:visible />
+	<Contacto class:list="contacto" client:visible />
+	<Footer client:visible />
+</Layout>

@@ -1,21 +1,20 @@
-import { Link as Anchor } from 'react-router-dom'
 
 function Footer() {
   return (
-    <footer className='bg-[#0600ff] selection:bg-transparent w-full text-white text-mono  p-10 md:px-20 md:py-10 z-40 relative flex justify-between'>
+    <footer className='bg-[#0600ff] selection:bg-transparent w-full text-white text-mono p-10 md:px-20 md:py-10 z-40 relative flex justify-between'>
 
       <div id='redes' className='h-full md:w-[10%] flex flex-col justify-between'>
-        <p className='text-lg md:text-[2.5vh] font-[700]'>redes<span className='animate-pulse-slow'>_</span></p>
+        <p className='text-lg md:text-[2.5vh] font-bold'>redes<span className='animate-pulse-slow'>_</span></p>
         <div>
-          <Anchor to={'https://github.com/nicodsd'}>
+          <a href={'https://github.com/nicodsd'}>
             <p className='h-5'>Github</p>
-          </Anchor>
-          <Anchor to={'https://www.behance.net/nicobaj'}>
+          </a>
+          <a href={'https://www.behance.net/nicobaj'}>
             <p className='h-5'>Bēhance</p>
-          </Anchor>
-          <Anchor to={'https://www.linkedin.com/in/nicobarreraj/'}>
+          </a>
+          <a href={'https://www.linkedin.com/in/nicobarreraj/'}>
             <p>Linkedin</p>
-          </Anchor>
+          </a>
         </div>
       </div>
 

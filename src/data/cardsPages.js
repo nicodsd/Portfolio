@@ -4,10 +4,10 @@ export let cardsPages = [
         pagina: "qmenu",
         titulo: "Qmenú",
         enlace: "qmenu.digital",
-        github: "https://github.com/zErhiz/HomeEssentials-front.git",
+        github: "",
         descripcion: "Aplicación web para locales gastronómicos donde podrán gestionar sus platos y pedidos.",
         descExtendido: "",
-        miniatura: "../Images/portadas/qmenu.webp",
+        miniatura: "../Images/portadas/qmenu_portada.webp",
         color: "#7847E0",
     },
     {
@@ -18,7 +18,7 @@ export let cardsPages = [
         github: "https://github.com/zErhiz/HomeEssentials-front.git",
         descripcion: "E-Commerce de productos para el hogar con un diseño vanguardista y moderno, con un amplio catálogo de productos en diferentes categorías, con carrito y creación de usuarios.",
         descExtendido: "",
-        miniatura: "../Images/portadas/home.webp",
+        miniatura: "../Images/portadas/home_portada.webp",
         color: "#7847E0",
     },
     {
