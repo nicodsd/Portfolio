@@ -33,7 +33,7 @@ function Principio() {
 
     return (
         <>
-            <div className='mx-10 md:px-10 pb- md:mx-[4vh] selection:bg-transparent md:cuerpo text-mono z-20'>
+            <div className='mx-10 md:px-10 md:mx-[4vh] selection:bg-transparent md:cuerpo text-mono z-20'>
                 <div className='flex flex-col items-center md:flex-row md:items-end justify-between relative'>
 
                     {/* Sección Nombre Nico Barrera */}
@@ -78,12 +78,8 @@ function Principio() {
                     </motion.div>
 
                     {/* Visualizador 3D interactivo con DitheredObject */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0, x: 30 }}
-                        whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                        transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                        viewport={{ once: true }}
-                        className="w-full md:w-[45vw] h-[85vw] md:h-[40vw] absolute md:right-10 z-50 -top-6 md:-top-3"
+                    <div
+                        className="w-full primer-plano md:w-[45vw] h-[70vw] md:h-[40vw] absolute md:right-10 z-50 -top-10 md:-top-3"
                     >
                         {/* 3. Le pasamos la imagen activa dinámicamente según el currentIndex */}
                         <DitheredObject
@@ -110,7 +106,7 @@ function Principio() {
                             highlight="#FFD440"
                             className="w-full h-full"
                         />
-                    </motion.div>
+                    </div>
                 </div>
 
                 {/* Líneas decorativas */}

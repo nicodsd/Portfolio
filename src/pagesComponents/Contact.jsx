@@ -1,10 +1,16 @@
 import { useState, useRef } from 'react'
 import emailjs from 'emailjs-com'
-import { motion } from 'motion/react'
-import DitheredObject from '../components/canvasui/DitheredObject'
+import { motion, AnimatePresence } from 'motion/react'
+import { FaGithub, FaBehance, FaLinkedin } from 'react-icons/fa'
+
+// Variantes para la alerta flotante
+const alertVariants = {
+  hidden: { opacity: 0, y: -20, scale: 0.95 },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.25, ease: "easeOut" } },
+  exit: { opacity: 0, y: -20, scale: 0.95, transition: { duration: 0.2 } }
+}
 
 function Contact() {
-
   const nombre = useRef("")
   const correo = useRef("")
   const comentarios = useRef("")
@@ -58,93 +64,89 @@ function Contact() {
 
   return (
     <div className='relative'>
-      {enviado &&
-        <div className='selection:bg-transparent w-fit drop-shadow-md flex bg-white -translate-y-16 md:-translate-y-20 rounded-md md:rounded-lg fixed h-fit modal-enviado z-10'>
-          <div className='flex flex-col bg-white cursor-default p-4 md:p-6 rounded-l-md md:rounded-l-lg'>
-            <h2 className='font-semibold flex flex-wrap'>{res}</h2>
-          </div>
-          <div className='text-white'>
-            <p onClick={quitarAlerta} className='h-full w-9 md:w-7 bg-[#0600ff] hover:opacity-80 cursor-pointer flex justify-center items-center rounded-r-md md:rounded-r-lg text-xl'>X</p>
-          </div>
-        </div>
-      }
+      {/* AnimatePresence permite animar la salida cuando enviado pasa a false */}
+      <AnimatePresence>
+        {enviado && (
+          <motion.div
+            variants={alertVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className='selection:bg-transparent w-fit drop-shadow-md flex bg-white -translate-y-16 md:-translate-y-20 rounded-md md:rounded-lg fixed h-fit modal-enviado z-50'
+          >
+            <div className='flex flex-col bg-white cursor-default p-4 md:p-6 rounded-l-md md:rounded-l-lg'>
+              <h2 className='font-semibold flex flex-wrap'>{res}</h2>
+            </div>
+            <div className='text-white'>
+              <p onClick={quitarAlerta} className='h-full w-9 md:w-7 bg-[#0600ff] hover:opacity-80 cursor-pointer flex justify-center items-center rounded-r-md md:rounded-r-lg text-xl'>X</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      <div id='contacto' className='z-20 px-10 w-full md:pb-0 pb-40 relative max-w-full flex items-center justify-center'>
-        <div className='w-full md:px-20 flex flex-col items-center md:flex-row justify-between'>
-          <div className='text-mono flex flex-col md:w-[40%] h-[60vw] md:h-[30vw] min-h-62.5 relative gap-y-4 md:items-start w-full items-center py-10 md:justify-center selection:bg-transparent'>
-            <DitheredObject
-              src="/Images/diseño-grafico/objetos-graficos/contact.svg"
-              method="halftone"
-              gridSize={0}
-              pixelSizeRatio={1}
-              environmentIntensity={1}
-              roughness={0}
-              scale={4}
-              xOffset={0}
-              yOffset={0}
-              floatIntensity={0}
-              rotationIntensity={1}
-              floatSpeed={0}
-              fov={70}
-              cameraDistance={5}
-              grayscale={false}
-              invert={false}
-              dither={true}
-              autoRotate={true}
-              zoom={false}
-              highlight="#FFD440"
-              className="w-full h-full absolute inset-0"
+      <div id='contacto' className='z-20 seccion-contact px-4 w-full md:pb-0 pt-60 md:pt-30 pb-30 relative max-w-full flex items-center justify-center'>
+        <div className='w-full flex md:w-[60%] h-[60vw] md:h-[30vw] py-20 min-h-62.5 flex-col items-center md:flex-row justify-center'>
+          {/*  <div className='text-mono flex flex-col md:w-[40%] h-[60vw] md:h-[25vw] min-h-62.5 relative gap-y-4 md:items-start w-full items-center py-10 md:justify-center selection:bg-transparent'>
+            <img
+              src="/Images/diseño-grafico/objetos-graficos/contact.svg" alt=""
+              width={1000}
+              height={1000}
+              className="w-20 md:w-[20vw] h-20 md:h-[20vw]"
             />
-          </div>
-          <div className='flex flex-col w-full md:w-[60%] h-full gap-y-16 items-start justify-center'>
+          </div> */}
+          <div className='flex flex-col title-contact w-full md:w-[60%] h-full gap-y-16 items-start justify-center'>
             <div className='flex flex-col gap-y-4 selection:bg-transparent'>
-              <motion.div
-                className='md:text-7xl text-5xl text-[#0600ff] font-black tracking-tight flex'
-                initial="hidden" whileInView="show" viewport={{ once: true }}
-                variants={{ hidden: { opacity: 1 }, show: { opacity: 1, transition: { staggerChildren: 0.08 } } }}
+
+              {/* Contenedor del título */}
+              <h2
+                className="md:text-7xl text-5xl text-[#0600ff] font-black tracking-tight flex flex-wrap"
               >
-                {"Hablemos".split("").map((char, index) => (
-                  <motion.span
-                    key={index}
-                    variants={{ hidden: { opacity: 0, y: 60, rotateX: -40 }, show: { opacity: 1, y: 0, rotateX: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } } }}
-                    className="inline-block"
-                  >
-                    {char}
-                  </motion.span>
-                ))}
-              </motion.div>
+                Hablemos
+              </h2>
+
               <p className='text-lg lg:text-start lg:text-lg'>
-                ¿Tenés alguna idea en mente? ¿Necesitás ayuda con algún proyecto? ¿Querés que trabajemos juntos?
-                <br className='hidden md:block' />
-                {" "}No dudes en escribirme, te responderé a la brevedad.
+                {" "}Te responderé a la brevedad.
               </p>
             </div>
 
             <form onSubmit={sendMail} className='flex justify-center h-full w-full flex-col text-[13px] md:text-sm gap-y-10'>
               <div className='w-full flex gap-x-4 text-mono'>
                 <input
-                  className='w-full border-b bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]'
+                  className='w-full input-contact border-b bg-transparent focus:outline-none border-[#000000] placeholder:text-gray-300'
                   type="text"
                   ref={nombre}
                   required
                   autoComplete='off'
-                  placeholder='Nombre *' />
+                  placeholder='Juan Perez *' />
                 <input
-                  className='w-full border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-[#0600ff]'
+                  className='w-full input-contact border-b-[1px] bg-transparent focus:outline-none border-[#000000] placeholder:text-gray-300'
                   type="email"
                   ref={correo}
                   required
                   autoComplete='off'
-                  placeholder='Correo *' />
+                  placeholder='mi@gmail.com *' />
               </div>
               <input
                 ref={comentarios}
-                className='w-full border-b-[1px] bg-transparent focus:outline-none h-fit text-mono border-[#000000] placeholder:text-[#0600ff]'
+                className='w-full input-contact border-b-[1px] bg-transparent focus:outline-none h-fit text-mono border-[#000000] placeholder:text-gray-300'
                 type="text"
                 required
                 autoComplete='off'
-                placeholder='Comentarios *' />
-              <div className='flex w-full justify-end'>
+                placeholder='Quiero una tienda para mi local de indumentaria. *' />
+              <div className='flex w-full input-contact justify-between button-contact'>
+                <div id='redes' className='h-full w-fit flex justify-center items-center'>
+                  <div className='flex justify-center items-start gap-3'>
+                    <a className='h-10' href={'https://www.linkedin.com/in/nicobarreraj/'}>
+                      <FaLinkedin size={45} />
+                    </a>
+                    <a className='h-10' href={'https://github.com/nicodsd'}>
+                      <FaGithub size={45} />
+                    </a>
+                    <a className='h-10' href={'https://www.behance.net/nicobaj'}>
+                      <FaBehance size={45} />
+                    </a>
+                  </div>
+                </div>
                 <button
                   type="submit"
                   disabled={cargando}
@@ -167,7 +169,7 @@ function Contact() {
           </div>
         </div>
       </div>
-    </div >
+    </div>
   )
 }
 

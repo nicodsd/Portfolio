@@ -1,15 +1,14 @@
-import mobile from '../../public/Images/contenido/mobile-hom.webp'
 import { motion } from 'motion/react'
 import { DitheredObject } from '../components/canvasui/DitheredObject';
 
 function Mobile() {
   return (
-    <div className='md:min-h-screen px-10 overflow-hidden relative selection:bg-transparent py-32 flex w-full justify-between gap-x-3 items-center text-mono'>
+    <div className='md:min-h-screen px-10  overflow-hidden relative selection:bg-transparent py-32 flex w-full justify-between gap-x-3 items-center text-mono'>
       <motion.div className="z-30 md:h-[17vw]" initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.2, type: "spring", stiffness: 200 }}>
         <svg xmlns="http://www.w3.org/2000/svg" className="hidden md:block h-auto md:w-[200px]" fill="none" viewBox="0 0 268 293"><path id="forma" fill="#ffd400" d="M145.084 81.26c67.378 0 121.999 54.622 121.999 122.001v89.245h-34.764c-55.228 0-100-44.772-100-100V81.261z" /><path id="forma" fill="#0019ff" d="M132.318 81.261v111.245c0 55.228-44.771 100-100 100H.648V81.261zM267.083.536c0 44.583-36.141 80.725-80.724 80.725h-54.04V.536z" /><path id="forma" fill="#000" d="M132.318.536v80.725H.648C.649 36.678 36.792.536 81.375.536z" /></svg>
       </motion.div>
 
-      <div className='flex group flex-col z-20 items-center gap-y-5 md:gap-y-8 h-full'>
+      <div className='flex group seccion-mobile flex-col z-20 items-center gap-y-5 md:gap-y-8 h-full'>
         <div className='circulo-back-mobile border border-transparent group-hover:border-2 group-hover:border-black/5 transition-all duration-200 w-[60vw] h-[60vw] md:w-[50vh] md:h-[50vh] z-0 rounded-full'></div>
         <div className='circulo-back-mobile border border-transparent group-hover:border-2 group-hover:border-black/5 transition-all duration-300 delay-100 w-[70vw] h-[70vw] md:w-[70vh] md:h-[70vh] z-0 rounded-full'></div>
         <div className='circulo-back-mobile border border-transparent group-hover:border-2 group-hover:border-black/5 transition-all duration-400 delay-200 w-[80vw] h-[80vw] md:w-[90vh] md:h-[90vh] z-0 rounded-full'></div>
@@ -29,7 +28,7 @@ function Mobile() {
             </motion.span>
           ))}
         </motion.h2>
-        <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, type: "spring", stiffness: 200 }}>
+        <div className='cel'>
           {/*           <img
             className='w-64 relative z-10 h-fit hover:drop-shadow-[3px_5px_0_rgba(0,0,0,1)] md:hover:drop-shadow-[6px_10px_0_rgba(0,0,0,1)] hover:scale-[1.05] hover:-skew-x-2 hover:rotate-3 duration-200'
             src={mobile?.src}
@@ -58,9 +57,9 @@ function Mobile() {
             autoRotate={true}
             zoom={false}
             highlight="#000"
-            className="w-64 h-80 md:w-100 md:h-110"
+            className="w-64 h-80 cel md:w-100 md:h-110"
           />
-        </motion.div>
+        </div>
         <div className='flex w-52 md:w-fit flex-col font-[300] relative md:font-[200] text-[13px] md:text-sm text-center'>
           <p>HomeEssentials</p>
           <p>E-commerce</p>

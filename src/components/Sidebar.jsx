@@ -96,10 +96,6 @@ function Sidebar({ open, close }) {
                                 </button>
                             </motion.li>
                         ))}
-
-                        <motion.li variants={itemVariants} className="cursor-default pt-4">
-                            <p className="opacity-20 text-3xl">Diseño Gráfico</p>
-                        </motion.li>
                     </motion.ul>
                 </motion.div>
             )}

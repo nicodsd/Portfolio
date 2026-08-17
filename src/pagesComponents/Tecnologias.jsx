@@ -11,20 +11,20 @@ import { SiTailwindcss, SiNextdotjs, SiWordpress, SiExpress, SiPostman, SiAstro 
 // --- DATOS Y CONFIGURACIÓN ---
 
 const techLogos = [
-    { node: <FaHtml5 className="text-[#0004ff] w-8 h-8 md:w-10 md:h-10" /> },
-    { node: <FaCss3Alt className="text-[#0004ff] w-8 h-8 md:w-10 md:h-10" /> },
-    { node: <FaJs className="text-[#0004ff] w-8 h-8 md:w-10 md:h-10" /> },
-    { node: <SiWordpress className="text-[#0004ff] w-8 h-8 md:w-10 md:h-10" /> },
-    { node: <FaReact className="text-[#0004ff] w-8 h-8 md:w-10 md:h-10" /> },
-    { node: <SiAstro className="text-[#0004ff] w-8 h-8 md:w-10 md:h-10" /> },
-    { node: <SiTailwindcss className="text-[#0004ff] w-8 h-8 md:w-10 md:h-10" /> },
-    { node: <FaNodeJs className="text-[#0004ff] w-8 h-8 md:w-10 md:h-10" /> },
-    { node: <SiNextdotjs className="text-[#0004ff] w-8 h-8 md:w-10 md:h-10" /> },
-    { node: <SiExpress className="text-[#0004ff] w-8 h-8 md:w-10 md:h-10" /> },
-    { node: <SiPostman className="text-[#0004ff] w-8 h-8 md:w-10 md:h-10" /> },
-    { node: <FaFigma className="text-[#0004ff] w-8 h-8 md:w-10 md:h-10" /> },
-    { node: <FaGitAlt className="text-[#0004ff] w-8 h-8 md:w-10 md:h-10" /> },
-    { node: <FaAws className="text-[#0004ff] w-8 h-8 md:w-10 md:h-10" /> }
+    { node: <FaHtml5 className="text-[#0004ff] w-8 h-8 md:w-10 lg:w-15 md:h-10 lg:h-15" /> },
+    { node: <FaCss3Alt className="text-[#0004ff] w-8 h-8 md:w-10 lg:w-15 md:h-10 lg:h-15" /> },
+    { node: <FaJs className="text-[#0004ff] w-8 h-8 md:w-10 lg:w-15 md:h-10 lg:h-15" /> },
+    { node: <SiWordpress className="text-[#0004ff] w-8 h-8 md:w-10 lg:w-15 md:h-10 lg:h-15" /> },
+    { node: <FaReact className="text-[#0004ff] w-8 h-8 md:w-10 lg:w-15 md:h-10 lg:h-15" /> },
+    { node: <SiAstro className="text-[#0004ff] w-8 h-8 md:w-10 lg:w-15 md:h-10 lg:h-15" /> },
+    { node: <SiTailwindcss className="text-[#0004ff] w-8 h-8 md:w-10 lg:w-15 md:h-10 lg:h-15" /> },
+    { node: <FaNodeJs className="text-[#0004ff] w-8 h-8 md:w-10 lg:w-15 md:h-10 lg:h-15" /> },
+    { node: <SiNextdotjs className="text-[#0004ff] w-8 h-8 md:w-10 lg:w-15 md:h-10 lg:h-15" /> },
+    { node: <SiExpress className="text-[#0004ff] w-8 h-8 md:w-10 lg:w-15 md:h-10 lg:h-15" /> },
+    { node: <SiPostman className="text-[#0004ff] w-8 h-8 md:w-10 lg:w-15 md:h-10 lg:h-15" /> },
+    { node: <FaFigma className="text-[#0004ff] w-8 h-8 md:w-10 lg:w-15 md:h-10 lg:h-15" /> },
+    { node: <FaGitAlt className="text-[#0004ff] w-8 h-8 md:w-10 lg:w-15 md:h-10 lg:h-15" /> },
+    { node: <FaAws className="text-[#0004ff] w-8 h-8 md:w-10 lg:w-15 md:h-10 lg:h-15" /> }
 ]
 const TECH_CATEGORIES = [
     {
@@ -87,20 +87,15 @@ const letterVariants = {
     show: { opacity: 1, y: 0, rotateX: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } }
 }
 
-const imageSweepVariants = {
-    hidden: { opacity: 1, y: 150 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } }
-}
-
 function Tecnologias() {
     const titleText = "Tecnologías"
 
     return (
-        <div className='h-fit relative px-4 md:px-10 selection:bg-transparent w-full text-mono flex flex-col items-center justify-evenly'>
-            <div className='w-full flex flex-col items-center md:flex-row justify-between'>
+        <div id='tecnologias' className='h-fit relative px-4 md:px-10 selection:bg-transparent w-full text-mono flex flex-col items-center justify-evenly'>
+            <div className='w-full flex seccion-tecno flex-col items-center md:flex-row justify-between'>
 
                 {/* Encabezado y Descripción */}
-                <div id='tecnologias' className='h-full md:ml-6 border-x border-t p-5 rounded-t-lg'>
+                <div className='h-full title-tecno md:ml-6 border-x border-t p-5 rounded-t-lg'>
                     <motion.h2
                         className='w-full text-2xl lg:text-3xl font-bold flex overflow-hidden'
                         initial="hidden"
@@ -125,7 +120,7 @@ function Tecnologias() {
 
                 {/* Imagen Rueda Animada */}
                 <img
-                    className='absolute h-18 z-30 lg:h-28 bottom-[40vw] sm:bottom-[34vw] lg:bottom-[32vw] right-10 lg:right-[10vw] animate-[spin_30s_linear_infinite]'
+                    className='absolute h-18 z-30 lg:h-28 img-tecno bottom-[40vw] sm:bottom-[34vw] lg:bottom-[32vw] right-10 lg:right-[10vw] animate-[spin_30s_linear_infinite]'
                     src={rueda?.src || rueda}
                     alt="Rueda decorativa"
                 />
@@ -140,7 +135,7 @@ function Tecnologias() {
                         variants={containerVariants}
                     >
                         {TECH_CATEGORIES.map((cat, idx) => (
-                            <div key={idx} className={`w-full md:w-fit ${cat.title === 'Backend' || cat.title === 'Databases' || cat.title === 'Herramientas' ? 'flex flex-col' : ''}`}>
+                            <div key={idx} className={`w-full tecno md:w-fit ${cat.title === 'Backend' || cat.title === 'Databases' || cat.title === 'Herramientas' ? 'flex flex-col' : ''}`}>
 
                                 {/* Header de la categoría */}
                                 <motion.div
@@ -177,34 +172,27 @@ function Tecnologias() {
             </div>
 
             {/* Galería / Capturas animadas */}
-            <motion.div
+            <div
                 className='relative w-full md:pt-10 h-[45vw] md:h-[30vw] flex items-center justify-center selection:bg-transparent z-10'
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={containerVariants}
             >
-                <motion.img
-                    variants={imageSweepVariants}
-                    className='absolute h-fit w-[50vw] md:w-[44vw] rounded md:rounded-md shadow-[0px_5px_0_rgba(0,0,250,1)] z-10 md:shadow-[0px_12px_0_rgba(0,0,250,1)]'
+                <img
+                    className='absolute img-tecno h-fit w-[50vw] md:w-[44vw] rounded md:rounded-md shadow-[0px_5px_0_rgba(0,0,250,1)] z-10 md:shadow-[0px_12px_0_rgba(0,0,250,1)]'
                     src={img?.src || img}
                     alt="Captura principal"
                 />
-                <motion.img
-                    variants={imageSweepVariants}
-                    className='absolute h-fit w-[40vw] rotate-6 md:rotate-0 opacity-95 md:opacity-90 md:w-[30vw] rounded md:rounded-md -right-2 shadow-[0px_4px_0_rgba(255,0,100,1)] md:shadow-[0px_9px_0_rgba(255,0,100,1)]'
+                <img
+                    className='absolute h-fit img-tecno2 w-[40vw] rotate-6 md:rotate-0 opacity-95 md:opacity-90 md:w-[30vw] rounded md:rounded-md -right-2 shadow-[0px_4px_0_rgba(255,0,100,1)] md:shadow-[0px_9px_0_rgba(255,0,100,1)]'
                     src={img2?.src || img2}
                     alt="Captura secundaria derecha"
                 />
-                <motion.img
-                    variants={imageSweepVariants}
-                    className='absolute h-fit w-[40vw] -rotate-6 md:rotate-0 opacity-95 md:opacity-90 md:w-[30vw] rounded md:rounded-md -left-2 shadow-[0px_4px_0_rgba(255,0,100,1)] md:shadow-[0px_9px_0_rgba(255,0,100,1)]'
+                <img
+                    className='absolute h-fit img-tecno3 w-[40vw] -rotate-6 md:rotate-0 opacity-95 md:opacity-90 md:w-[30vw] rounded md:rounded-md -left-2 shadow-[0px_4px_0_rgba(255,0,100,1)] md:shadow-[0px_9px_0_rgba(255,0,100,1)]'
                     src={img3?.src || img3}
                     alt="Captura secundaria izquierda"
                 />
-            </motion.div>
-            <div className="w-full h-20 md:h-30 mt-10 overflow-hidden flex items-center mask-[linear-gradient(to_right,transparent,black,transparent)]">
-                <LogoLoop logos={techLogos} speed={40} direction="left" gap={20} className="w-full" />
+            </div>
+            <div className="w-full logoloop-seccion h-20 lg:h-40 mt- overflow-hidden flex items-center mask-[linear-gradient(to_right,transparent,black,transparent)]">
+                <LogoLoop logos={techLogos} speed={20} direction="left" gap={30} className="w-full" />
             </div>
         </div>
     )
