@@ -148,7 +148,7 @@ export const LogoLoop = memo(
         width = '100%',
         logoHeight = 28,
         gap = 32,
-        pauseOnHover,
+        pauseOnHover = false,
         hoverSpeed,
         fadeOut = false,
         fadeOutColor,
@@ -274,7 +274,7 @@ export const LogoLoop = memo(
                     <span
                         className={cx(
                             'inline-flex items-center',
-                            'motion-reduce:transition-none',
+                            'motion-reduce:transition-none carrousel-sec',
                             scaleOnHover &&
                             'transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover/item:scale-120'
                         )}

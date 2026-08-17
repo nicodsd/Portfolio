@@ -1,25 +1,9 @@
-import { motion } from 'motion/react'
-
-const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    show: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 0.5,
-            ease: [0.22, 1, 0.36, 1],
-        },
-    },
-}
-
-// Subcomponente individual para mejor legibilidad y rendimiento
 function CardItem({ project }) {
     const { pagina, miniatura, titulo, descripcion } = project
 
     return (
-        <motion.div
-            variants={cardVariants}
-            className="w-full transition-shadow duration-200 border hover:shadow-xl rounded-lg overflow-hidden"
+        <div
+            className="w-full transition-shadow card duration-200 border hover:shadow-xl rounded-lg overflow-hidden"
         >
             <a
                 href={`/detalles/${pagina}`}
@@ -46,7 +30,7 @@ function CardItem({ project }) {
                     </div>
                 </div>
             </a>
-        </motion.div>
+        </div>
     )
 }
 

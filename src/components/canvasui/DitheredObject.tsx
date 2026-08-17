@@ -81,8 +81,8 @@ export interface DitheredObjectInstance {
 const DEFAULTS: Required<DitheredObjectOptions> = {
   src: "",
   method: "bayer",
-  gridSize: 30,
-  pixelSizeRatio: 10,
+  gridSize: 40,
+  pixelSizeRatio: 30,
   grayscale: true,
   invert: false,
   dither: true,
@@ -353,7 +353,7 @@ const ROOM_FORMERS: FormerDef[] = [
   },
 ];
 
-const CAMERA_DIR = new THREE.Vector3(0, -1, 4).normalize();
+const CAMERA_DIR = new THREE.Vector3(0, -1.2, 4).normalize();
 const MODEL_LIFT = 0.3;
 const RASTER_SIZE = 2048;
 const TRACE_SIZE = 512;
@@ -362,7 +362,7 @@ const SIMPLIFY_TOLERANCE = 1;
 const MIN_AREA = 6;
 const MAX_CONTOURS = 64;
 const EXTRUDE_DEPTH = 0.08;
-const BEVEL_SIZE = 0.006;
+const BEVEL_SIZE = 0.005;
 const METHOD_INDEX: Record<DitherMethod, number> = {
   bayer: 0,
   halftone: 1,

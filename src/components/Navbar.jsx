@@ -26,11 +26,10 @@ function Navbar() {
             <div className="w-4 h-4 md:w-8 md:h-8 bg-[#000000] invisible md:visible rounded-full animate__flash animate__animated animate__delay-1s animate__faster"></div>
             <div className='flex'>
               <ul className='flex w-fit lg:gap-x-7 md:gap-2 text-[0px] md:text-xs lg:text-sm absolute md:relative invisible md:visible font-normal items-center'>
-                <li className='cursor-pointer'><a href={'/#inicio'}>Inicio</a></li>
-                <li className='cursor-pointer'><a href={'/#proyectos'}>Proyectos</a></li>
-                <li className='cursor-pointer'><a href={'/#tecnologias'}>Tecnologías</a></li>
-                <li className='cursor-pointer'><a href={'/#contacto'}>Contacto</a></li>
-                <li className='cursor-default'><p className='border-l-2 text-[#00000077] border-black px-2 lg:px-6'>Diseño Grāfico</p></li>
+                <li className='cursor-pointer menu-navbar'><a href={'/#inicio'}>Inicio</a></li>
+                <li className='cursor-pointer menu-navbar'><a href={'/#proyectos'}>Proyectos</a></li>
+                <li className='cursor-pointer menu-navbar'><a href={'/#tecnologias'}>Tecnologías</a></li>
+                <li className='cursor-pointer menu-navbar'><a href={'/#contacto'}>Contacto</a></li>
               </ul>
               <p className="text-xl font-semibold cursor-default md:px-5">
                 portafolio

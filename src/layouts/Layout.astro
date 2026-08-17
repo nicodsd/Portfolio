@@ -25,6 +25,23 @@ import ATop from "../components/ATop";
 		<Navbar client:load />
 		<ATop client:visible />
 		<slot />
+		<script>
+			import { efecto_section_proyectos_cards } from "../styles/effectsGsap";
+
+			const initEffects = () => {
+				const efectos = efecto_section_proyectos_cards();
+
+				// Ejecuta cada función contenida en el array
+				efectos.forEach((efecto) => {
+					if (typeof efecto === "function") {
+						efecto();
+					}
+				});
+			};
+
+			// 'astro:page-load' cubre tanto la carga inicial como la navegación entre páginas
+			document.addEventListener("DOMContentLoaded", initEffects);
+		</script>
 	</body>
 </html>
 
