@@ -84,7 +84,7 @@ function Contact() {
         )}
       </AnimatePresence>
 
-      <div id='contacto' className='z-20 seccion-contact px-4 w-full md:pb-0 pt-60 md:pt-30 pb-30 relative max-w-full flex items-center justify-center'>
+      <div id='contacto' className='z-20 overflow-hidden seccion-contact px-4 w-full md:pb-0 pt-20 md:pt-30 pb-30 relative max-w-full flex items-center justify-center'>
         <div className='w-full flex md:w-[60%] h-[60vw] md:h-[30vw] py-20 min-h-62.5 flex-col items-center md:flex-row justify-center'>
           {/*  <div className='text-mono flex flex-col md:w-[40%] h-[60vw] md:h-[25vw] min-h-62.5 relative gap-y-4 md:items-start w-full items-center py-10 md:justify-center selection:bg-transparent'>
             <img
@@ -137,13 +137,13 @@ function Contact() {
                 <div id='redes' className='h-full w-fit flex justify-center items-center'>
                   <div className='flex justify-center items-start gap-3'>
                     <a className='h-10' href={'https://www.linkedin.com/in/nicobarreraj/'}>
-                      <FaLinkedin size={45} />
+                      <FaLinkedin className='text-3xl' />
                     </a>
                     <a className='h-10' href={'https://github.com/nicodsd'}>
-                      <FaGithub size={45} />
+                      <FaGithub className='text-3xl' />
                     </a>
                     <a className='h-10' href={'https://www.behance.net/nicobaj'}>
-                      <FaBehance size={45} />
+                      <FaBehance className='text-3xl' />
                     </a>
                   </div>
                 </div>
